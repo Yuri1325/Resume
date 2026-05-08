@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ============================================================
-       EDIT: Page title (shows in browser tab)
-       ============================================================ -->
   <title>Uri Richardson</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,21 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── TOKENS ─────────────────────────────────────────────────── */
     :root {
-      --bg:       #07070b;
-      --surface:  #0d0d14;
-      --border:   #1c1c2a;
-      --gold:     #c8a96e;
-      --gold-dim: #7a6340;
-      --text:     #dddde8;
-      --muted:    #5c5c72;
-      --white:    #f0f0f8;
-      --radius:   6px;
-      --max:      900px;
+      --bg:         #080808;
+      --surface:    #101010;
+      --border:     #202020;
+      --accent:     #e0e0e0;
+      --accent-dim: #383838;
+      --text:       #a8a8a8;
+      --muted:      #525252;
+      --white:      #f5f5f5;
+      --radius:     6px;
+      --max:        900px;
     }
 
-    /* ── RESET ──────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -39,30 +33,29 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
-    a { color: var(--gold); text-decoration: none; }
+    a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     ul { list-style: none; }
 
-    /* ── GRAIN OVERLAY ──────────────────────────────────────────── */
+    /* film grain */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025;
+      opacity: 0.03;
       pointer-events: none;
       z-index: 9999;
     }
 
-    /* ── CANVAS (stars) ─────────────────────────────────────────── */
-    #stars-canvas {
+    #bg-canvas {
       position: fixed;
       inset: 0;
       z-index: 0;
       pointer-events: none;
     }
 
-    /* ── NAV ────────────────────────────────────────────────────── */
+    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -71,16 +64,16 @@
       justify-content: center;
       gap: 2.5rem;
       padding: 1.1rem 2rem;
-      background: linear-gradient(to bottom, rgba(7,7,11,0.95) 0%, transparent 100%);
+      background: linear-gradient(to bottom, rgba(8,8,8,0.95) 0%, transparent 100%);
       font-family: 'Cinzel', serif;
       font-size: 0.7rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
     }
     nav a { color: var(--muted); transition: color 0.3s; }
-    nav a:hover { color: var(--gold); text-decoration: none; }
+    nav a:hover { color: var(--white); text-decoration: none; }
 
-    /* ── HERO ───────────────────────────────────────────────────── */
+    /* ── HERO ── */
     #hero {
       position: relative;
       min-height: 100svh;
@@ -95,15 +88,11 @@
     .hero-line {
       width: 1px;
       height: 60px;
-      background: linear-gradient(to bottom, transparent, var(--gold-dim));
+      background: linear-gradient(to bottom, transparent, var(--accent-dim));
       margin: 0 auto 2.5rem;
       opacity: 0;
       animation: fade-down 1.2s 0.2s forwards;
     }
-
-    /* ============================================================
-       EDIT: Your name (hero heading)
-       ============================================================ */
     .hero-name {
       font-family: 'Cinzel', serif;
       font-size: clamp(2.8rem, 8vw, 6.5rem);
@@ -114,11 +103,7 @@
       opacity: 0;
       animation: fade-up 1.2s 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
     }
-    .hero-name span { color: var(--gold); }
-
-    /* ============================================================
-       EDIT: Your one-line tagline below the name
-       ============================================================ */
+    .hero-name span { color: var(--accent); }
     .hero-tagline {
       margin-top: 1.2rem;
       font-size: clamp(0.75rem, 2vw, 0.95rem);
@@ -129,10 +114,6 @@
       opacity: 0;
       animation: fade-up 1s 0.9s forwards;
     }
-
-    /* ============================================================
-       EDIT: Location / contact pills in the hero
-       ============================================================ */
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
@@ -151,8 +132,7 @@
       border-radius: 999px;
       transition: color 0.3s, border-color 0.3s;
     }
-    .hero-meta a:hover { color: var(--gold); border-color: var(--gold-dim); text-decoration: none; }
-
+    .hero-meta a:hover { color: var(--white); border-color: var(--accent-dim); text-decoration: none; }
     .hero-scroll {
       position: absolute;
       bottom: 2rem;
@@ -169,11 +149,11 @@
     .scroll-dot {
       width: 4px; height: 4px;
       border-radius: 50%;
-      background: var(--gold-dim);
+      background: var(--accent-dim);
       animation: scroll-bounce 1.6s infinite;
     }
 
-    /* ── SECTION WRAPPER ────────────────────────────────────────── */
+    /* ── SECTIONS ── */
     section {
       position: relative;
       z-index: 1;
@@ -191,7 +171,7 @@
       font-family: 'Cinzel', serif;
       font-size: 0.65rem;
       letter-spacing: 0.35em;
-      color: var(--gold);
+      color: var(--accent);
       text-transform: uppercase;
       white-space: nowrap;
     }
@@ -209,7 +189,7 @@
       margin-bottom: 0.6rem;
     }
 
-    /* ── REVEAL ANIMATION (triggered by IntersectionObserver) ───── */
+    /* ── REVEAL ── */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -222,28 +202,23 @@
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* ── ABOUT ──────────────────────────────────────────────────── */
+    /* ── ABOUT ── */
     #about-content {
       font-size: 1.05rem;
       font-weight: 300;
       color: var(--text);
       line-height: 1.85;
       max-width: 680px;
-      border-left: 2px solid var(--gold-dim);
+      border-left: 2px solid var(--accent-dim);
       padding-left: 1.8rem;
     }
 
-    /* ── TIMELINE (Experience) ──────────────────────────────────── */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    /* ── TIMELINE ── */
+    .timeline { display: flex; flex-direction: column; }
     .tl-item {
       display: grid;
       grid-template-columns: 140px 24px 1fr;
       gap: 0 1.2rem;
-      position: relative;
     }
     .tl-date {
       font-size: 0.72rem;
@@ -253,26 +228,18 @@
       padding-top: 0.25rem;
       padding-bottom: 2.5rem;
     }
-    .tl-spine {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    .tl-spine { display: flex; flex-direction: column; align-items: center; }
     .tl-dot {
       width: 10px; height: 10px;
       border-radius: 50%;
-      border: 2px solid var(--gold);
+      border: 2px solid var(--accent-dim);
       background: var(--bg);
       flex-shrink: 0;
       margin-top: 0.3rem;
-      transition: background 0.3s;
+      transition: border-color 0.3s, background 0.3s;
     }
-    .tl-item:hover .tl-dot { background: var(--gold); }
-    .tl-line {
-      flex: 1;
-      width: 1px;
-      background: var(--border);
-    }
+    .tl-item:hover .tl-dot { border-color: var(--white); background: var(--white); }
+    .tl-line { flex: 1; width: 1px; background: var(--border); }
     .tl-item:last-child .tl-line { background: transparent; }
     .tl-body { padding-bottom: 2.5rem; }
     .tl-role {
@@ -284,15 +251,11 @@
     }
     .tl-org {
       font-size: 0.82rem;
-      color: var(--gold);
+      color: var(--accent);
       letter-spacing: 0.1em;
       margin: 0.2rem 0 0.7rem;
     }
-    .tl-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
+    .tl-details { display: flex; flex-direction: column; gap: 0.3rem; }
     .tl-details li {
       font-size: 0.88rem;
       font-weight: 300;
@@ -300,14 +263,9 @@
       padding-left: 1rem;
       position: relative;
     }
-    .tl-details li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--gold-dim);
-    }
+    .tl-details li::before { content: '—'; position: absolute; left: 0; color: var(--accent-dim); }
 
-    /* ── EDUCATION ──────────────────────────────────────────────── */
+    /* ── EDUCATION ── */
     .edu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -320,45 +278,24 @@
       padding: 1.6rem;
       transition: border-color 0.3s, transform 0.3s;
     }
-    .edu-card:hover { border-color: var(--gold-dim); transform: translateY(-3px); }
-    .edu-school {
-      font-family: 'Cinzel', serif;
-      font-size: 1rem;
-      color: var(--white);
-      margin-bottom: 0.3rem;
-    }
-    .edu-location {
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
-    .edu-detail {
-      font-size: 0.83rem;
-      color: var(--text);
-      display: flex;
-      gap: 0.5rem;
-      align-items: baseline;
-      margin-bottom: 0.3rem;
-    }
+    .edu-card:hover { border-color: var(--accent-dim); transform: translateY(-3px); }
+    .edu-school { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.3rem; }
+    .edu-location { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 1rem; }
+    .edu-detail { font-size: 0.83rem; color: var(--text); display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.3rem; }
     .edu-detail .label { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.1em; }
     .edu-badge {
       display: inline-block;
       margin-top: 0.7rem;
       font-size: 0.7rem;
       letter-spacing: 0.12em;
-      color: var(--gold);
-      border: 1px solid var(--gold-dim);
+      color: var(--accent);
+      border: 1px solid var(--accent-dim);
       padding: 0.15rem 0.6rem;
       border-radius: 999px;
     }
 
-    /* ── CERTIFICATIONS ─────────────────────────────────────────── */
-    .cert-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+    /* ── CERTIFICATIONS ── */
+    .cert-list { display: flex; flex-direction: column; gap: 1rem; }
     .cert-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -370,24 +307,13 @@
       gap: 1rem;
       transition: border-color 0.3s, transform 0.3s;
     }
-    .cert-card:hover { border-color: var(--gold-dim); transform: translateX(4px); }
-    .cert-name {
-      font-family: 'Cinzel', serif;
-      font-size: 0.95rem;
-      color: var(--white);
-      margin-bottom: 0.3rem;
-    }
-    .cert-issuer { font-size: 0.8rem; color: var(--gold); }
+    .cert-card:hover { border-color: var(--accent-dim); transform: translateX(4px); }
+    .cert-name { font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--white); margin-bottom: 0.3rem; }
+    .cert-issuer { font-size: 0.8rem; color: var(--accent); }
     .cert-id { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
-    .cert-date {
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      white-space: nowrap;
-      padding-top: 0.2rem;
-    }
+    .cert-date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.1em; white-space: nowrap; padding-top: 0.2rem; }
 
-    /* ── SKILLS ─────────────────────────────────────────────────── */
+    /* ── SKILLS ── */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -400,12 +326,12 @@
       padding: 1.4rem;
       transition: border-color 0.3s;
     }
-    .skill-group:hover { border-color: var(--gold-dim); }
+    .skill-group:hover { border-color: var(--accent-dim); }
     .skill-group-title {
       font-family: 'Cinzel', serif;
       font-size: 0.72rem;
       letter-spacing: 0.2em;
-      color: var(--gold);
+      color: var(--accent);
       text-transform: uppercase;
       margin-bottom: 0.9rem;
     }
@@ -413,18 +339,14 @@
     .skill-tag {
       font-size: 0.78rem;
       color: var(--text);
-      background: rgba(200,169,110,0.06);
-      border: 1px solid rgba(200,169,110,0.15);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
       padding: 0.25rem 0.65rem;
       border-radius: 4px;
     }
-    .skill-tag .note {
-      font-size: 0.68rem;
-      color: var(--muted);
-      margin-left: 0.25rem;
-    }
+    .skill-tag .note { font-size: 0.68rem; color: var(--muted); margin-left: 0.25rem; }
 
-    /* ── FOOTER ─────────────────────────────────────────────────── */
+    /* ── FOOTER ── */
     footer {
       position: relative;
       z-index: 1;
@@ -432,20 +354,10 @@
       padding: 3rem 2rem 4rem;
       border-top: 1px solid var(--border);
     }
-    .footer-name {
-      font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      color: var(--muted);
-      letter-spacing: 0.3em;
-    }
-    .footer-copy {
-      margin-top: 0.6rem;
-      font-size: 0.72rem;
-      color: var(--border);
-      letter-spacing: 0.1em;
-    }
+    .footer-name { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--muted); letter-spacing: 0.3em; }
+    .footer-copy { margin-top: 0.6rem; font-size: 0.72rem; color: var(--border); letter-spacing: 0.1em; }
 
-    /* ── KEYFRAMES ──────────────────────────────────────────────── */
+    /* ── KEYFRAMES ── */
     @keyframes fade-up {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: none; }
@@ -459,7 +371,6 @@
       50%       { transform: translateY(6px); opacity: 1; }
     }
 
-    /* ── RESPONSIVE ─────────────────────────────────────────────── */
     @media (max-width: 600px) {
       nav { gap: 1.2rem; font-size: 0.62rem; }
       .tl-item { grid-template-columns: 80px 20px 1fr; gap: 0 0.8rem; }
@@ -473,12 +384,8 @@
 </head>
 <body>
 
-<!-- Animated star field -->
-<canvas id="stars-canvas"></canvas>
+<canvas id="bg-canvas"></canvas>
 
-<!-- ── NAV ──────────────────────────────────────────────────────────
-     EDIT: Add or remove nav links to match your sections below.
-     ─────────────────────────────────────────────────────────────── -->
 <nav>
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
@@ -487,26 +394,18 @@
   <a href="#skills">Skills</a>
 </nav>
 
-
-<!-- ════════════════════════════════════════════════════════════════
-     HERO
-     EDIT: name, tagline, and contact details below.
-     ════════════════════════════════════════════════════════════════ -->
 <div id="hero">
   <div class="hero-line"></div>
-
+  <!-- EDIT: Your name -->
   <h1 class="hero-name">Uri <span>Richardson</span></h1>
-
-  <!-- EDIT: One-line subtitle -->
+  <!-- EDIT: One-line tagline -->
   <p class="hero-tagline">Computer Science &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; Tappan, NY</p>
-
-  <!-- EDIT: Contact / location pills. Add, remove, or change these. -->
+  <!-- EDIT: Contact pills — add, remove, or change -->
   <div class="hero-meta">
     <span>Tappan, NY</span>
     <a href="tel:+12392091589">239 209 1589</a>
     <a href="mailto:uri.richardson@gmail.com">uri.richardson@gmail.com</a>
   </div>
-
   <div class="hero-scroll">
     <span>Scroll</span>
     <div class="scroll-dot"></div>
@@ -514,17 +413,13 @@
 </div>
 
 
-<!-- ════════════════════════════════════════════════════════════════
-     ABOUT
-     EDIT: Replace the paragraph text with your about-me blurb.
-     ════════════════════════════════════════════════════════════════ -->
 <section id="about">
   <div class="section-header reveal">
     <span class="section-label">01 &mdash; About</span>
     <div class="section-rule"></div>
   </div>
   <h2 class="section-title reveal reveal-delay-1">Hello, I'm Uri.</h2>
-
+  <!-- EDIT: About me paragraph -->
   <p id="about-content" class="reveal reveal-delay-2">
     Born and raised in Rockland, NY, I currently attend Tappan Zee High School
     with plans to pursue a career in computer science — a field in which I've
@@ -537,13 +432,6 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════════════
-     EXPERIENCE
-     HOW TO ADD A NEW ROLE: Copy one <!-- EXPERIENCE ITEM --> block
-     (from <div class="tl-item reveal"> to its closing </div></div>)
-     and paste it directly below. Edit the fields inside.
-     HOW TO REMOVE A ROLE: Delete the entire block for that role.
-     ════════════════════════════════════════════════════════════════ -->
 <section id="experience">
   <div class="section-header reveal">
     <span class="section-label">02 &mdash; Experience</span>
@@ -617,11 +505,6 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════════════
-     EDUCATION
-     HOW TO ADD A SCHOOL: Copy one <!-- EDU CARD --> block and paste
-     it inside .edu-grid. Edit the fields.
-     ════════════════════════════════════════════════════════════════ -->
 <section id="education">
   <div class="section-header reveal">
     <span class="section-label">03 &mdash; Education</span>
@@ -645,12 +528,6 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════════════
-     CERTIFICATIONS
-     HOW TO ADD A CERT: Copy one <!-- CERT CARD --> block and paste
-     it inside .cert-list. Edit the fields.
-     HOW TO REMOVE A CERT: Delete the entire block for that cert.
-     ════════════════════════════════════════════════════════════════ -->
 <section id="certifications">
   <div class="section-header reveal">
     <span class="section-label">04 &mdash; Certifications</span>
@@ -675,13 +552,6 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════════════
-     SKILLS
-     HOW TO ADD A SKILL GROUP: Copy one <!-- SKILL GROUP --> block.
-     HOW TO ADD A SKILL TAG inside a group: Copy a <span> inside
-     .skill-tags and edit the text.
-     HOW TO REMOVE: Delete the relevant <span> or entire group.
-     ════════════════════════════════════════════════════════════════ -->
 <section id="skills">
   <div class="section-header reveal">
     <span class="section-label">05 &mdash; Skills</span>
@@ -736,67 +606,79 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════════════
-     FOOTER
-     EDIT: Update name or year if needed.
-     ════════════════════════════════════════════════════════════════ -->
 <footer>
+  <!-- EDIT: Name and year -->
   <div class="footer-name">URI RICHARDSON</div>
   <div class="footer-copy">&copy; 2026 &nbsp;·&nbsp; Tappan, NY</div>
 </footer>
 
 
 <script>
-  /* ── STAR FIELD ──────────────────────────────────────────────── */
+  /* ── FLOATING GEOMETRIC LINES ── */
   (function () {
-    const canvas = document.getElementById('stars-canvas');
-    const ctx = canvas.getContext('2d');
-    let W, H, stars;
+    const canvas = document.getElementById('bg-canvas');
+    const ctx    = canvas.getContext('2d');
+    let W, H, shards;
 
     function resize() {
       W = canvas.width  = window.innerWidth;
       H = canvas.height = window.innerHeight;
     }
 
-    function createStars(n) {
-      return Array.from({ length: n }, () => ({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        r: Math.random() * 1.1 + 0.2,
-        a: Math.random(),
-        speed: Math.random() * 0.003 + 0.001,
-        phase: Math.random() * Math.PI * 2,
-      }));
+    function mkShard(init) {
+      return {
+        x:     Math.random() * W,
+        y:     init ? Math.random() * H : H + 40,
+        len:   Math.random() * 65 + 18,
+        angle: (Math.random() - 0.5) * 0.85,
+        vx:    (Math.random() - 0.5) * 0.14,
+        vy:    -(Math.random() * 0.32 + 0.09),
+        alpha: Math.random() * 0.055 + 0.018,
+        spin:  (Math.random() - 0.5) * 0.0007,
+      };
     }
 
-    function draw(t) {
+    function init() {
+      shards = Array.from({ length: 30 }, () => mkShard(true));
+    }
+
+    function draw() {
       ctx.clearRect(0, 0, W, H);
-      for (const s of stars) {
-        const alpha = s.a * (0.5 + 0.5 * Math.sin(t * s.speed * 1000 + s.phase));
+      ctx.lineWidth = 0.6;
+      for (const s of shards) {
+        s.x += s.vx;
+        s.y += s.vy;
+        s.angle += s.spin;
+        if (s.y < -60) Object.assign(s, mkShard(false));
+        const cos = Math.cos(s.angle) * s.len / 2;
+        const sin = Math.sin(s.angle) * s.len / 2;
         ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(200,169,110,${alpha})`;
-        ctx.fill();
+        ctx.moveTo(s.x - cos, s.y - sin);
+        ctx.lineTo(s.x + cos, s.y + sin);
+        ctx.strokeStyle = `rgba(255,255,255,${s.alpha})`;
+        ctx.stroke();
       }
       requestAnimationFrame(draw);
     }
 
     resize();
-    stars = createStars(160);
-    window.addEventListener('resize', () => { resize(); stars = createStars(160); });
+    init();
+    window.addEventListener('resize', () => { resize(); init(); });
     requestAnimationFrame(draw);
   })();
 
-  /* ── SCROLL REVEAL ───────────────────────────────────────────── */
+  /* ── SCROLL REVEAL ── */
   (function () {
     const io = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }),
+      (entries) => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      }),
       { threshold: 0.12 }
     );
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   })();
 
-  /* ── NAV ACTIVE STATE ────────────────────────────────────────── */
+  /* ── NAV ACTIVE STATE ── */
   (function () {
     const sections = document.querySelectorAll('section[id]');
     const links    = document.querySelectorAll('nav a');
@@ -805,7 +687,7 @@
         if (e.isIntersecting) {
           links.forEach(l => l.style.color = '');
           const active = document.querySelector(`nav a[href="#${e.target.id}"]`);
-          if (active) active.style.color = 'var(--gold)';
+          if (active) active.style.color = 'var(--white)';
         }
       }),
       { rootMargin: '-40% 0px -55% 0px' }
