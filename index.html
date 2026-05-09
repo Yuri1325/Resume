@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
 
   <style>
     :root {
@@ -487,6 +488,54 @@
       }
     }
 
+    /* ── PDF MODE (applied by downloadPDF() before capture) ── */
+    body.pdf-mode { background: #fff !important; }
+    body.pdf-mode #bg-canvas,
+    body.pdf-mode nav,
+    body.pdf-mode .hero-line,
+    body.pdf-mode .hero-scroll,
+    body.pdf-mode .hero-actions { display: none !important; }
+    body.pdf-mode #hero { min-height: auto !important; padding: 2rem 2rem 1rem; }
+    body.pdf-mode section { padding: 1.5rem 2rem; }
+    body.pdf-mode .reveal { opacity: 1 !important; transform: none !important; }
+    body.pdf-mode .hero-name,
+    body.pdf-mode .hero-tagline,
+    body.pdf-mode .hero-meta { opacity: 1 !important; animation: none !important; }
+    body.pdf-mode .hero-name { color: #000 !important; }
+    body.pdf-mode .hero-name span { color: #222 !important; }
+    body.pdf-mode .hero-tagline { color: #555 !important; letter-spacing: 0.06em !important; }
+    body.pdf-mode .hero-meta a,
+    body.pdf-mode .hero-meta span { color: #333 !important; border-color: #bbb !important; }
+    body.pdf-mode .section-title { color: #000 !important; }
+    body.pdf-mode .section-label { color: #333 !important; letter-spacing: 0.1em !important; }
+    body.pdf-mode .section-rule { background: linear-gradient(to right, #ccc, transparent) !important; }
+    body.pdf-mode #about-content { color: #222 !important; border-left-color: #aaa !important; }
+    body.pdf-mode .tl-role { color: #000 !important; }
+    body.pdf-mode .tl-org { color: #333 !important; }
+    body.pdf-mode .tl-date { color: #555 !important; }
+    body.pdf-mode .tl-dot { border-color: #777 !important; background: #fff !important; }
+    body.pdf-mode .tl-line { background: #ddd !important; }
+    body.pdf-mode .tl-details li { color: #444 !important; }
+    body.pdf-mode .tl-details li::before { color: #bbb !important; }
+    body.pdf-mode .edu-card,
+    body.pdf-mode .cert-card,
+    body.pdf-mode .skill-group { background: #fafafa !important; border-color: #e0e0e0 !important; }
+    body.pdf-mode .edu-school,
+    body.pdf-mode .cert-name { color: #000 !important; }
+    body.pdf-mode .edu-location,
+    body.pdf-mode .cert-date,
+    body.pdf-mode .cert-id { color: #555 !important; }
+    body.pdf-mode .edu-detail { color: #222 !important; }
+    body.pdf-mode .edu-detail .label { color: #666 !important; }
+    body.pdf-mode .edu-badge { color: #333 !important; border-color: #aaa !important; }
+    body.pdf-mode .cert-issuer { color: #333 !important; }
+    body.pdf-mode .skill-group-title { color: #222 !important; letter-spacing: 0.08em !important; }
+    body.pdf-mode .skill-tag { color: #222 !important; background: #f0f0f0 !important; border-color: #ccc !important; }
+    body.pdf-mode .skill-tag .note { color: #666 !important; }
+    body.pdf-mode footer { border-top-color: #eee !important; }
+    body.pdf-mode .footer-name { color: #888 !important; letter-spacing: 0.15em !important; }
+    body.pdf-mode .footer-copy { color: #bbb !important; }
+
     @media (max-width: 600px) {
       nav { gap: 1.2rem; font-size: 0.62rem; }
       .tl-item { grid-template-columns: 80px 20px 1fr; gap: 0 0.8rem; }
@@ -510,6 +559,7 @@
   <a href="#skills">Skills</a>
 </nav>
 
+<main id="resume-content">
 <div id="hero">
   <div class="hero-line"></div>
   <!-- EDIT: Your name -->
@@ -524,8 +574,8 @@
   </div>
   <!-- EDIT: Set your LinkedIn URL in href below -->
   <div class="hero-actions">
-    <a href="https://linkedin.com/in/YOUR-PROFILE-HERE" target="_blank" rel="noopener">LinkedIn</a>
-    <button onclick="window.print()">Download PDF</button>
+    <a href="www.linkedin.com/in/uri-richardson-255a79382" target="_blank" rel="noopener">LinkedIn</a>
+    <button onclick="downloadPDF()">Download PDF</button>
   </div>
 
   <div class="hero-scroll">
@@ -733,9 +783,37 @@
   <div class="footer-name">URI RICHARDSON</div>
   <div class="footer-copy">&copy; 2026 &nbsp;·&nbsp; Tappan, NY</div>
 </footer>
+</main>
 
 
 <script>
+  /* ── PDF DOWNLOAD ── */
+  function downloadPDF() {
+    const btn = document.querySelector('.hero-actions button');
+    const orig = btn.textContent;
+    btn.textContent = 'Generating…';
+    btn.disabled = true;
+
+    document.body.classList.add('pdf-mode');
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+
+    html2pdf()
+      .set({
+        margin:      [10, 12, 10, 12],
+        filename:    'Uri_Richardson_Resume.pdf',
+        image:       { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+        jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      })
+      .from(document.getElementById('resume-content'))
+      .save()
+      .then(function () {
+        document.body.classList.remove('pdf-mode');
+        btn.textContent = orig;
+        btn.disabled = false;
+      });
+  }
+
   /* ── FLOATING GEOMETRIC LINES ── */
   (function () {
     const canvas = document.getElementById('bg-canvas');
