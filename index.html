@@ -812,8 +812,13 @@
 
   /* ── EMAIL OBFUSCATION ── */
   (function () {
-    const u = 'uri.richardson', d = 'gmail.com';
-    document.querySelector('.email-link').href = 'mailto:' + u + '@' + d;
+    const link = document.querySelector('.email-link');
+    if (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'mailto:' + 'uri.richardson' + '@' + 'gmail.com';
+      });
+    }
   })();
 
   /* ── FLOATING GEOMETRIC LINES ── */
