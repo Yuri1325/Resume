@@ -570,8 +570,7 @@
   <!-- EDIT: Contact pills — add, remove, or change -->
   <div class="hero-meta">
     <span>Tappan, NY</span>
-    <a href="tel:+13292091589">329 209 1589</a>
-    <a href="mailto:uri.richardson@gmail.com">uri.richardson@gmail.com</a>
+    <a class="email-link" href="#">Email</a>
   </div>
   <!-- EDIT: Set your LinkedIn URL in href below -->
   <div class="hero-actions">
@@ -810,6 +809,12 @@
         btn.disabled = false;
       });
   }
+
+  /* ── EMAIL OBFUSCATION ── */
+  (function () {
+    const u = 'uri.richardson', d = 'gmail.com';
+    document.querySelector('.email-link').href = 'mailto:' + u + '@' + d;
+  })();
 
   /* ── FLOATING GEOMETRIC LINES ── */
   (function () {
