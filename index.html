@@ -534,6 +534,12 @@
     body.pdf-mode .skill-tag { color: #222 !important; background: #f0f0f0 !important; border-color: #ccc !important; }
     body.pdf-mode .skill-tag .note { color: #666 !important; }
     body.pdf-mode footer { border-top-color: #eee !important; }
+    body.pdf-mode .section-header { break-after: avoid; }
+    body.pdf-mode .section-title  { break-after: avoid; break-inside: avoid; }
+    body.pdf-mode .cert-card,
+    body.pdf-mode .edu-card,
+    body.pdf-mode .skill-group,
+    body.pdf-mode .tl-item        { break-inside: avoid; }
     body.pdf-mode .footer-name { color: #888 !important; letter-spacing: 0.15em !important; }
     body.pdf-mode .footer-copy { color: #bbb !important; }
 
@@ -800,6 +806,7 @@
         image:       { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
         jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:   { mode: ['css', 'legacy'], avoid: ['.section-header', '.section-title', '.cert-card', '.edu-card', '.skill-group', '.tl-item'] },
       })
       .from(document.getElementById('resume-content'))
       .save()
