@@ -581,7 +581,7 @@
   <!-- EDIT: Contact pills — add, remove, or change -->
   <div class="hero-meta">
     <span>New York</span>
-    <a href="mailto:uri.richardson@gmail.com">Email</a>
+    <a href="#" class="email-link">Email</a>
   </div>
   <!-- EDIT: Set your LinkedIn URL in href below -->
   <div class="hero-actions">
@@ -822,6 +822,18 @@
       });
   }
 
+
+  /* ── EMAIL COPY ── */
+  document.querySelector('.email-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    var addr = 'uri.richardson' + '@' + 'gmail.com';
+    navigator.clipboard.writeText(addr).then(function () {
+      var el = e.currentTarget;
+      var orig = el.textContent;
+      el.textContent = 'Copied!';
+      setTimeout(function () { el.textContent = orig; }, 2000);
+    });
+  });
 
   /* ── FLOATING GEOMETRIC LINES ── */
   (function () {
