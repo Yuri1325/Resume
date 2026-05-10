@@ -853,10 +853,9 @@
     e.preventDefault();
     var addr = 'uri.richardson' + '@' + 'gmail.com';
     navigator.clipboard.writeText(addr).then(function () {
-      var el = e.currentTarget;
-      var orig = el.textContent;
-      el.textContent = 'Copied!';
-      setTimeout(function () { el.textContent = orig; }, 2000);
+      var toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(function () { toast.classList.remove('show'); }, 2200);
     });
   });
 
