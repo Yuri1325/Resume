@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git status *)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$r='c:/Users/uribr/OneDrive/Documents/GitHub/Resume'; git -C $r add -A; if(git -C $r status --porcelain){git -C $r commit -m 'auto: update site'; git -C $r push}",
+            "shell": "powershell",
+            "timeout": 30,
+            "statusMessage": "Pushing to GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
