@@ -573,7 +573,17 @@
     body.pdf-mode .footer-copy { color: #bbb !important; }
 
     @media (max-width: 640px) {
-      nav { gap: 1.2rem; font-size: 0.62rem; }
+      nav {
+        justify-content: flex-start;
+        gap: 1.4rem;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.12em;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      nav::-webkit-scrollbar { display: none; }
       section { padding: 3.5rem 1.5rem; }
       .hero-name { letter-spacing: 0.07em; }
       .skills-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
