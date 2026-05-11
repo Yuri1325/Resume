@@ -572,14 +572,40 @@
     body.pdf-mode .footer-name { color: #888 !important; letter-spacing: 0.15em !important; }
     body.pdf-mode .footer-copy { color: #bbb !important; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       nav { gap: 1.2rem; font-size: 0.62rem; }
-      .tl-item { grid-template-columns: 80px 20px 1fr; gap: 0 0.8rem; }
-      .tl-date { font-size: 0.65rem; }
+      section { padding: 3.5rem 1.5rem; }
+      .hero-name { letter-spacing: 0.07em; }
+      .skills-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
     }
-    @media (max-width: 420px) {
-      .tl-item { grid-template-columns: 0 20px 1fr; }
-      .tl-date { display: none; }
+
+    @media (max-width: 520px) {
+      /* Reflow timeline: date moves above role, body gets full width */
+      .tl-item {
+        grid-template-columns: 22px 1fr;
+        grid-template-areas:
+          "spine date"
+          "spine body";
+        gap: 0 0.9rem;
+      }
+      .tl-spine { grid-area: spine; }
+      .tl-date {
+        grid-area: date;
+        text-align: left;
+        font-size: 0.68rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.15rem;
+      }
+      .tl-body { grid-area: body; }
+
+      /* Tighten hero actions on small screens */
+      .hero-actions { gap: 0.5rem; }
+      .hero-actions a,
+      .hero-actions button { font-size: 0.65rem; padding: 0.4rem 0.85rem; }
+
+      /* Ensure edu/cert cards don't overflow */
+      .edu-grid,
+      .cert-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
