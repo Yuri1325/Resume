@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uri Richardson</title>
+  <title>Uri Richardson | Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080808'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23f5f5f5' letter-spacing='1'%3EUR%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
     body {
       background: var(--bg);
       color: var(--text);
@@ -95,6 +95,14 @@
       opacity: 0;
       animation: fade-down 1.2s 0.2s forwards;
     }
+    .hero-name-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fade-up 1.2s 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
     .hero-name {
       font-family: 'Cinzel', serif;
       font-size: clamp(2rem, 5vw, 4.2rem);
@@ -102,12 +110,23 @@
       letter-spacing: 0.12em;
       color: var(--white);
       line-height: 1.05;
-      opacity: 0;
-      animation: fade-up 1.2s 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
     }
     .hero-name span { color: var(--accent); }
+    .badge-verify {
+      width: clamp(20px, 4vw, 32px);
+      height: clamp(20px, 4vw, 32px);
+      fill: #3b82f6;
+    }
+    .hero-pronouns {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 0.2rem;
+      opacity: 0;
+      animation: fade-up 1s 0.7s forwards;
+    }
     .hero-tagline {
-      margin-top: 1.2rem;
+      margin-top: 1rem;
       font-size: clamp(0.75rem, 2vw, 0.95rem);
       font-weight: 300;
       letter-spacing: 0.35em;
@@ -257,20 +276,36 @@
       letter-spacing: 0.1em;
       margin: 0.2rem 0 0.7rem;
     }
-    .tl-details { display: flex; flex-direction: column; gap: 0.3rem; }
+    .tl-details { display: flex; flex-direction: column; gap: 0.4rem; }
     .tl-details li {
       font-size: 0.88rem;
       font-weight: 300;
-      color: var(--muted);
-      padding-left: 1rem;
+      color: var(--text);
+      padding-left: 1.2rem;
       position: relative;
     }
     .tl-details li::before { content: '—'; position: absolute; left: 0; color: var(--accent-dim); }
 
-    /* ── EDUCATION ── */
+    /* ── PROJECTS ── */
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .project-card:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
+    .project-title { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.2rem; }
+    .project-date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 1rem; }
+    .project-desc { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--text); }
+    .project-desc p { margin-bottom: 0.8rem; }
+    .project-desc p:last-child { margin-bottom: 0; }
+
+    /* ── EDUCATION / GRID CARDS ── */
     .edu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.2rem;
     }
     .edu-card {
@@ -284,19 +319,19 @@
     .edu-school { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.3rem; }
     .edu-location { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 1rem; }
     .edu-detail { font-size: 0.83rem; color: var(--text); display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.3rem; }
-    .edu-detail .label { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.1em; }
+    .edu-detail .label { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.1em; width: 80px; }
+    .edu-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
     .edu-badge {
       display: inline-block;
-      margin-top: 0.7rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
       color: var(--accent);
       border: 1px solid var(--accent-dim);
       padding: 0.15rem 0.6rem;
       border-radius: 999px;
     }
 
-    /* ── CERTIFICATIONS ── */
+    /* ── CERTIFICATIONS / AWARDS ── */
     .cert-list { display: flex; flex-direction: column; gap: 1rem; }
     .cert-card {
       background: var(--surface);
@@ -314,6 +349,7 @@
     .cert-issuer { font-size: 0.8rem; color: var(--accent); }
     .cert-id { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
     .cert-date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.1em; white-space: nowrap; padding-top: 0.2rem; }
+    .cert-desc { font-size: 0.85rem; font-weight: 300; color: var(--text); margin-top: 0.6rem; line-height: 1.6; }
 
     /* ── SKILLS ── */
     .skills-grid {
@@ -367,10 +403,7 @@
       transition: opacity 0.25s, transform 0.25s;
       z-index: 1000;
     }
-    #toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     /* ── FOOTER ── */
     footer {
@@ -434,191 +467,61 @@
     /* ── PRINT / PDF ── */
     @media print {
       * { animation: none !important; transition: none !important; }
-
-      #bg-canvas,
-      nav,
-      .hero-line,
-      .hero-scroll,
-      .hero-actions,
-      .section-label,
-      .section-rule,
-      footer { display: none !important; }
-
+      #bg-canvas, nav, .hero-line, .hero-scroll, .hero-actions, .section-label, .section-rule, footer, .badge-verify { display: none !important; }
       body { background: #fff !important; color: #111 !important; font-size: 10.5pt; }
-
-      #hero {
-        min-height: auto !important;
-        padding: 1.5rem 1.5rem 1rem;
-        text-align: left;
-      }
-      .hero-name {
-        font-size: 26pt !important;
-        color: #000 !important;
-        opacity: 1 !important;
-      }
+      #hero { min-height: auto !important; padding: 1.5rem 1.5rem 1rem; text-align: left; }
+      .hero-name-wrapper { justify-content: flex-start; }
+      .hero-name { font-size: 26pt !important; color: #000 !important; opacity: 1 !important; }
       .hero-name span { color: #333 !important; }
-      .hero-tagline {
-        font-size: 8.5pt !important;
-        color: #555 !important;
-        opacity: 1 !important;
-        margin-top: 0.5rem;
-      }
-      .hero-meta {
-        opacity: 1 !important;
-        margin-top: 0.7rem;
-        gap: 0.5rem;
-      }
-      .hero-meta a, .hero-meta span {
-        color: #333 !important;
-        border-color: #bbb !important;
-        font-size: 7.5pt !important;
-      }
-
+      .hero-tagline { font-size: 8.5pt !important; color: #555 !important; opacity: 1 !important; margin-top: 0.5rem; }
+      .hero-meta { opacity: 1 !important; margin-top: 0.7rem; gap: 0.5rem; }
+      .hero-meta a, .hero-meta span { color: #333 !important; border-color: #bbb !important; font-size: 7.5pt !important; }
       section { padding: 1rem 1.5rem; max-width: 100%; }
-
       .section-header { margin-bottom: 0.8rem; }
       .section-title { color: #000 !important; font-size: 13pt !important; margin-bottom: 0.5rem; border-bottom: 1px solid #ccc; padding-bottom: 0.3rem; }
-
       .reveal { opacity: 1 !important; transform: none !important; }
-
       .tl-date { color: #666 !important; }
       .tl-dot { border-color: #888 !important; background: #fff !important; }
       .tl-line { background: #ddd !important; }
       .tl-role { color: #000 !important; }
       .tl-org { color: #333 !important; }
       .tl-details li { color: #444 !important; }
-      .tl-details li::before { color: #aaa !important; }
-
-      .edu-card, .cert-card, .skill-group {
-        background: #fff !important;
-        border-color: #ddd !important;
-      }
-      .edu-school, .cert-name { color: #000 !important; }
-      .edu-location, .cert-date, .cert-id { color: #555 !important; }
-      .edu-detail { color: #222 !important; }
-      .edu-detail .label { color: #777 !important; }
-      .edu-badge { color: #333 !important; border-color: #aaa !important; }
-      .cert-issuer { color: #333 !important; }
-
-      .skill-group-title { color: #222 !important; }
+      .project-card, .edu-card, .cert-card, .skill-group { background: #fff !important; border-color: #ddd !important; break-inside: avoid; }
+      .project-title, .edu-school, .cert-name { color: #000 !important; }
       .skill-tag { color: #222 !important; background: #f5f5f5 !important; border-color: #ccc !important; }
-      .skill-tag .note { color: #666 !important; }
-
-      #about-content { color: #222 !important; border-left-color: #aaa !important; }
-
-      .edu-card:hover, .cert-card:hover, .skill-group:hover, .tl-item:hover .tl-dot {
-        transform: none !important;
-        border-color: #ddd !important;
-        background: inherit !important;
-      }
     }
 
-    /* ── PDF MODE (applied by downloadPDF() before capture) ── */
+    /* PDF Mode Rules */
     body.pdf-mode { background: #fff !important; }
-    body.pdf-mode #bg-canvas,
-    body.pdf-mode nav,
-    body.pdf-mode .hero-line,
-    body.pdf-mode .hero-scroll,
-    body.pdf-mode .hero-actions { display: none !important; }
-    body.pdf-mode #hero { min-height: auto !important; padding: 2rem 2rem 1rem; }
+    body.pdf-mode #bg-canvas, body.pdf-mode nav, body.pdf-mode .hero-line, body.pdf-mode .hero-scroll, body.pdf-mode .hero-actions, body.pdf-mode .badge-verify { display: none !important; }
+    body.pdf-mode #hero { min-height: auto !important; padding: 2rem 2rem 1rem; text-align: left; }
+    body.pdf-mode .hero-name-wrapper { justify-content: flex-start; }
     body.pdf-mode section { padding: 1.5rem 2rem; }
     body.pdf-mode .reveal { opacity: 1 !important; transform: none !important; }
-    body.pdf-mode .hero-name,
-    body.pdf-mode .hero-tagline,
-    body.pdf-mode .hero-meta { opacity: 1 !important; animation: none !important; }
-    body.pdf-mode .hero-name { color: #000 !important; }
+    body.pdf-mode .hero-name, body.pdf-mode .hero-tagline, body.pdf-mode .hero-meta { opacity: 1 !important; animation: none !important; color: #000 !important; }
     body.pdf-mode .hero-name span { color: #222 !important; }
-    body.pdf-mode .hero-tagline { color: #555 !important; letter-spacing: 0.06em !important; }
-    body.pdf-mode .hero-meta a,
-    body.pdf-mode .hero-meta span { color: #333 !important; border-color: #bbb !important; }
-    body.pdf-mode .section-title { color: #000 !important; }
-    body.pdf-mode .section-label { color: #333 !important; letter-spacing: 0.1em !important; }
-    body.pdf-mode .section-rule { background: linear-gradient(to right, #ccc, transparent) !important; }
-    body.pdf-mode #about-content { color: #222 !important; border-left-color: #aaa !important; }
-    body.pdf-mode .tl-role { color: #000 !important; }
-    body.pdf-mode .tl-org { color: #333 !important; }
-    body.pdf-mode .tl-date { color: #555 !important; }
-    body.pdf-mode .tl-dot { border-color: #777 !important; background: #fff !important; }
-    body.pdf-mode .tl-line { background: #ddd !important; }
-    body.pdf-mode .tl-details li { color: #444 !important; }
-    body.pdf-mode .tl-details li::before { color: #bbb !important; }
-    body.pdf-mode .edu-card,
-    body.pdf-mode .cert-card,
-    body.pdf-mode .skill-group { background: #fafafa !important; border-color: #e0e0e0 !important; }
-    body.pdf-mode .edu-school,
-    body.pdf-mode .cert-name { color: #000 !important; }
-    body.pdf-mode .edu-location,
-    body.pdf-mode .cert-date,
-    body.pdf-mode .cert-id { color: #555 !important; }
-    body.pdf-mode .edu-detail { color: #222 !important; }
-    body.pdf-mode .edu-detail .label { color: #666 !important; }
-    body.pdf-mode .edu-badge { color: #333 !important; border-color: #aaa !important; }
-    body.pdf-mode .cert-issuer { color: #333 !important; }
-    body.pdf-mode .skill-group-title { color: #222 !important; letter-spacing: 0.08em !important; }
+    body.pdf-mode .hero-meta a, body.pdf-mode .hero-meta span { color: #333 !important; border-color: #bbb !important; }
+    body.pdf-mode .project-card, body.pdf-mode .edu-card, body.pdf-mode .cert-card, body.pdf-mode .skill-group { background: #fafafa !important; border-color: #e0e0e0 !important; break-inside: avoid; page-break-inside: avoid; }
+    body.pdf-mode .project-title, body.pdf-mode .edu-school, body.pdf-mode .cert-name { color: #000 !important; }
     body.pdf-mode .skill-tag { color: #222 !important; background: #f0f0f0 !important; border-color: #ccc !important; }
-    body.pdf-mode .skill-tag .note { color: #666 !important; }
-    body.pdf-mode footer { border-top-color: #eee !important; }
-    body.pdf-mode section,
-    body.pdf-mode .section-header,
-    body.pdf-mode .section-title,
-    body.pdf-mode .cert-card,
-    body.pdf-mode .edu-card,
-    body.pdf-mode .skill-group,
-    body.pdf-mode .tl-item,
-    body.pdf-mode .tl-body,
-    body.pdf-mode .edu-grid,
-    body.pdf-mode .cert-list,
-    body.pdf-mode .skills-grid    { break-inside: avoid; page-break-inside: avoid; }
-    body.pdf-mode .footer-name { color: #888 !important; letter-spacing: 0.15em !important; }
-    body.pdf-mode .footer-copy { color: #bbb !important; }
 
     @media (max-width: 640px) {
-      nav {
-        justify-content: flex-start;
-        gap: 1.4rem;
-        padding: 0.9rem 1.5rem;
-        font-size: 0.6rem;
-        letter-spacing: 0.12em;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-      }
+      nav { justify-content: flex-start; gap: 1.4rem; padding: 0.9rem 1.5rem; font-size: 0.6rem; letter-spacing: 0.12em; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
       nav::-webkit-scrollbar { display: none; }
+      nav a { padding: 0.2rem 0.4rem; display: inline-block; }
       section { padding: 3.5rem 1.5rem; }
       .hero-name { letter-spacing: 0.07em; }
       .skills-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
       .section-header { gap: 0.8rem; }
-      .section-label { letter-spacing: 0.15em; font-size: 0.6rem; }
-      .section-title { font-size: clamp(1.1rem, 5.5vw, 1.6rem); letter-spacing: 0.03em; }
+      .section-title { font-size: clamp(1.1rem, 5.5vw, 1.6rem); }
     }
 
     @media (max-width: 520px) {
-      /* Reflow timeline: date moves above role, body gets full width */
-      .tl-item {
-        grid-template-columns: 22px 1fr;
-        grid-template-areas:
-          "spine date"
-          "spine body";
-        gap: 0 0.9rem;
-      }
+      .tl-item { grid-template-columns: 22px 1fr; grid-template-areas: "spine date" "spine body"; gap: 0 0.9rem; }
       .tl-spine { grid-area: spine; }
-      .tl-date {
-        grid-area: date;
-        text-align: left;
-        font-size: 0.68rem;
-        padding-top: 0.25rem;
-        padding-bottom: 0.15rem;
-      }
+      .tl-date { grid-area: date; text-align: left; font-size: 0.68rem; padding-top: 0.25rem; padding-bottom: 0.15rem; }
       .tl-body { grid-area: body; }
-
-      /* Tighten hero actions on small screens */
-      .hero-actions { gap: 0.5rem; }
-      .hero-actions a,
-      .hero-actions button { font-size: 0.65rem; padding: 0.4rem 0.85rem; }
-
-      /* Ensure edu/cert cards don't overflow */
-      .edu-grid,
-      .cert-list { grid-template-columns: 1fr; }
+      .edu-grid, .cert-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -630,27 +533,32 @@
 <nav>
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
   <a href="#education">Education</a>
-  <a href="#certifications">Certifications</a>
+  <a href="#credentials">Credentials</a>
   <a href="#skills">Skills</a>
 </nav>
 
 <main id="resume-content">
 <div id="hero">
   <div class="hero-line"></div>
-  <!-- EDIT: Your name -->
-  <h1 class="hero-name">Uri <span>Richardson</span></h1>
-  <!-- EDIT: One-line tagline -->
-  <p class="hero-tagline">Computer Science &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; New York</p>
-  <!-- EDIT: Contact pills — add, remove, or change -->
-  <div class="hero-meta">
-    <span>New York</span>
-    <a href="#" class="email-link">Email</a>
+  <div class="hero-name-wrapper">
+    <h1 class="hero-name">Uri <span>Richardson</span></h1>
+    <svg class="badge-verify" viewBox="0 0 24 24" aria-label="Verified Profile">
+      <path d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.7l-3.61.81.34 3.68L1 12l2.44 2.79-.34 3.69 3.61.82 1.89 3.2L12 21.04l3.4 1.46 1.89-3.2 3.61-.82-.34-3.69L23 12zm-13 5l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+    </svg>
   </div>
-  <!-- EDIT: Set your LinkedIn URL in href below -->
+  <p class="hero-pronouns">He / Him</p>
+  <p class="hero-tagline">Computer Science &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; New York</p>
+  
+  <div class="hero-meta">
+    <span>Tappan, NY</span>
+    <a href="#" class="email-link">Email Contact</a>
+  </div>
+  
   <div class="hero-actions">
     <a href="https://www.linkedin.com/in/uri-richardson-255a79382" target="_blank" rel="noopener">LinkedIn</a>
-    <button onclick="downloadPDF()">Download PDF</button>
+    <button type="button" onclick="downloadPDF()">Download PDF</button>
   </div>
 
   <div class="hero-scroll">
@@ -666,9 +574,8 @@
     <div class="section-rule"></div>
   </div>
   <h2 class="section-title reveal reveal-delay-1">Hello, I'm Uri.</h2>
-  <!-- EDIT: About me paragraph -->
   <p id="about-content" class="reveal reveal-delay-2">
-    Hello, I’m Uri. I'm a student at Tappan Zee High School and intend to pursue a career in computer science, a field in which I already have considerable experience. 
+    I'm a student at Tappan Zee High School and intend to pursue a career in computer science, a field in which I already have considerable experience. 
     When it comes to work, I’m highly self-motivated — not because of external pressures, but because I genuinely love what I do. 
     I learn fast, enjoy mastering new topics, and always push myself to improve. I look forward to working with you.
   </p>
@@ -683,105 +590,138 @@
   <h2 class="section-title reveal reveal-delay-1">Where I've Worked &amp; Led</h2>
 
   <div class="timeline">
-
-    <!-- EXPERIENCE ITEM -->
     <div class="tl-item reveal reveal-delay-2">
       <div class="tl-date">Sep 2025<br>Present</div>
       <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
       <div class="tl-body">
         <div class="tl-role">President</div>
-        <div class="tl-org">Computer Science Honor Society</div>
+        <div class="tl-org">Computer Science Honor Society &mdash; TZHS</div>
         <ul class="tl-details">
-          <li>Promote the mission of the honor society within the school and community.</li>
-          <li>Plan, oversee, and participate in events hosted by the honor society.</li>
+          <li>Lead the honor society by promoting its mission of advancing computer science education, academic excellence, and community engagement.</li>
+          <li>Organize meetings, plan and oversee events, and support outreach efforts that strengthen student interest in computing.</li>
         </ul>
       </div>
     </div>
-    <!-- END EXPERIENCE ITEM -->
 
-    <!-- EXPERIENCE ITEM -->
     <div class="tl-item reveal reveal-delay-3">
       <div class="tl-date">Aug 2025<br>Present</div>
       <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
       <div class="tl-body">
-        <div class="tl-role">Project Manager</div>
-        <div class="tl-org">SO BOTZ &mdash; FRC Team #6911</div>
+        <div class="tl-role">Project Manager &amp; Programmer</div>
+        <div class="tl-org">SO BOTZ &mdash; FIRST Robotics Competition Team #6911</div>
         <ul class="tl-details">
-          <li>Organize tasks for 60+ members, overseeing the full build and design process.</li>
-          <li>Program the robot and manage software-side objectives.</li>
+          <li>Coordinate tasks, timelines, and deliverables for a 60+ member robotics build and design process.</li>
+          <li>Support software architectures alongside project management tool tracking via Notion, MS Teams, and Google Classroom.</li>
+          <li>Oversee developmental syncs across subteams while ensuring workflows follow FIRST alignment principles.</li>
         </ul>
       </div>
     </div>
-    <!-- END EXPERIENCE ITEM -->
 
-    <!-- EXPERIENCE ITEM -->
     <div class="tl-item reveal reveal-delay-4">
       <div class="tl-date">Oct 2023<br>May 2024</div>
       <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
       <div class="tl-body">
-        <div class="tl-role">Volunteer</div>
+        <div class="tl-role">Volunteer IT Support</div>
         <div class="tl-org">St. John Henry Newman &mdash; Tappan, NY</div>
         <ul class="tl-details">
-          <li>Provided IT support and assisted teachers with technical needs.</li>
-          <li>Organized community events — amassing 100+ volunteer hours.</li>
+          <li>Provided technical hardware configuration, infrastructure systems maintenance, and automation sheet updates.</li>
+          <li>Amassed over 100+ structural contribution hours assisting daily workspace tasks and operations.</li>
         </ul>
       </div>
     </div>
-    <!-- END EXPERIENCE ITEM -->
 
-    <!-- EXPERIENCE ITEM -->
     <div class="tl-item reveal">
       <div class="tl-date">Apr 2022</div>
       <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
       <div class="tl-body">
-        <div class="tl-role">Volunteer</div>
-        <div class="tl-org">Keep Rockland Beautiful Inc.</div>
+        <div class="tl-role">Volunteer Team Member</div>
+        <div class="tl-org">Keep Rockland Beautiful Inc &mdash; Spring Valley, NY</div>
         <ul class="tl-details">
-          <li>Collaborated with staff to maintain operations.</li>
-          <li>Provided support to fellow volunteers throughout the event.</li>
+          <li>Collaborated with operations personnel during community impact and resource allocation schedules.</li>
         </ul>
       </div>
     </div>
-    <!-- END EXPERIENCE ITEM -->
+  </div>
+</section>
 
+
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-label">03 &mdash; Engineering Projects</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title reveal reveal-delay-1">Product Design &amp; Prototyping</h2>
+
+  <div class="project-card reveal reveal-delay-2">
+    <div class="project-title">Project REACH &mdash; Assistive Hardware Solution</div>
+    <div class="project-date">Oct 2025 &ndash; May 2026</div>
+    <div class="project-desc">
+      <p>Developed an electrically powered assistive grabber in a four-person Project Invent team to alleviate senior fall risks, partnering closely with Mosaic Senior Living.</p>
+      <p>Engineered a fully joystick-controlled active design optimizing for users with limited grip strength. The system leverages an automated telescoping lead-screw component that extends flawlessly from 12 inches to over 30 inches, coupled with a servo-actuated claw utilizing flexible TPU gripping fingers.</p>
+      <p><strong>Role:</strong> Spearheaded the complete mechanical layout planning, Onshape CAD 3D modeling cycles, and continuous prototyping steps for the telescoping architecture components.</p>
+    </div>
   </div>
 </section>
 
 
 <section id="education">
   <div class="section-header reveal">
-    <span class="section-label">03 &mdash; Education</span>
+    <span class="section-label">04 &mdash; Education</span>
     <div class="section-rule"></div>
   </div>
   <h2 class="section-title reveal reveal-delay-1">Academic Background</h2>
 
   <div class="edu-grid">
-
-    <!-- EDU CARD -->
     <div class="edu-card reveal reveal-delay-2">
       <div class="edu-school">Tappan Zee High School</div>
       <div class="edu-location">Blauvelt, NY</div>
-      <div class="edu-detail"><span class="label">Graduation</span> 2027</div>
-      <div class="edu-detail"><span class="label">GPA</span> 4.0</div>
-      <span class="edu-badge">Perfect Attendance</span>
+      <div class="edu-detail"><span class="label">Timeline</span> 2023 &ndash; 2027</div>
+      <div class="edu-detail"><span class="label">Grade / GPA</span> 94.294</div>
+      <div class="edu-badges">
+        <span class="edu-badge">Perfect Attendance</span>
+        <span class="edu-badge">AP Computer Science Principles (Score: 5)</span>
+      </div>
     </div>
-    <!-- END EDU CARD -->
-
   </div>
 </section>
 
 
-<section id="certifications">
+<section id="credentials">
   <div class="section-header reveal">
-    <span class="section-label">04 &mdash; Certifications</span>
+    <span class="section-label">05 &mdash; Credentials &amp; Awards</span>
     <div class="section-rule"></div>
   </div>
-  <h2 class="section-title reveal reveal-delay-1">Credentials</h2>
+  <h2 class="section-title reveal reveal-delay-1">Licenses, Certificates &amp; Honors</h2>
 
   <div class="cert-list">
-
-    <!-- CERT CARD -->
     <div class="cert-card reveal reveal-delay-2">
+      <div>
+        <div class="cert-name">RIT Engineering and Technology Award</div>
+        <div class="cert-issuer">Rochester Institute of Technology</div>
+        <div class="cert-desc">Awarded to high school juniors demonstrating exceptional academic achievement and innovative technical problem-solving track records in STEM coursework.</div>
+      </div>
+      <div class="cert-date">Issued May 2026</div>
+    </div>
+
+    <div class="cert-card reveal reveal-delay-3">
+      <div>
+        <div class="cert-name">FIRST Leadership Award Semi-Finalist</div>
+        <div class="cert-issuer">FIRST Robotics (FRC Team #6911)</div>
+        <div class="cert-desc">One of two students nominated team-wide for this international individual honor highlighting tech contributions, peer leadership, and STEM outreach.</div>
+      </div>
+      <div class="cert-date">Issued Feb 2026</div>
+    </div>
+
+    <div class="cert-card reveal">
+      <div>
+        <div class="cert-name">Google AI Professional Certificate</div>
+        <div class="cert-issuer">Google</div>
+        <div class="cert-id">Credential ID: VI461IV2IEXS</div>
+      </div>
+      <div class="cert-date">Issued Jun 2026</div>
+    </div>
+
+    <div class="cert-card reveal">
       <div>
         <div class="cert-name">Python for Data Science, AI &amp; Development</div>
         <div class="cert-issuer">IBM</div>
@@ -789,68 +729,60 @@
       </div>
       <div class="cert-date">Issued Oct 2025</div>
     </div>
-    <!-- END CERT CARD -->
-
   </div>
 </section>
 
 
 <section id="skills">
   <div class="section-header reveal">
-    <span class="section-label">05 &mdash; Skills</span>
+    <span class="section-label">06 &mdash; Skills</span>
     <div class="section-rule"></div>
   </div>
   <h2 class="section-title reveal reveal-delay-1">What I Bring</h2>
 
   <div class="skills-grid">
-
-    <!-- SKILL GROUP -->
     <div class="skill-group reveal reveal-delay-2">
       <div class="skill-group-title">Programming</div>
       <div class="skill-tags">
         <span class="skill-tag">Java<span class="note">2 yrs</span></span>
         <span class="skill-tag">Python<span class="note">1 yr</span></span>
-        <span class="skill-tag">GitHub<span class="note">2 yrs</span></span>
+        <span class="skill-tag">Object-Oriented</span>
+        <span class="skill-tag">GitHub</span>
       </div>
     </div>
-    <!-- END SKILL GROUP -->
 
-    <!-- SKILL GROUP -->
     <div class="skill-group reveal reveal-delay-3">
+      <div class="skill-group-title">Engineering &amp; Design</div>
+      <div class="skill-tags">
+        <span class="skill-tag">CAD Modeling</span>
+        <span class="skill-tag">Onshape</span>
+        <span class="skill-tag">3D Printing</span>
+        <span class="skill-tag">Prototyping</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal reveal-delay-2">
       <div class="skill-group-title">Project Management</div>
       <div class="skill-tags">
-        <span class="skill-tag">Leadership</span>
-        <span class="skill-tag">Organization</span>
+        <span class="skill-tag">Team Leadership</span>
+        <span class="skill-tag">Notion / Teams</span>
+        <span class="skill-tag">Task Tracking</span>
       </div>
     </div>
-    <!-- END SKILL GROUP -->
 
-    <!-- SKILL GROUP -->
-    <div class="skill-group reveal reveal-delay-2">
-      <div class="skill-group-title">Technical Support</div>
-      <div class="skill-tags">
-        <span class="skill-tag">IT Assistance</span>
-        <span class="skill-tag">Adaptability</span>
-      </div>
-    </div>
-    <!-- END SKILL GROUP -->
-
-    <!-- SKILL GROUP -->
     <div class="skill-group reveal reveal-delay-3">
-      <div class="skill-group-title">Work Ethic</div>
+      <div class="skill-group-title">Core Competencies</div>
       <div class="skill-tags">
-        <span class="skill-tag">Tenacious</span>
-        <span class="skill-tag">Teamwork</span>
+        <span class="skill-tag">IT Support</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Collaboration</span>
       </div>
     </div>
-    <!-- END SKILL GROUP -->
-
   </div>
 </section>
 
 
 <footer>
-  <!-- EDIT: Name and year -->
   <div class="footer-name">URI RICHARDSON</div>
   <div class="footer-copy">&copy; 2026 &nbsp;·&nbsp; New York</div>
 </footer>
