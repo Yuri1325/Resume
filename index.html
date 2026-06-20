@@ -426,8 +426,7 @@
       opacity: 0;
       animation: fade-up 1s 1.5s forwards;
     }
-    .hero-actions a,
-    .hero-actions button {
+    .hero-actions a {
       font-family: 'Raleway', sans-serif;
       font-size: 0.72rem;
       letter-spacing: 0.18em;
@@ -436,46 +435,11 @@
       padding: 0.45rem 1.1rem;
       border-radius: 999px;
       transition: color 0.3s, background 0.3s, border-color 0.3s;
-    }
-    .hero-actions a {
       color: var(--accent);
       border: 1px solid var(--accent-dim);
       background: transparent;
     }
     .hero-actions a:hover { background: rgba(255,255,255,0.06); border-color: var(--accent); text-decoration: none; }
-    .hero-actions button {
-      color: var(--bg);
-      background: var(--white);
-      border: 1px solid var(--white);
-    }
-    .hero-actions button:hover { background: var(--accent); border-color: var(--accent); }
-
-    /* ── PRINT / SYSTEM PDF DESIGN ── */
-    @media print {
-      * { animation: none !important; transition: none !important; }
-      #bg-canvas, nav, .hero-line, .hero-scroll, .hero-actions, .section-label, .section-rule, footer { display: none !important; }
-      body { background: #fff !important; color: #111 !important; font-size: 10.5pt; }
-      #hero { min-height: auto !important; padding: 1.5rem 1.5rem 1rem; text-align: left; }
-      .hero-name-wrapper { justify-content: flex-start; }
-      .hero-name { font-size: 26pt !important; color: #000 !important; opacity: 1 !important; }
-      .hero-name span { color: #333 !important; }
-      .hero-tagline { font-size: 8.5pt !important; color: #555 !important; opacity: 1 !important; margin-top: 0.5rem; }
-      .hero-meta { opacity: 1 !important; margin-top: 0.7rem; gap: 0.5rem; }
-      .hero-meta a, .hero-meta span { color: #333 !important; border-color: #bbb !important; font-size: 7.5pt !important; }
-      section { padding: 1rem 1.5rem; max-width: 100%; }
-      .section-header { margin-bottom: 0.8rem; }
-      .section-title { color: #000 !important; font-size: 13pt !important; margin-bottom: 0.5rem; border-bottom: 1px solid #ccc; padding-bottom: 0.3rem; }
-      .reveal { opacity: 1 !important; transform: none !important; }
-      .tl-date { color: #666 !important; }
-      .tl-dot { border-color: #888 !important; background: #fff !important; }
-      .tl-line { background: #ddd !important; }
-      .tl-role { color: #000 !important; }
-      .tl-org { color: #333 !important; }
-      .tl-details li { color: #444 !important; }
-      .project-card, .edu-card, .cert-card, .skill-group { background: #fff !important; border-color: #ddd !important; break-inside: avoid; }
-      .project-title, .edu-school, .cert-name { color: #000 !important; }
-      .skill-tag { color: #222 !important; background: #f5f5f5 !important; border-color: #ccc !important; }
-    }
 
     @media (max-width: 640px) {
       nav { justify-content: flex-start; gap: 1.4rem; padding: 0.9rem 1.5rem; font-size: 0.6rem; letter-spacing: 0.12em; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -508,6 +472,7 @@
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
   <a href="#credentials">Credentials</a>
+  <a href="#awards">Awards</a>
   <a href="#skills">Skills</a>
 </nav>
 
@@ -520,13 +485,11 @@
   <p class="hero-tagline">Computer Science &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; New York</p>
   
   <div class="hero-meta">
-    <span>Tappan, NY</span>
     <a href="#" class="email-link">Email Contact</a>
   </div>
   
   <div class="hero-actions">
     <a href="https://www.linkedin.com/in/uri-richardson-255a79382" target="_blank" rel="noopener">LinkedIn</a>
-    <button type="button" onclick="downloadPDF()">Download PDF</button>
   </div>
 
   <div class="hero-scroll">
@@ -656,10 +619,39 @@
 
 <section id="credentials">
   <div class="section-header reveal">
-    <span class="section-label">05 &mdash; Credentials &amp; Awards</span>
+    <span class="section-label">05 &mdash; Credentials</span>
     <div class="section-rule"></div>
   </div>
-  <h2 class="section-title reveal reveal-delay-1">Licenses, Certificates &amp; Honors</h2>
+  <h2 class="section-title reveal reveal-delay-1">Licenses &amp; Certifications</h2>
+
+  <div class="cert-list">
+    <div class="cert-card reveal reveal-delay-2">
+      <div>
+        <div class="cert-name">Google AI Professional Certificate</div>
+        <div class="cert-issuer">Google</div>
+        <div class="cert-id">Credential ID: VI461IV2IEXS</div>
+      </div>
+      <div class="cert-date">Issued Jun 2026</div>
+    </div>
+
+    <div class="cert-card reveal reveal-delay-3">
+      <div>
+        <div class="cert-name">Python for Data Science, AI &amp; Development</div>
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-id">Credential ID: X23BG1WPY01R</div>
+      </div>
+      <div class="cert-date">Issued Oct 2025</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="awards">
+  <div class="section-header reveal">
+    <span class="section-label">06 &mdash; Awards</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title reveal reveal-delay-1">Honors &amp; Recognition</h2>
 
   <div class="cert-list">
     <div class="cert-card reveal reveal-delay-2">
@@ -679,31 +671,13 @@
       </div>
       <div class="cert-date">Issued Feb 2026</div>
     </div>
-
-    <div class="cert-card reveal">
-      <div>
-        <div class="cert-name">Google AI Professional Certificate</div>
-        <div class="cert-issuer">Google</div>
-        <div class="cert-id">Credential ID: VI461IV2IEXS</div>
-      </div>
-      <div class="cert-date">Issued Jun 2026</div>
-    </div>
-
-    <div class="cert-card reveal">
-      <div>
-        <div class="cert-name">Python for Data Science, AI &amp; Development</div>
-        <div class="cert-issuer">IBM</div>
-        <div class="cert-id">Credential ID: X23BG1WPY01R</div>
-      </div>
-      <div class="cert-date">Issued Oct 2025</div>
-    </div>
   </div>
 </section>
 
 
 <section id="skills">
   <div class="section-header reveal">
-    <span class="section-label">06 &mdash; Skills</span>
+    <span class="section-label">07 &mdash; Skills</span>
     <div class="section-rule"></div>
   </div>
   <h2 class="section-title reveal reveal-delay-1">What I Bring</h2>
@@ -758,15 +732,6 @@
 
 
 <script>
-  /* ── RELIABLE SYSTEM PRINT DOWNLOAD ── */
-  function downloadPDF() {
-    // Force reveal animations to display instantly for a complete capture
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-    
-    // Open native browser print/save layout instantly without crashing dependencies
-    window.print();
-  }
-
   /* ── EMAIL COPY ── */
   document.querySelector('.email-link').addEventListener('click', function (e) {
     e.preventDefault();
