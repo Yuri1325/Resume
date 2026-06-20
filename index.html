@@ -121,7 +121,7 @@
       opacity: 0;
       animation: fade-up 1s 0.9s forwards;
     }
-    .hero-meta {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
@@ -130,16 +130,20 @@
       opacity: 0;
       animation: fade-up 1s 1.2s forwards;
     }
-    .hero-meta a, .hero-meta span {
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.9rem;
+    .hero-actions a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0.45rem 1.2rem;
       border-radius: 999px;
-      transition: color 0.3s, border-color 0.3s;
+      transition: color 0.3s, background 0.3s, border-color 0.3s;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      background: transparent;
     }
-    .hero-meta a:hover { color: var(--white); border-color: var(--accent-dim); text-decoration: none; }
+    .hero-actions a:hover { color: var(--white); background: rgba(255,255,255,0.04); border-color: var(--accent-dim); text-decoration: none; }
     .hero-scroll {
       position: absolute;
       bottom: 2rem;
@@ -416,31 +420,6 @@
       50%       { transform: translateY(6px); opacity: 1; }
     }
 
-    /* ── HERO ACTIONS ── */
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      justify-content: center;
-      margin-top: 1rem;
-      opacity: 0;
-      animation: fade-up 1s 1.5s forwards;
-    }
-    .hero-actions a {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      cursor: pointer;
-      padding: 0.45rem 1.1rem;
-      border-radius: 999px;
-      transition: color 0.3s, background 0.3s, border-color 0.3s;
-      color: var(--accent);
-      border: 1px solid var(--accent-dim);
-      background: transparent;
-    }
-    .hero-actions a:hover { background: rgba(255,255,255,0.06); border-color: var(--accent); text-decoration: none; }
-
     @media (max-width: 640px) {
       nav { justify-content: flex-start; gap: 1.4rem; padding: 0.9rem 1.5rem; font-size: 0.6rem; letter-spacing: 0.12em; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
       nav::-webkit-scrollbar { display: none; }
@@ -484,11 +463,8 @@
   </div>
   <p class="hero-tagline">Computer Science &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; New York</p>
   
-  <div class="hero-meta">
-    <a href="#" class="email-link">Email Contact</a>
-  </div>
-  
   <div class="hero-actions">
+    <a href="#" class="email-link">Email Contact</a>
     <a href="https://www.linkedin.com/in/uri-richardson-255a79382" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 
