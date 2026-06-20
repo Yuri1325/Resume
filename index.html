@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
 
   <style>
     :root {
@@ -112,21 +111,8 @@
       line-height: 1.05;
     }
     .hero-name span { color: var(--accent); }
-    .badge-verify {
-      width: clamp(20px, 4vw, 32px);
-      height: clamp(20px, 4vw, 32px);
-      fill: #3b82f6;
-    }
-    .hero-pronouns {
-      font-size: 0.8rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      margin-top: 0.2rem;
-      opacity: 0;
-      animation: fade-up 1s 0.7s forwards;
-    }
     .hero-tagline {
-      margin-top: 1rem;
+      margin-top: 1.2rem;
       font-size: clamp(0.75rem, 2vw, 0.95rem);
       font-weight: 300;
       letter-spacing: 0.35em;
@@ -464,10 +450,10 @@
     }
     .hero-actions button:hover { background: var(--accent); border-color: var(--accent); }
 
-    /* ── PRINT / PDF ── */
+    /* ── PRINT / SYSTEM PDF DESIGN ── */
     @media print {
       * { animation: none !important; transition: none !important; }
-      #bg-canvas, nav, .hero-line, .hero-scroll, .hero-actions, .section-label, .section-rule, footer, .badge-verify { display: none !important; }
+      #bg-canvas, nav, .hero-line, .hero-scroll, .hero-actions, .section-label, .section-rule, footer { display: none !important; }
       body { background: #fff !important; color: #111 !important; font-size: 10.5pt; }
       #hero { min-height: auto !important; padding: 1.5rem 1.5rem 1rem; text-align: left; }
       .hero-name-wrapper { justify-content: flex-start; }
@@ -490,20 +476,6 @@
       .project-title, .edu-school, .cert-name { color: #000 !important; }
       .skill-tag { color: #222 !important; background: #f5f5f5 !important; border-color: #ccc !important; }
     }
-
-    /* PDF Mode Rules */
-    body.pdf-mode { background: #fff !important; }
-    body.pdf-mode #bg-canvas, body.pdf-mode nav, body.pdf-mode .hero-line, body.pdf-mode .hero-scroll, body.pdf-mode .hero-actions, body.pdf-mode .badge-verify { display: none !important; }
-    body.pdf-mode #hero { min-height: auto !important; padding: 2rem 2rem 1rem; text-align: left; }
-    body.pdf-mode .hero-name-wrapper { justify-content: flex-start; }
-    body.pdf-mode section { padding: 1.5rem 2rem; }
-    body.pdf-mode .reveal { opacity: 1 !important; transform: none !important; }
-    body.pdf-mode .hero-name, body.pdf-mode .hero-tagline, body.pdf-mode .hero-meta { opacity: 1 !important; animation: none !important; color: #000 !important; }
-    body.pdf-mode .hero-name span { color: #222 !important; }
-    body.pdf-mode .hero-meta a, body.pdf-mode .hero-meta span { color: #333 !important; border-color: #bbb !important; }
-    body.pdf-mode .project-card, body.pdf-mode .edu-card, body.pdf-mode .cert-card, body.pdf-mode .skill-group { background: #fafafa !important; border-color: #e0e0e0 !important; break-inside: avoid; page-break-inside: avoid; }
-    body.pdf-mode .project-title, body.pdf-mode .edu-school, body.pdf-mode .cert-name { color: #000 !important; }
-    body.pdf-mode .skill-tag { color: #222 !important; background: #f0f0f0 !important; border-color: #ccc !important; }
 
     @media (max-width: 640px) {
       nav { justify-content: flex-start; gap: 1.4rem; padding: 0.9rem 1.5rem; font-size: 0.6rem; letter-spacing: 0.12em; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -544,11 +516,7 @@
   <div class="hero-line"></div>
   <div class="hero-name-wrapper">
     <h1 class="hero-name">Uri <span>Richardson</span></h1>
-    <svg class="badge-verify" viewBox="0 0 24 24" aria-label="Verified Profile">
-      <path d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.7l-3.61.81.34 3.68L1 12l2.44 2.79-.34 3.69 3.61.82 1.89 3.2L12 21.04l3.4 1.46 1.89-3.2 3.61-.82-.34-3.69L23 12zm-13 5l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-    </svg>
   </div>
-  <p class="hero-pronouns">He / Him</p>
   <p class="hero-tagline">Computer Science &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; New York</p>
   
   <div class="hero-meta">
@@ -790,34 +758,14 @@
 
 
 <script>
-  /* ── PDF DOWNLOAD ── */
+  /* ── RELIABLE SYSTEM PRINT DOWNLOAD ── */
   function downloadPDF() {
-    const btn = document.querySelector('.hero-actions button');
-    const orig = btn.textContent;
-    btn.textContent = 'Generating…';
-    btn.disabled = true;
-
-    document.body.classList.add('pdf-mode');
+    // Force reveal animations to display instantly for a complete capture
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-
-    html2pdf()
-      .set({
-        margin:      [10, 12, 10, 12],
-        filename:    'Uri_Richardson_Resume.pdf',
-        image:       { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
-        jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak:   { mode: ['avoid-all', 'css', 'legacy'] },
-      })
-      .from(document.getElementById('resume-content'))
-      .save()
-      .then(function () {
-        document.body.classList.remove('pdf-mode');
-        btn.textContent = orig;
-        btn.disabled = false;
-      });
+    
+    // Open native browser print/save layout instantly without crashing dependencies
+    window.print();
   }
-
 
   /* ── EMAIL COPY ── */
   document.querySelector('.email-link').addEventListener('click', function (e) {
