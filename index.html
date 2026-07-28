@@ -795,6 +795,10 @@
     const canvas = document.getElementById('bg-canvas');
     const ctx    = canvas.getContext('2d');
     let W, H, shards;
+    let shardRGB = getComputedStyle(document.documentElement).getPropertyValue('--shard').trim();
+    window.addEventListener('themechange', function () {
+      shardRGB = getComputedStyle(document.documentElement).getPropertyValue('--shard').trim();
+    });
 
     function resize() {
       W = canvas.width  = window.innerWidth;
