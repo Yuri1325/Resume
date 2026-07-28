@@ -10,8 +10,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
 
+  <script>
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+  </script>
+
   <style>
     :root {
+      --bg:         #f6f5f2;
+      --surface:    #ffffff;
+      --border:     #e3e1dc;
+      --accent:     #2f2f2f;
+      --accent-dim: #c4c1ba;
+      --text:       #4c4c4c;
+      --muted:      #8b8880;
+      --white:      #131313;
+      --nav-fade:   rgba(246,245,242,0.95);
+      --tag-bg:     rgba(0,0,0,0.03);
+      --tag-border: rgba(0,0,0,0.12);
+      --hover-bg:   rgba(0,0,0,0.05);
+      --shard:      30,30,30;
+      --radius:     6px;
+      --max:        900px;
+    }
+    html.dark {
       --bg:         #080808;
       --surface:    #101010;
       --border:     #202020;
@@ -20,8 +41,11 @@
       --text:       #a8a8a8;
       --muted:      #525252;
       --white:      #f5f5f5;
-      --radius:     6px;
-      --max:        900px;
+      --nav-fade:   rgba(8,8,8,0.95);
+      --tag-bg:     rgba(255,255,255,0.04);
+      --tag-border: rgba(255,255,255,0.1);
+      --hover-bg:   rgba(255,255,255,0.04);
+      --shard:      255,255,255;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
