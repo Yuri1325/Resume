@@ -168,7 +168,14 @@
       border: 1px solid var(--border);
       background: transparent;
     }
-    .hero-actions a:hover { color: var(--white); background: rgba(255,255,255,0.04); border-color: var(--accent-dim); text-decoration: none; }
+    .hero-actions a:hover { color: var(--white); background: var(--hover-bg); border-color: var(--accent-dim); text-decoration: none; }
+    .hero-actions a.btn-primary {
+      background: var(--white);
+      color: var(--bg);
+      border-color: var(--white);
+      font-weight: 600;
+    }
+    .hero-actions a.btn-primary:hover { color: var(--bg); background: var(--accent); border-color: var(--accent); }
     .hero-scroll {
       position: absolute;
       bottom: 2rem;
