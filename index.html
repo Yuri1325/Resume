@@ -831,7 +831,7 @@
         ctx.beginPath();
         ctx.moveTo(s.x - cos, s.y - sin);
         ctx.lineTo(s.x + cos, s.y + sin);
-        ctx.strokeStyle = `rgba(255,255,255,${s.alpha})`;
+        ctx.strokeStyle = `rgba(${shardRGB},${s.alpha})`;
         ctx.stroke();
       }
       requestAnimationFrame(draw);
