@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Uri Richardson Resume</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.55in 0.4in 0.55in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9.5pt;
+    line-height: 1.26;
+    color: #111;
+    -webkit-print-color-adjust: exact;
+  }
+  .sans { font-family: Arial, Helvetica, sans-serif; }
+
+  header { text-align: center; margin-bottom: 6pt; }
+  header h1 {
+    margin: 0 0 3pt;
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+  }
+  header .contact { font-family: Arial, Helvetica, sans-serif; font-size: 8.6pt; color: #333; }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8.6pt;
+    font-weight: 700;
+    letter-spacing: 2.2pt;
+    text-transform: uppercase;
+    color: #222;
+    margin: 8pt 0 3pt;
+    padding-bottom: 3pt;
+    border-bottom: 1px solid #555;
+  }
+  header + h2 { margin-top: 6pt; }
+
+  p { margin: 0; }
+  .summary { text-align: left; }
+
+  .entry { margin-bottom: 5pt; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .entry-title { font-size: 10.6pt; }
+  .entry-title b { font-weight: 700; }
+  .entry-title i { font-style: italic; }
+  .entry-date { font-family: Arial, Helvetica, sans-serif; font-size: 8.4pt; color: #333; white-space: nowrap; }
+  ul { margin: 1pt 0 0; padding-left: 14pt; }
+  li { margin: 0 0 0.5pt; padding-left: 2pt; }
+  li::marker { color: #444; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28pt; }
+  .two-col h2 { margin-top: 8pt; }
+  .cert { margin-bottom: 4pt; }
+  .cert b { font-size: 10.6pt; }
+  .cert .meta { font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; color: #333; margin-top: 1pt; }
+
+  .skills p { margin-bottom: 2pt; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Uri Richardson</h1>
+  <div class="contact">Tappan, New York &nbsp;·&nbsp; uri.richardson@gmail.com &nbsp;·&nbsp; (329) 209-1589</div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">Hello, I’m Uri. I’m a student at Tappan Zee High School and intend to pursue a career in computer science, a field in which I already have considerable experience. When it comes to work, I’m highly self-motivated — not because of external pressures, but because I genuinely love what I do. I learn fast, enjoy mastering new topics, and always push myself to improve. I look forward to working with you.</p>
+
+<h2>Experience</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <div class="entry-title"><b>Information Technology Intern</b> — <i>Lower Hudson Regional Information Center</i></div>
+    <div class="entry-date">Jul 2026 – Sep 2026</div>
+  </div>
+  <ul>
+    <li>Managed inventory for 750+ IT devices across four locations, including computers, peripherals, cameras, interactive displays, and smart pens.</li>
+    <li>Configured, deployed, and connected 20+ types of IT devices, verifying power, Ethernet, data connectivity, and operational readiness.</li>
+    <li>Troubleshot network infrastructure issues across Ethernet cabling, ports, patch panels, switches, and VLAN configuration; coordinated with network teams to resolve complex connectivity problems.</li>
+    <li>Diagnosed, repaired, and upgraded computer hardware; installed and routed network, data, and AV cabling through ceilings, walls, and racks; supported installation of AV systems and interactive smart-board displays.</li>
+    <li>Performed preventative maintenance on network and server rack environments and streamlined large-scale, repetitive deployment workflows, significantly reducing task completion times while meeting project deadlines.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <div class="entry-title"><b>President</b> — <i>Computer Science Honor Society, Tappan Zee High School</i></div>
+    <div class="entry-date">Sep 2025 – Present</div>
+  </div>
+  <ul>
+    <li>Lead the society's mission of advancing computer science education, academic excellence, and community engagement.</li>
+    <li>Organize meetings and initiatives, encourage student involvement in technology, and support outreach that strengthens interest in computer science across the school and broader community.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <div class="entry-title"><b>Project Manager</b> — <i>SO BOTZ, FIRST Robotics Competition Team #6911</i></div>
+    <div class="entry-date">Aug 2025 – Jul 2026</div>
+  </div>
+  <ul>
+    <li>Coordinated tasks, timelines, and deliverables for a 60+ member FIRST Robotics Competition team.</li>
+    <li>Supported robot design, build, and programming; managed communication and project tracking through Notion, Microsoft Teams, and Google Classroom; oversaw progress across subteams.</li>
+    <li>Contributed to presentations and promoted FIRST core values of teamwork, innovation, and gracious professionalism.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <div class="entry-title"><b>REACH — Assistive Electric Grabber</b> — <i>Project Invent × Mosaic Senior Living</i></div>
+    <div class="entry-date">Oct 2025 – May 2026</div>
+  </div>
+  <ul>
+    <li>Built a joystick-controlled, electrically powered assistive grabber on a four-person team so seniors with limited grip strength can retrieve objects without bending, stretching, or reaching.</li>
+    <li>Device extends 12″ to 30″+ via a custom telescoping lead screw system, with a servo-actuated claw and flexible TPU fingers; primarily 3D printed.</li>
+    <li>Owned mechanical design, CAD modeling (Onshape), prototyping, and 3D printing of the telescoping mechanism.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <div class="entry-title"><b>Tappan Zee High School</b> — <i>Blauvelt, NY</i></div>
+    <div class="entry-date">2023 – 2027</div>
+  </div>
+  <ul>
+    <li>GPA: 94.3 / 100 &nbsp;·&nbsp; AP Computer Science Principles — Score: 5 (May 2025)</li>
+  </ul>
+</div>
+
+<div class="two-col">
+  <div>
+    <h2>Certifications</h2>
+    <div class="cert">
+      <b>Google AI Professional Certificate</b>
+      <div class="meta">Google · Jun 2026 · ID: VI461IV2IEXS</div>
+    </div>
+    <div class="cert">
+      <b>Python for Data Science, AI &amp; Development</b>
+      <div class="meta">IBM · Oct 2025 · ID: X23BG1WPY01R</div>
+    </div>
+  </div>
+  <div>
+    <h2>Honors &amp; Awards</h2>
+    <div class="cert">
+      <b>RIT Engineering &amp; Technology Award</b>
+      <div class="meta">Rochester Institute of Technology · May 2026 · Faculty-nominated</div>
+    </div>
+    <div class="cert">
+      <b>FIRST Leadership Award Semi-Finalist</b>
+      <div class="meta">FIRST Robotics · Feb 2026 · 1 of 2 team nominees</div>
+    </div>
+  </div>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><b>IT &amp; Infrastructure:</b> IT Asset Management, Network Troubleshooting, VLANs &amp; Switches, Structured Cabling, Hardware Repair, AV Systems</p>
+  <p><b>Programming:</b> Java, Python, GitHub, Object-Oriented Design</p>
+  <p><b>Design &amp; Fabrication:</b> CAD, Onshape, 3D Printing, Rapid Prototyping</p>
+  <p><b>Project Management:</b> Leadership, Organization, Notion, Microsoft Teams, Google Classroom</p>
+</div>
+
+</body>
+</html>
