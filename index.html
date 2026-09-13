@@ -345,6 +345,13 @@
     .project-desc { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--text); }
     .project-desc p { margin-bottom: 0.8rem; }
     .project-desc p:last-child { margin-bottom: 0; }
+    .project-links { margin-top: 1.2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .project-links a {
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); border-bottom: 1px solid var(--accent-dim);
+      padding-bottom: 2px; transition: border-color 0.3s;
+    }
+    .project-links a:hover { border-color: var(--accent); }
 
     /* ── EDUCATION / GRID CARDS ── */
     .edu-grid {
