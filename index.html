@@ -467,6 +467,10 @@
     .footer-name { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--muted); letter-spacing: 0.3em; }
     .footer-version { margin-top: 0.4rem; font-size: 0.55rem; color: var(--muted); opacity: 0.6; letter-spacing: 0.15em; }
     .footer-copy { margin-top: 0.6rem; font-size: 0.72rem; color: var(--accent-dim); letter-spacing: 0.1em; }
+    .footer-credit { position: absolute; right: 1.25rem; bottom: 1rem; font-size: 0.72rem; letter-spacing: 0.04em; color: var(--text); }
+    .footer-credit a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-dim); }
+    .footer-credit a:hover { border-bottom-color: var(--accent); }
+    @media (max-width: 640px) { .footer-credit { position: static; margin-top: 1.4rem; } }
 
     /* ── KEYFRAMES ── */
     @keyframes fade-up {
