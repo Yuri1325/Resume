@@ -337,6 +337,11 @@
     .outro p { margin: 1rem auto 2rem; max-width: 30rem; }
     .outro .hero-jump { margin-top: 0; }
     footer { text-align: center; padding: 3rem 1rem 3rem; font-size: .8rem; color: var(--muted); border-top: 1px solid var(--border); }
+    footer { position: relative; }
+    .footer-credit { position: absolute; right: 1.25rem; bottom: 1rem; font-size: .76rem; letter-spacing: .04em; color: var(--text); }
+    .footer-credit a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-dim); }
+    .footer-credit a:hover { border-bottom-color: var(--accent); }
+    @media (max-width: 640px) { .footer-credit { position: static; margin-top: 1.2rem; } }
     footer .footer-name { font-family: 'Cinzel', serif; letter-spacing: .3em; color: var(--white); margin-bottom: .4rem; }
     .toast { position: fixed; bottom: 2rem; left: 50%; transform: translate(-50%, 1rem); opacity: 0; background: var(--white); color: var(--bg); padding: .6rem 1.2rem; border-radius: 999px; font-size: .85rem; transition: opacity .3s, transform .3s; pointer-events: none; z-index: 500; }
     .toast.show { opacity: 1; transform: translate(-50%, 0); }
@@ -639,6 +644,7 @@ setRotation(<span class="c-num">180</span>-((<span class="c-kw">int</span>)(angl
 <footer>
   <div class="footer-name">URI RICHARDSON</div>
   <div>&copy; 2026 New York</div>
+  <div class="footer-credit">Made by <a href="https://tappanzeeweb.com" target="_blank" rel="noopener">Tappan Zee Web</a></div>
 </footer>
 
 <dialog class="lightbox" aria-label="Enlarged screenshot">
