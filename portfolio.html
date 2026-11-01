@@ -115,7 +115,7 @@
       --accent-dim: #c4c1ba; --text: #4c4c4c; --muted: #6f6c66; --white: #131313;
       --nav-fade: rgba(246,245,242,0.92); --tag-bg: rgba(0,0,0,0.03); --tag-border: rgba(0,0,0,0.14);
       --ai: #2648c9; --ai-soft: rgba(38,72,201,0.08);
-      --bar: #0c0c0c; --frame-shadow: 0 30px 80px -40px rgba(40,36,30,0.45);
+      --frame: rgba(19,19,19,0.55); --bar: #0c0c0c; --frame-shadow: 0 30px 80px -40px rgba(40,36,30,0.45);
       --radius: 6px; --max: 1180px;
     }
     html.dark {
@@ -124,7 +124,7 @@
       --accent-dim: #383838; --text: #a8a8a8; --muted: #808080; --white: #f5f5f5;
       --nav-fade: rgba(8,8,8,0.92); --tag-bg: rgba(255,255,255,0.04); --tag-border: rgba(255,255,255,0.14);
       --ai: #8ea6ff; --ai-soft: rgba(142,166,255,0.1);
-      --bar: #000; --frame-shadow: 0 30px 80px -40px rgba(0,0,0,0.9);
+      --frame: rgba(245,245,245,0.4); --bar: #000; --frame-shadow: 0 30px 80px -40px rgba(0,0,0,0.9);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -247,9 +247,18 @@
     /* SCENE (one project) */
     .scene { max-width: var(--max); margin: 0 auto; padding: 4rem 1.5rem 7rem; }
     .aperture {
+      --p: 1; --ty: calc(9% * (1 - var(--p))); --tx: calc(11% * (1 - var(--p)));
       position: relative; border-radius: var(--radius); overflow: hidden; background: #0d0d0d;
       box-shadow: var(--frame-shadow); aspect-ratio: 16 / 9;
+      clip-path: inset(var(--ty) var(--tx) round var(--radius));
     }
+    /* thin frame that tracks the clip edge as the aperture opens */
+    .aperture::after {
+      content: ''; position: absolute; z-index: 2; pointer-events: none;
+      top: var(--ty); bottom: var(--ty); left: var(--tx); right: var(--tx);
+      border: 1.5px solid var(--frame); border-radius: var(--radius);
+    }
+    .aperture .play-toggle { z-index: 3; }
     .aperture--tall { aspect-ratio: 3 / 2; }
     .aperture--tall > img { object-position: top; }
     .aperture--contain { background: #111; }
@@ -840,7 +849,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* aperture: frame opens as it enters */
   gsap.utils.toArray('.aperture').forEach(function (ap) {
     var media = ap.querySelector(':scope > img, :scope > video, :scope > .flow');
-    gsap.fromTo(ap, { clipPath: 'inset(9% 11% 9% 11% round 6px)' }, { clipPath: 'inset(0% 0% 0% 0% round 6px)', ease: 'none', scrollTrigger: { trigger: ap, start: 'top 92%', end: 'top 28%', scrub: 0.5 } });
+    gsap.fromTo(ap, { '--p': 0 }, { '--p': 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top 92%', end: 'top 28%', scrub: 0.5 } });
     if (media) gsap.fromTo(media, { scale: 1.14 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top bottom', end: 'bottom 30%', scrub: 0.5 } });
   });
 
