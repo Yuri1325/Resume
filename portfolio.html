@@ -46,13 +46,6 @@
   },
   {
    "@type": "CreativeWork",
-   "name": "EPOCh",
-   "description": "A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and te",
-   "url": "https://epoch-c6bef.web.app/",
-   "keywords": "Hand-built"
-  },
-  {
-   "@type": "CreativeWork",
    "name": "Invasion",
    "description": "A top-down survival game written in Java with Greenfoot for my final project. Slimes crawl in from every edge of the map and chase you down. Every slime your defenses destroy earns $1, and you spend i",
    "keywords": "Hand-built"
@@ -87,8 +80,15 @@
   },
   {
    "@type": "CreativeWork",
+   "name": "EPOCh",
+   "description": "A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and te",
+   "url": "https://epoch-c6bef.web.app/",
+   "keywords": "AI-assisted"
+  },
+  {
+   "@type": "CreativeWork",
    "name": "PRIORITY V",
-   "description": "A planner that builds the day for you. Enter tasks with a total time, a priority from I to V and a due date, plus fixed blocks like school, practice and dinner. The scheduler places work sessions betw",
+   "description": "",
    "url": "https://priority-v.web.app/",
    "keywords": "AI-assisted"
   },
@@ -219,6 +219,7 @@
       white-space: nowrap;
     }
     .chip .ph { font-size: 15px; }
+    .chip--wip { border-style: dashed; color: var(--text); }
     .chip--ai { color: var(--ai); border-color: color-mix(in srgb, var(--ai) 50%, transparent); background: var(--ai-soft); }
 
     /* LEGEND */
@@ -426,8 +427,8 @@
     <p>Some of this work I wrote line by line. Some I designed and directed with AI coding tools doing part of the typing. Both are real, shipped work, so they are shown separately and marked clearly.</p>
   </div>
   <div class="legend-keys">
-    <a class="key" href="#hand"><span class="count">6</span><span><strong>Built by hand</strong>Written without AI assistance. Marked with <span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span></span></a>
-    <a class="key key--ai" href="#ai"><span class="count">4</span><span><strong>Built with AI</strong>Planned and shipped by me with AI coding assistance. Marked with <span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span></span></a>
+    <a class="key" href="#hand"><span class="count">5</span><span><strong>Built by hand</strong>Written without AI assistance. Marked with <span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span></span></a>
+    <a class="key key--ai" href="#ai"><span class="count">5</span><span><strong>Built with AI</strong>Planned and shipped by me with AI coding assistance. Marked with <span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span></span></a>
   </div>
 </section>
 
@@ -435,7 +436,7 @@
   <div class="reel-inner">
     <div class="reel-rule" aria-hidden="true"></div>
     <h2 class="reel-title" id="reel-hand">Built by hand</h2>
-    <p class="reel-lede">An assistive device, games, a classifier and a study site, made without AI assistance.</p>
+    <p class="reel-lede">An assistive device, games and a classifier, made without AI assistance.</p>
   </div>
 </section>
 
@@ -460,24 +461,6 @@
    </div>
   
   <ul class="gallery"><li><button type="button" data-full="portfolio/reach-site.webp"><figure><img src="portfolio/reach-site-t.webp" alt="The Reach website: the CAD assembly telescopes apart as you scroll" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The Reach website: the CAD assembly telescopes apart as you scroll</figcaption></figure></button></li><li><button type="button" data-full="portfolio/reach-full.webp"><figure><img src="portfolio/reach-full-t.webp" alt="The full Reach assembly in Onshape: handle, three telescoping stages and the claw" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The full Reach assembly in Onshape: handle, three telescoping stages and the claw</figcaption></figure></button></li><li><button type="button" data-full="portfolio/reach-claw.webp"><figure><img src="portfolio/reach-claw-t.webp" alt="The claw: a four-bar linkage closes Fin Ray fingers in a straight line" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The claw: a four-bar linkage closes Fin Ray fingers in a straight line</figcaption></figure></button></li><li><button type="button" data-full="portfolio/reach-connector.webp"><figure><img src="portfolio/reach-connector-t.webp" alt="Connector V2: slimmer, lighter, riding on twin lead screws" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Connector V2: slimmer, lighter, riding on twin lead screws</figcaption></figure></button></li><li><button type="button" data-full="portfolio/reach-timeline.webp"><figure><img src="portfolio/reach-timeline-t.webp" alt="Six months, three versions, every build week on the timeline" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Six months, three versions, every build week on the timeline</figcaption></figure></button></li><li><button type="button" data-full="portfolio/reach-inside.webp"><figure><img src="portfolio/reach-inside-t.webp" alt="What is inside the tube: claw, twin lead screws and electronics" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>What is inside the tube: claw, twin lead screws and electronics</figcaption></figure></button></li></ul>
-</article>
-
-<article class="scene" id="epoch" data-reel="hand" aria-labelledby="epoch-t">
-  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/epoch-tour-poster.webp" aria-label="Scrolling through EPOCh&#x27;s Period 1 overview, the study modes and AP World History"><source src="portfolio/epoch-tour.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
-  <div class="scene-head">
-    <div class="rise">
-      <h3 class="scene-title" id="epoch-t">EPOCh</h3>
-      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span>AP U.S. and AP World History study site, 2026</span></div>
-    </div>
-    <div class="scene-links rise"><a class="btn" href="https://epoch-c6bef.web.app/" target="_blank" rel="noopener">Open EPOCh</a></div>
-  </div>
-  <div class="scene-body">
-    <div class="rise"><p>A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and term lists.</p><p>Every highlighted term opens a hover card with its definition, date, period and the terms it connects to, so reading the overview doubles as building a concept map.</p><ul class="stack" aria-label="Tools used"><li>React 18</li><li>Vite</li><li>Tailwind CSS</li><li>anime.js</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>OpenAI API</li><li>Web Speech API</li></ul></div>
-    <div class="rise"><div class="aside-block"><h4>What&#x27;s inside</h4><ul class="facts"><li>Ten study modes, including flashcards, Timeline Sort, document sourcing (HAPP), Degrees of Separation and the Feynman technique</li><li>An “Ask anything” tutor with a course-specific prompt and streamed answers</li><li>Written answers graded by AI, with keyword grading as a fallback</li><li>Live multiplayer rooms (MCQ Blitz, Define the Term) with real-time leaderboards</li><li>A community board where students post and upvote feature ideas</li></ul></div></div>
-  </div>
-  
-  
-  <ul class="gallery"><li><button type="button" data-full="portfolio/epoch-hover.webp"><figure><img src="portfolio/epoch-hover-t.webp" alt="Hovering a highlighted term opens its definition, period and connected terms" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Hovering a highlighted term opens its definition, period and connected terms</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-modes.webp"><figure><img src="portfolio/epoch-modes-t.webp" alt="The Study tab&#x27;s game modes" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The Study tab&#x27;s game modes</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-world.webp"><figure><img src="portfolio/epoch-world-t.webp" alt="One toggle switches the whole site to AP World History" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>One toggle switches the whole site to AP World History</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-themes.webp"><figure><img src="portfolio/epoch-themes-t.webp" alt="Key themes, key people and term chips for each period" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Key themes, key people and term chips for each period</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-sort.webp"><figure><img src="portfolio/epoch-sort-t.webp" alt="Timeline Sort: put AP terms in chronological order" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Timeline Sort: put AP terms in chronological order</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-overview.webp"><figure><img src="portfolio/epoch-overview-t.webp" alt="U.S. History overview: nine period tabs and the Period 1 narrative" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>U.S. History overview: nine period tabs and the Period 1 narrative</figcaption></figure></button></li></ul>
 </article>
 
 <article class="scene" id="invasion" data-reel="hand" aria-labelledby="invasion-t">
@@ -600,17 +583,35 @@ setRotation(<span class="c-num">180</span>-((<span class="c-kw">int</span>)(angl
   <ul class="gallery gallery--phones"><li><button type="button" data-full="portfolio/sobotz-ann.webp"><figure><img src="portfolio/sobotz-ann-t.webp" alt="Announcements: post to members, leads or parents, with email notifications" loading="lazy" decoding="async" width="390" height="844"><figcaption>Announcements: post to members, leads or parents, with email notifications</figcaption></figure></button></li><li><button type="button" data-full="portfolio/sobotz-events.webp"><figure><img src="portfolio/sobotz-events-t.webp" alt="Team calendar with meetings, days off and events to RSVP to" loading="lazy" decoding="async" width="390" height="844"><figcaption>Team calendar with meetings, days off and events to RSVP to</figcaption></figure></button></li><li><button type="button" data-full="portfolio/sobotz-cres.webp"><figure><img src="portfolio/sobotz-cres-t.webp" alt="Crescendo: sign up to staff the school café by shift" loading="lazy" decoding="async" width="390" height="844"><figcaption>Crescendo: sign up to staff the school café by shift</figcaption></figure></button></li><li><button type="button" data-full="portfolio/sobotz-leaders.webp"><figure><img src="portfolio/sobotz-leaders-t.webp" alt="Hours leaderboard (names blurred here for privacy)" loading="lazy" decoding="async" width="390" height="844"><figcaption>Hours leaderboard (names blurred here for privacy)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/sobotz-qr.webp"><figure><img src="portfolio/sobotz-qr-t.webp" alt="My QR: the personal code the door scanner reads (blurred here)" loading="lazy" decoding="async" width="390" height="844"><figcaption>My QR: the personal code the door scanner reads (blurred here)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/sobotz-admin.webp"><figure><img src="portfolio/sobotz-admin-t.webp" alt="Admin tools: approvals, live attendance, hour edits, notifications" loading="lazy" decoding="async" width="390" height="844"><figcaption>Admin tools: approvals, live attendance, hour edits, notifications</figcaption></figure></button></li></ul>
 </article>
 
+<article class="scene" id="epoch" data-reel="ai" aria-labelledby="epoch-t">
+  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/epoch-tour-poster.webp" aria-label="Scrolling through EPOCh&#x27;s Period 1 overview, the study modes and AP World History"><source src="portfolio/epoch-tour.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="epoch-t">EPOCh</h3>
+      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span>AP U.S. and AP World History study site, 2026</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn btn--ai" href="https://epoch-c6bef.web.app/" target="_blank" rel="noopener">Open EPOCh</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and term lists.</p><p>Every highlighted term opens a hover card with its definition, date, period and the terms it connects to, so reading the overview doubles as building a concept map.</p><ul class="stack" aria-label="Tools used"><li>React 18</li><li>Vite</li><li>Tailwind CSS</li><li>anime.js</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>OpenAI API</li><li>Web Speech API</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>What&#x27;s inside</h4><ul class="facts"><li>Ten study modes, including flashcards, Timeline Sort, document sourcing (HAPP), Degrees of Separation and the Feynman technique</li><li>An “Ask anything” tutor with a course-specific prompt and streamed answers</li><li>Written answers graded by AI, with keyword grading as a fallback</li><li>Live multiplayer rooms (MCQ Blitz, Define the Term) with real-time leaderboards</li><li>A community board where students post and upvote feature ideas</li></ul></div></div>
+  </div>
+  
+  
+  <ul class="gallery"><li><button type="button" data-full="portfolio/epoch-hover.webp"><figure><img src="portfolio/epoch-hover-t.webp" alt="Hovering a highlighted term opens its definition, period and connected terms" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Hovering a highlighted term opens its definition, period and connected terms</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-modes.webp"><figure><img src="portfolio/epoch-modes-t.webp" alt="The Study tab&#x27;s game modes" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The Study tab&#x27;s game modes</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-world.webp"><figure><img src="portfolio/epoch-world-t.webp" alt="One toggle switches the whole site to AP World History" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>One toggle switches the whole site to AP World History</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-themes.webp"><figure><img src="portfolio/epoch-themes-t.webp" alt="Key themes, key people and term chips for each period" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Key themes, key people and term chips for each period</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-sort.webp"><figure><img src="portfolio/epoch-sort-t.webp" alt="Timeline Sort: put AP terms in chronological order" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Timeline Sort: put AP terms in chronological order</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-overview.webp"><figure><img src="portfolio/epoch-overview-t.webp" alt="U.S. History overview: nine period tabs and the Period 1 narrative" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>U.S. History overview: nine period tabs and the Period 1 narrative</figcaption></figure></button></li></ul>
+</article>
+
 <article class="scene" id="priority" data-reel="ai" aria-labelledby="priority-t">
   <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/priority-tour-poster.webp" aria-label="PRIORITY V building a day schedule, then switching to week and month views (sample data)"><source src="portfolio/priority-tour.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
   <div class="scene-head">
     <div class="rise">
       <h3 class="scene-title" id="priority-t">PRIORITY V</h3>
-      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span>Auto-scheduling day planner, 2026 (in progress)</span></div>
+      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span class="chip chip--wip"><i class="ph ph-hammer" aria-hidden="true"></i>Work in progress</span><span>Auto-scheduling day planner, started April 2026</span></div>
     </div>
-    <div class="scene-links rise"><a class="btn btn--ai" href="https://priority-v.web.app/" target="_blank" rel="noopener">Open PRIORITY V</a></div>
+    <div class="scene-links rise"><a class="btn btn--ai" href="https://priority-v.web.app/" target="_blank" rel="noopener">Try the work in progress</a></div>
   </div>
   <div class="scene-body">
-    <div class="rise"><p>A planner that builds the day for you. Enter tasks with a total time, a priority from I to V and a due date, plus fixed blocks like school, practice and dinner. The scheduler places work sessions between them.</p><p>It orders work by priority and deadline, adds breaks after long stretches, protects a daily free-time target and puts deep-focus tasks in your peak hours. It also looks ahead and warns when a deadline is at risk.</p><ul class="stack" aria-label="Tools used"><li>JavaScript (no framework)</li><li>SVG</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>Web Speech API</li><li>Service Worker</li></ul></div>
+    <div class="rise"><p><strong>Still in development.</strong> PRIORITY V works today, but it isn't finished: features are still being built and may change.</p><p>A planner that builds the day for you. Enter tasks with a total time, a priority from I to V and a due date, plus fixed blocks like school, practice and dinner. The scheduler places work sessions between them.</p><p>It orders work by priority and deadline, adds breaks after long stretches, protects a daily free-time target and puts deep-focus tasks in your peak hours. It also looks ahead and warns when a deadline is at risk.</p><ul class="stack" aria-label="Tools used"><li>JavaScript (no framework)</li><li>SVG</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>Web Speech API</li><li>Service Worker</li></ul></div>
     <div class="rise"><div class="aside-block"><h4>Features</h4><ul class="facts"><li>Day, week and month views. The day timeline zooms and pans, and goes vertical on phones</li><li>Free-time target with a Spread toggle: scattered through the day or kept as one block</li><li>Hold-to-speak voice commands to add tasks and blockers</li><li>Repeating blockers and .ics calendar import</li><li>Cloud sync with Google or username and PIN sign-in, plus reminder notifications</li></ul></div></div>
   </div>
   
