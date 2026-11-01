@@ -198,6 +198,46 @@
       font-weight: 600;
     }
     .hero-actions a.btn-primary:hover { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+    .hero-actions a.btn-portfolio {
+      color: var(--white);
+      border: 1.5px solid var(--white);
+      font-weight: 600;
+    }
+    .hero-actions a.btn-portfolio:hover { background: var(--white); color: var(--bg); border-color: var(--white); }
+
+    /* Portfolio pill in the nav, set apart from the section links */
+    nav a.nav-portfolio {
+      color: var(--white);
+      border: 1px solid var(--white);
+      border-radius: 999px;
+      padding: 0.3rem 0.95rem;
+      margin: -0.3rem 0 -0.3rem 0.4rem;
+      transition: color 0.3s, background 0.3s;
+    }
+    nav a.nav-portfolio:hover { background: var(--white); color: var(--bg); }
+
+    /* Portfolio call-to-action at the end of Projects */
+    .portfolio-cta {
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+      margin-top: 1.5rem; padding: 1.3rem 1.5rem;
+      border: 1.5px solid var(--white); border-radius: var(--radius);
+      background: var(--surface); color: var(--text);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .portfolio-cta:hover { text-decoration: none; background: var(--hover-bg); }
+    .portfolio-cta:active { transform: translateY(1px); }
+    .portfolio-cta-text { font-size: 0.88rem; font-weight: 300; line-height: 1.6; }
+    .portfolio-cta-text strong { display: block; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.15rem; }
+    .portfolio-cta-btn {
+      flex: none; padding: 0.55rem 1.3rem; border-radius: 999px;
+      background: var(--white); color: var(--bg);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    }
+    .portfolio-cta:hover .portfolio-cta-btn { background: var(--accent); }
+    @media (max-width: 640px) {
+      .portfolio-cta { flex-direction: column; align-items: flex-start; }
+      nav a.nav-portfolio { order: -1; margin: 0; padding: 0.2rem 0.8rem; flex: none; }
+    }
     .hero-scroll {
       position: absolute;
       bottom: 2rem;
