@@ -228,8 +228,10 @@
     /* REEL TITLE CARD */
     .reel { position: relative; min-height: 100dvh; display: grid; place-items: center; text-align: center; padding: 6rem 1.5rem; overflow: hidden; }
     .reel-inner { max-width: 52rem; }
-    .reel-title { font-family: 'Cinzel', serif; font-weight: 900; color: var(--white); font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 1.05; letter-spacing: .14em; }
+    .reel-title { font-family: 'Cinzel', serif; font-weight: 900; color: var(--white); font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 1.05; letter-spacing: .1em; }
     .reel--ai .reel-title { color: var(--ai); }
+    .rt-word { display: inline-block; white-space: nowrap; }
+    .rt-letter { display: inline-block; will-change: transform, opacity; }
     .reel-lede { margin: 1.5rem auto 0; max-width: 36rem; font-size: 1.08rem; font-weight: 300; }
     .reel-rule { width: 1px; height: 70px; margin: 0 auto 2rem; background: linear-gradient(to bottom, transparent, var(--accent-dim)); }
     .reel--ai .reel-rule { background: linear-gradient(to bottom, transparent, var(--ai)); }
@@ -725,11 +727,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var mm = gsap.matchMedia();
 
-  /* reel title cards: pin and tighten tracking (desktop) */
+  /* reel title cards: pin, letters glide together (transform only, no re-wrap) */
+  function splitLetters(h) {
+    var text = h.textContent.trim();
+    h.setAttribute('aria-label', text);
+    h.textContent = '';
+    text.split(' ').forEach(function (word, wi, arr) {
+      var w = document.createElement('span');
+      w.className = 'rt-word'; w.setAttribute('aria-hidden', 'true');
+      word.split('').forEach(function (ch) {
+        var l = document.createElement('span'); l.className = 'rt-letter'; l.textContent = ch; w.appendChild(l);
+      });
+      h.appendChild(w);
+      if (wi < arr.length - 1) h.appendChild(document.createTextNode(' '));
+    });
+    return h.querySelectorAll('.rt-letter');
+  }
   mm.add('(min-width: 768px)', function () {
     gsap.utils.toArray('.reel').forEach(function (reel) {
+      var title = reel.querySelector('.reel-title');
+      var letters = title.querySelectorAll('.rt-letter');
+      if (!letters.length) letters = splitLetters(title);
+      var mid = (letters.length - 1) / 2;
       var t = gsap.timeline({ scrollTrigger: { trigger: reel, start: 'top top', end: '+=90%', pin: true, scrub: 0.6 } });
-      t.fromTo(reel.querySelector('.reel-title'), { letterSpacing: '0.42em', opacity: 0.15 }, { letterSpacing: '0.1em', opacity: 1, ease: 'power2.out' })
+      t.fromTo(letters,
+          { x: function (i) { return (i - mid) * 26; }, opacity: 0.12 },
+          { x: 0, opacity: 1, ease: 'power3.out' })
        .fromTo(reel.querySelector('.reel-lede'), { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, '<0.3')
        .fromTo(reel.querySelector('.reel-rule'), { scaleY: 0, transformOrigin: 'top' }, { scaleY: 1 }, 0)
        .to(reel.querySelector('.reel-inner'), { opacity: 0, y: -40, ease: 'power1.in' }, '+=0.35');
