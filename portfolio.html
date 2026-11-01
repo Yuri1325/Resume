@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Uri Richardson</title>
+  <meta name="description" content="Projects by Uri Richardson: games, machine learning and web apps, split into work built by hand and work built with AI assistance." />
+  <link rel="canonical" href="https://www.uri-richardson.com/portfolio.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio | Uri Richardson" />
+  <meta property="og:description" content="Games, machine learning and web apps. Hand-built work and AI-assisted work, labeled." />
+  <meta property="og:url" content="https://www.uri-richardson.com/portfolio.html" />
+  <meta property="og:image" content="https://www.uri-richardson.com/portfolio/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#080808" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080808'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23f5f5f5' letter-spacing='1'%3EUR%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+  <script>
+    try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark'); } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Portfolio | Uri Richardson",
+ "url": "https://www.uri-richardson.com/portfolio.html",
+ "author": {
+  "@type": "Person",
+  "name": "Uri Richardson",
+  "url": "https://www.uri-richardson.com/"
+ },
+ "hasPart": [
+  {
+   "@type": "CreativeWork",
+   "name": "EPOCh",
+   "description": "A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and te",
+   "url": "https://epoch-c6bef.web.app/",
+   "keywords": "Hand-built"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Invasion",
+   "description": "A top-down survival game written in Java with Greenfoot for a final project. Slimes pour in from the edges of the map. You move your character, earn cash for every kill and spend it on defenses before",
+   "keywords": "Hand-built"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "PyTag Online",
+   "description": "A two-player online game of tag written in Python with pygame for Computer Science 1. Two players connect to a server, one is randomly made the tagger, and the runner has to survive 100 seconds in an ",
+   "url": "https://github.com/Yuri1325/Socket-Tag",
+   "keywords": "Hand-built"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Handwritten Digit Classifier",
+   "description": "A k-nearest-neighbors classifier for handwritten digits. It loads the 60,000 training and 10,000 test images of MNIST from JSON, flattens each 28 by 28 image into a 784-number vector and trains OpenCV",
+   "url": "https://github.com/Yuri1325/KNN-Project",
+   "keywords": "Hand-built"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "The Box",
+   "description": "A ten-level puzzle platformer written in JavaScript in Code.org Game Lab. Every level traps a stick figure inside a walled box, and the whole game is finding the way out: a gap in a wall, a hidden ope",
+   "url": "https://studio.code.org/projects/gamelab/cy9FKuMCYuP6VYuUNUL6vSV6Hi5eUKh52TP9SPuCd0s",
+   "keywords": "Hand-built"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Robotics Attendance",
+   "description": "My robotics team needed to know who showed up and for how long. I've rebuilt the answer three times, and each version replaced the last as the team grew.",
+   "url": "https://so-botz.web.app/",
+   "keywords": "AI-assisted"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "PRIORITY V",
+   "description": "A planner that builds the day for you. Enter tasks with a total time, a priority from I to V and a due date, plus fixed blocks like school, practice and dinner. The scheduler places work sessions betw",
+   "url": "https://priority-v.web.app/",
+   "keywords": "AI-assisted"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "LHRIC Intern Time Card",
+   "description": "Interns at the Lower Hudson Regional Information Center log hours on an official paper timecard. This app replaces the paperwork: sign in with Google, fill in each day's time in, lunch and time out, a",
+   "url": "https://lhric-timecard.web.app/",
+   "keywords": "AI-assisted"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Ask Me Anything",
+   "description": "I connected the ChatGPT API to Google Cloud so that from any computer I could email a specific account with a specific subject line. The program picks the message up, runs it through ChatGPT and repli",
+   "keywords": "AI-assisted"
+  }
+ ]
+}
+  </script>
+
+  <style>
+    :root {
+      --bg: #f6f5f2; --surface: #ffffff; --border: #e3e1dc; --accent: #2f2f2f;
+      --accent-dim: #c4c1ba; --text: #4c4c4c; --muted: #6f6c66; --white: #131313;
+      --nav-fade: rgba(246,245,242,0.92); --tag-bg: rgba(0,0,0,0.03); --tag-border: rgba(0,0,0,0.14);
+      --ai: #2648c9; --ai-soft: rgba(38,72,201,0.08);
+      --bar: #0c0c0c; --frame-shadow: 0 30px 80px -40px rgba(40,36,30,0.45);
+      --radius: 6px; --max: 1180px;
+    }
+    html.dark {
+      color-scheme: dark;
+      --bg: #080808; --surface: #101010; --border: #222; --accent: #e0e0e0;
+      --accent-dim: #383838; --text: #a8a8a8; --muted: #808080; --white: #f5f5f5;
+      --nav-fade: rgba(8,8,8,0.92); --tag-bg: rgba(255,255,255,0.04); --tag-border: rgba(255,255,255,0.14);
+      --ai: #8ea6ff; --ai-soft: rgba(142,166,255,0.1);
+      --bar: #000; --frame-shadow: 0 30px 80px -40px rgba(0,0,0,0.9);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-padding-top: 4rem; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Raleway', sans-serif; font-weight: 400; line-height: 1.75;
+      overflow-x: hidden; transition: background 0.3s, color 0.3s;
+    }
+    a { color: var(--accent); }
+    img, video { display: block; max-width: 100%; }
+    ul { list-style: none; }
+    :focus-visible { outline: 2px solid var(--ai); outline-offset: 3px; border-radius: 2px; }
+    h1, h2, h3, h4, h5 { text-wrap: balance; }
+    button, .btn { touch-action: manipulation; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .skip { position: absolute; left: 1rem; top: -3rem; z-index: 300; background: var(--surface); padding: .5rem 1rem; border-radius: 999px; }
+    .skip:focus { top: 1rem; }
+
+    body::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 400; opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      height: 60px; padding: 0 1.25rem;
+      background: linear-gradient(to bottom, var(--nav-fade) 0%, transparent 100%);
+      font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.18em;
+    }
+    .nav a { color: var(--muted); text-decoration: none; transition: color .3s; padding: .6rem .2rem; }
+    .nav a:hover, .nav a[aria-current="true"] { color: var(--white); }
+    .nav-links { display: flex; gap: 1.6rem; }
+    .nav-home { color: var(--white) !important; font-weight: 700; }
+    .nav { transition: background .35s; }
+    .nav--dark { background: transparent; }
+    .nav--dark a { color: rgba(245,245,245,.72); }
+    .nav--dark a:hover, .nav--dark .nav-home { color: #f5f5f5 !important; }
+    .nav--dark .theme-toggle { background: rgba(20,20,20,.6); border-color: rgba(255,255,255,.25); color: #f5f5f5; }
+    .reel-indicator {
+      font-family: 'Raleway', sans-serif; font-size: .74rem; letter-spacing: .04em; color: var(--muted);
+      min-width: 9rem; text-align: right; transition: color .3s;
+    }
+    .reel-indicator[data-reel="ai"] { color: var(--ai); }
+    .theme-toggle {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+      background: var(--surface); color: var(--accent); cursor: pointer; font-size: 1rem;
+      display: grid; place-items: center; flex: none; transition: border-color .3s, transform .2s;
+    }
+    .theme-toggle:hover { border-color: var(--accent-dim); }
+    .theme-toggle:active { transform: scale(.94); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .progress { position: fixed; top: 0; left: 0; height: 2px; width: 100%; background: var(--white); transform-origin: 0 50%; transform: scaleX(0); z-index: 210; opacity: .5; }
+
+    /* HERO: letterbox */
+    .hero { position: relative; min-height: 100dvh; display: grid; place-items: center; overflow: hidden; isolation: isolate; }
+    .strip { position: absolute; inset: 0; z-index: -2; display: flex; align-items: center; overflow: hidden; }
+    .strip-track { display: flex; gap: 1.2rem; padding-left: 1.2rem; animation: drift 90s linear infinite; will-change: transform; }
+    .strip-track img { height: 38vh; width: auto; aspect-ratio: 16/10; object-fit: cover; border-radius: var(--radius); filter: grayscale(1) contrast(1.05); opacity: .55; }
+    html.dark .strip-track img { opacity: .38; }
+    @keyframes drift { to { transform: translateX(-50%); } }
+    .hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at center, var(--bg) 18%, color-mix(in srgb, var(--bg) 55%, transparent) 60%, transparent 100%); }
+    .bar { position: absolute; left: 0; right: 0; height: 16vh; background: var(--bar); z-index: 2; }
+    .bar--top { top: 0; transform-origin: top; }
+    .bar--bottom { bottom: 0; transform-origin: bottom; }
+    .hero-copy { text-align: center; padding: 0 1rem; max-width: 60rem; }
+    .hero-kicker { font-family: 'Cinzel', serif; font-size: .9rem; letter-spacing: .4em; color: var(--muted); margin-bottom: 1.4rem; }
+    .hero-title {
+      font-family: 'Cinzel', serif; font-weight: 900; color: var(--white);
+      font-size: clamp(2.6rem, 8vw, 6.5rem); line-height: 1.02; letter-spacing: .06em;
+    }
+    .hero-sub { margin: 1.6rem auto 0; max-width: 34rem; font-size: 1.05rem; font-weight: 300; }
+    .hero-jump { margin-top: 2.2rem; display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .6rem 1.3rem;
+      border-radius: 999px; border: 1px solid var(--tag-border); background: var(--surface);
+      color: var(--white); text-decoration: none; font-size: .86rem; font-weight: 500; white-space: nowrap;
+      transition: border-color .25s, background .25s, transform .15s;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn:active { transform: translateY(1px); }
+    .btn--ai { color: var(--ai); border-color: color-mix(in srgb, var(--ai) 45%, transparent); background: var(--ai-soft); }
+    .btn--ai:hover { border-color: var(--ai); }
+
+    /* chips */
+    .chip {
+      display: inline-flex; align-items: center; gap: .45rem; padding: .28rem .8rem; border-radius: 999px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .02em; border: 1px solid var(--tag-border); color: var(--accent);
+      white-space: nowrap;
+    }
+    .chip .ph { font-size: 15px; }
+    .chip--ai { color: var(--ai); border-color: color-mix(in srgb, var(--ai) 50%, transparent); background: var(--ai-soft); }
+
+    /* LEGEND */
+    .legend { max-width: var(--max); margin: 0 auto; padding: 7rem 1.5rem 5rem; display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; }
+    .legend h2 { font-family: 'Cinzel', serif; color: var(--white); font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.2; font-weight: 700; }
+    .legend p { margin-top: 1rem; max-width: 34rem; }
+    .legend-keys { display: grid; gap: 1rem; }
+    .key { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; padding: 1.2rem 1.3rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); text-decoration: none; color: var(--text); transition: border-color .25s; }
+    .key:hover { border-color: var(--accent-dim); }
+    .key strong { display: block; color: var(--white); font-weight: 600; }
+    .key span.count { font-family: 'Cinzel', serif; font-size: 2rem; line-height: 1; color: var(--white); min-width: 2.2rem; }
+    .key--ai span.count, .key--ai strong { color: var(--ai); }
+
+    /* REEL TITLE CARD */
+    .reel { position: relative; min-height: 100dvh; display: grid; place-items: center; text-align: center; padding: 6rem 1.5rem; overflow: hidden; }
+    .reel-inner { max-width: 52rem; }
+    .reel-title { font-family: 'Cinzel', serif; font-weight: 900; color: var(--white); font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 1.05; letter-spacing: .14em; }
+    .reel--ai .reel-title { color: var(--ai); }
+    .reel-lede { margin: 1.5rem auto 0; max-width: 36rem; font-size: 1.08rem; font-weight: 300; }
+    .reel-rule { width: 1px; height: 70px; margin: 0 auto 2rem; background: linear-gradient(to bottom, transparent, var(--accent-dim)); }
+    .reel--ai .reel-rule { background: linear-gradient(to bottom, transparent, var(--ai)); }
+
+    /* SCENE (one project) */
+    .scene { max-width: var(--max); margin: 0 auto; padding: 4rem 1.5rem 7rem; }
+    .aperture {
+      position: relative; border-radius: var(--radius); overflow: hidden; background: #0d0d0d;
+      box-shadow: var(--frame-shadow); aspect-ratio: 16 / 9;
+    }
+    .aperture--tall { aspect-ratio: 3 / 2; }
+    .aperture--tall > img { object-position: top; }
+    .aperture--contain { background: #111; }
+    .aperture--flow { background: #0d0d0d; }
+    .aperture > img, .aperture > video { width: 100%; height: 100%; object-fit: cover; transform-origin: center; }
+    .aperture--contain > img, .aperture--contain > video { object-fit: contain; }
+    .aperture .play-toggle {
+      position: absolute; right: .9rem; bottom: .9rem; width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.35); background: rgba(10,10,10,.55); color: #f5f5f5; cursor: pointer;
+      display: grid; place-items: center; backdrop-filter: blur(6px);
+    }
+    .aperture .play-toggle svg { width: 16px; height: 16px; }
+    .scene-head { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: end; margin: 2.6rem 0 2rem; }
+    .scene-title { font-family: 'Cinzel', serif; font-weight: 700; color: var(--white); font-size: clamp(1.6rem, 3.6vw, 2.6rem); line-height: 1.15; letter-spacing: .03em; }
+    .scene-meta { margin-top: .7rem; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; font-size: .86rem; color: var(--muted); }
+    .scene-links { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: flex-end; }
+    .scene-body { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 3rem; }
+    .scene-body p { max-width: 65ch; }
+    .scene-body p + p { margin-top: 1rem; }
+    .scene-body h4 { font-family: 'Cinzel', serif; color: var(--white); font-size: 1rem; letter-spacing: .06em; margin-bottom: .9rem; font-weight: 700; }
+    .how { counter-reset: how; display: grid; gap: .9rem; list-style: none; }
+    .how li { position: relative; padding-left: 2.4rem; font-size: .95rem; }
+    .how li::before {
+      counter-increment: how; content: counter(how); position: absolute; left: 0; top: .1rem;
+      width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 1px solid var(--tag-border);
+      display: grid; place-items: center; font-size: .72rem; font-weight: 600; color: var(--accent);
+    }
+    .facts { display: grid; gap: .55rem; font-size: .95rem; }
+    .facts li { padding-left: 1.1rem; position: relative; }
+    .facts li::before { content: ''; position: absolute; left: 0; top: .78em; width: .45rem; height: 1px; background: var(--accent-dim); }
+    .stack { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.6rem; }
+    .stack li { font-size: .78rem; padding: .25rem .7rem; border-radius: 999px; background: var(--tag-bg); border: 1px solid var(--tag-border); }
+    .aside-block + .aside-block { margin-top: 2rem; }
+
+    .gallery { margin-top: 3rem; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 32%); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .8rem; scrollbar-width: thin; }
+    .gallery li { scroll-snap-align: start; display: flex; }
+    .gallery button { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); cursor: zoom-in; padding: 0; text-align: left; color: inherit; font: inherit; }
+    .gallery img { width: 100%; height: auto; aspect-ratio: 16/10; object-fit: cover; object-position: top; transition: transform .5s cubic-bezier(.16,1,.3,1); }
+    .gallery button:hover img { transform: scale(1.03); }
+    .gallery figcaption { padding: .7rem .9rem .8rem; font-size: .82rem; color: var(--muted); }
+    .gallery--phones { grid-auto-columns: minmax(180px, 22%); }
+    .gallery--phones img { aspect-ratio: 9/19; }
+    .gallery--square { grid-auto-columns: minmax(200px, 24%); }
+    .gallery--square img { aspect-ratio: 1; object-position: center; image-rendering: pixelated; }
+
+    /* timeline (attendance) */
+    .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.6rem; }
+    .year { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem; background: var(--surface); }
+    .year-n { font-family: 'Cinzel', serif; font-size: .95rem; color: var(--white); font-weight: 700; letter-spacing: .06em; }
+    .year h5 { font-size: 1rem; color: var(--white); margin: .4rem 0 .5rem; font-weight: 600; }
+    .year p { font-size: .9rem; }
+    .year .chip { margin-top: .9rem; }
+
+    /* flow diagram (ask me anything) */
+    .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; height: 100%; min-height: 100%; align-content: center; padding: 3rem 2.5rem; background: #0d0d0d; }
+    .flow-step { position: relative; text-align: center; color: #e8e8e8; padding: 0 .6rem; }
+    .flow-step .node { width: 74px; height: 74px; margin: 0 auto 1rem; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); display: grid; place-items: center; background: #151515; }
+    .flow-step .node .ph { font-size: 30px; color: #e8e8e8; }
+    .flow-step:not(.flow-step--end)::after { content: ''; position: absolute; top: 37px; left: calc(50% + 46px); right: calc(-50% + 46px); height: 1px; background: linear-gradient(90deg, rgba(255,255,255,.5), rgba(142,166,255,.9)); transform-origin: left; transform: scaleX(var(--draw, 1)); }
+    .flow-step strong { display: block; font-family: 'Cinzel', serif; letter-spacing: .05em; font-size: .95rem; color: #fff; }
+    .flow-step span { font-size: .82rem; color: #a9a9a9; }
+    .flow-timer { position: absolute; left: 0; right: 0; bottom: 1.4rem; text-align: center; font-size: .82rem; color: #8ea6ff; }
+
+    /* stats (knn) */
+    .kbar { display: grid; grid-template-columns: 2.2rem 1fr 3.6rem; gap: .6rem; align-items: center; font-size: .82rem; }
+    .kbar + .kbar { margin-top: .35rem; }
+    .kbar i { display: block; height: 8px; border-radius: 999px; background: var(--accent); transform-origin: left; }
+    .kbar b { font-weight: 600; color: var(--white); text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* between-reel divider */
+    .scene + .scene { border-top: 1px solid var(--border); }
+
+    /* lightbox */
+    dialog.lightbox { overscroll-behavior: contain; margin: auto; border: 0; padding: 0; background: transparent; max-width: min(1400px, 94vw); max-height: 92vh; }
+    dialog.lightbox::backdrop { background: rgba(5,5,5,.88); }
+    dialog.lightbox img { max-height: 84vh; width: auto; margin: 0 auto; border-radius: var(--radius); }
+    dialog.lightbox p { color: #ddd; text-align: center; margin-top: .8rem; font-size: .9rem; }
+    dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(20,20,20,.7); color: #fff; font-size: 1.3rem; cursor: pointer; }
+
+    /* footer */
+    .outro { text-align: center; padding: 8rem 1.5rem 4rem; }
+    .outro h2 { font-family: 'Cinzel', serif; color: var(--white); font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: .08em; }
+    .outro p { margin: 1rem auto 2rem; max-width: 30rem; }
+    .outro .hero-jump { margin-top: 0; }
+    footer { text-align: center; padding: 3rem 1rem 3rem; font-size: .8rem; color: var(--muted); border-top: 1px solid var(--border); }
+    footer .footer-name { font-family: 'Cinzel', serif; letter-spacing: .3em; color: var(--white); margin-bottom: .4rem; }
+    .toast { position: fixed; bottom: 2rem; left: 50%; transform: translate(-50%, 1rem); opacity: 0; background: var(--white); color: var(--bg); padding: .6rem 1.2rem; border-radius: 999px; font-size: .85rem; transition: opacity .3s, transform .3s; pointer-events: none; z-index: 500; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    /* entry state (JS sets .js-motion on <html>) */
+    .js-motion .rise { opacity: 0; transform: translateY(28px); }
+
+    @media (max-width: 900px) {
+      .legend { grid-template-columns: 1fr; padding-top: 5rem; }
+      .scene-body { grid-template-columns: 1fr; gap: 2.2rem; }
+      .scene-head { grid-template-columns: 1fr; }
+      .scene-links { justify-content: flex-start; }
+      .timeline { grid-template-columns: 1fr; }
+      .gallery { grid-auto-columns: 78%; }
+      .gallery--phones { grid-auto-columns: 46%; }
+      .flow { grid-template-columns: 1fr 1fr; row-gap: 2.4rem; padding: 2.4rem 1rem 3.4rem; }
+      .flow-step:not(.flow-step--end)::after { display: none; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .reel-indicator { min-width: 0; }
+      .scene { padding: 3rem 1rem 5rem; }
+      .legend { padding: 4.5rem 1rem 3rem; }
+      .bar { height: 11vh; }
+      .strip-track img { height: 26vh; opacity: .3; }
+      html.dark .strip-track img { opacity: .22; }
+      .hero::after { background: radial-gradient(ellipse at center, var(--bg) 30%, color-mix(in srgb, var(--bg) 70%, transparent) 75%, transparent 100%); }
+      .aperture, .aperture--tall { aspect-ratio: 4 / 3; }
+      .aperture--flow { aspect-ratio: auto; }
+      .reel-title { letter-spacing: .08em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .strip-track { animation: none; }
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to projects</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="nav-home" href="index.html">URI RICHARDSON</a>
+  <nav class="nav-links" aria-label="Portfolio sections">
+    <a href="index.html">Resume</a>
+    <a href="#hand">Built by hand</a>
+    <a href="#ai">Built with AI</a>
+  </nav>
+  <div class="nav-right">
+    <span class="reel-indicator" aria-live="polite"></span>
+    <button class="theme-toggle" type="button" aria-label="Switch light or dark theme">☾</button>
+  </div>
+</header>
+
+<main id="work-root">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="strip" aria-hidden="true"><div class="strip-track"><img src="portfolio/epoch-hover-t.webp" alt="" width="640" height="400"><img src="portfolio/invasion-mid-t.webp" alt="" width="640" height="400"><img src="portfolio/priority-day-t.webp" alt="" width="640" height="400"><img src="portfolio/knn-grid-t.webp" alt="" width="640" height="400"><img src="portfolio/att-sched-t.webp" alt="" width="640" height="400"><img src="portfolio/epoch-world-t.webp" alt="" width="640" height="400"><img src="portfolio/invasion-late-t.webp" alt="" width="640" height="400"><img src="portfolio/tc-grid-t.webp" alt="" width="640" height="400"><img src="portfolio/epoch-modes-t.webp" alt="" width="640" height="400"><img src="portfolio/epoch-hover-t.webp" alt="" width="640" height="400"><img src="portfolio/invasion-mid-t.webp" alt="" width="640" height="400"><img src="portfolio/priority-day-t.webp" alt="" width="640" height="400"><img src="portfolio/knn-grid-t.webp" alt="" width="640" height="400"><img src="portfolio/att-sched-t.webp" alt="" width="640" height="400"><img src="portfolio/epoch-world-t.webp" alt="" width="640" height="400"><img src="portfolio/invasion-late-t.webp" alt="" width="640" height="400"><img src="portfolio/tc-grid-t.webp" alt="" width="640" height="400"><img src="portfolio/epoch-modes-t.webp" alt="" width="640" height="400"></div></div>
+  <div class="bar bar--top" aria-hidden="true"></div>
+  <div class="bar bar--bottom" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="hero-kicker">Uri Richardson</p>
+    <h1 class="hero-title" id="hero-title">Portfolio</h1>
+    <p class="hero-sub">Games, machine learning and web apps, from a Code.org sketch to apps my robotics team uses every week.</p>
+    <div class="hero-jump">
+      <a class="btn" href="#hand">Built by hand</a>
+      <a class="btn btn--ai" href="#ai">Built with AI</a>
+    </div>
+  </div>
+</section>
+
+<section class="legend" id="work" aria-labelledby="legend-title">
+  <div>
+    <h2 id="legend-title">Every project is labeled by how it was made.</h2>
+    <p>Some of this work I wrote line by line. Some I designed and directed with AI coding tools doing part of the typing. Both are real, shipped work, so they are shown separately and marked clearly.</p>
+  </div>
+  <div class="legend-keys">
+    <a class="key" href="#hand"><span class="count">5</span><span><strong>Built by hand</strong>Written without AI assistance. Marked with <span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span></span></a>
+    <a class="key key--ai" href="#ai"><span class="count">4</span><span><strong>Built with AI</strong>Planned and shipped by me with AI coding assistance. Marked with <span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span></span></a>
+  </div>
+</section>
+
+<section class="reel" id="hand" data-reel="hand" aria-labelledby="reel-hand">
+  <div class="reel-inner">
+    <div class="reel-rule" aria-hidden="true"></div>
+    <h2 class="reel-title" id="reel-hand">Built by hand</h2>
+    <p class="reel-lede">Games, a classifier and a study site, written without AI assistance.</p>
+  </div>
+</section>
+
+
+<article class="scene" id="epoch" data-reel="hand" aria-labelledby="epoch-t">
+  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/epoch-tour-poster.webp" aria-label="Scrolling through EPOCh&#x27;s Period 1 overview, the study modes and AP World History"><source src="portfolio/epoch-tour.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="epoch-t">EPOCh</h3>
+      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span>AP U.S. and AP World History study site, 2026</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn" href="https://epoch-c6bef.web.app/" target="_blank" rel="noopener">Open EPOCh</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and term lists.</p><p>Every highlighted term opens a hover card with its definition, date, period and the terms it connects to, so reading the overview doubles as building a concept map.</p><ul class="stack" aria-label="Tools used"><li>React 18</li><li>Vite</li><li>Tailwind CSS</li><li>anime.js</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>OpenAI API</li><li>Web Speech API</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>What&#x27;s inside</h4><ul class="facts"><li>Ten study modes, including flashcards, Timeline Sort, document sourcing (HAPP), Degrees of Separation and the Feynman technique</li><li>An “Ask anything” tutor with a course-specific prompt and streamed answers</li><li>Written answers graded by AI, with keyword grading as a fallback</li><li>Live multiplayer rooms (MCQ Blitz, Define the Term) with real-time leaderboards</li><li>A community board where students post and upvote feature ideas</li></ul></div></div>
+  </div>
+  
+  <ul class="gallery"><li><button type="button" data-full="portfolio/epoch-hover.webp"><figure><img src="portfolio/epoch-hover-t.webp" alt="Hovering a highlighted term opens its definition, period and connected terms" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Hovering a highlighted term opens its definition, period and connected terms</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-modes.webp"><figure><img src="portfolio/epoch-modes-t.webp" alt="The Study tab&#x27;s game modes" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The Study tab&#x27;s game modes</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-world.webp"><figure><img src="portfolio/epoch-world-t.webp" alt="One toggle switches the whole site to AP World History" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>One toggle switches the whole site to AP World History</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-themes.webp"><figure><img src="portfolio/epoch-themes-t.webp" alt="Key themes, key people and term chips for each period" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Key themes, key people and term chips for each period</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-sort.webp"><figure><img src="portfolio/epoch-sort-t.webp" alt="Timeline Sort: put AP terms in chronological order" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Timeline Sort: put AP terms in chronological order</figcaption></figure></button></li><li><button type="button" data-full="portfolio/epoch-overview.webp"><figure><img src="portfolio/epoch-overview-t.webp" alt="U.S. History overview: nine period tabs and the Period 1 narrative" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>U.S. History overview: nine period tabs and the Period 1 narrative</figcaption></figure></button></li></ul>
+</article>
+
+<article class="scene" id="invasion" data-reel="hand" aria-labelledby="invasion-t">
+  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/invasion-poster.webp" aria-label="Invasion gameplay: the player places walls and turrets while slimes swarm in"><source src="portfolio/invasion.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="invasion-t">Invasion</h3>
+      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span>Turret defense game in Java (Greenfoot), June 2025</span></div>
+    </div>
+    <div class="scene-links rise"></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A top-down survival game written in Java with Greenfoot for a final project. Slimes pour in from the edges of the map. You move your character, earn cash for every kill and spend it on defenses before the horde overwhelms you.</p><p>The shop is bound to single keys so building happens mid-fight: walls (C) for $40, turrets (X) for $50 and land mines (Z) for $10. Turrets find and track the nearest slime on their own, and healing potions drop to keep a run going.</p><ul class="stack" aria-label="Tools used"><li>Java</li><li>Greenfoot</li><li>Object-oriented design</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>How it works</h4><ol class="how"><li>Each actor (player, slime, turret, bullet, mine, explosion) is its own class with an act() loop Greenfoot calls every frame</li><li>Turrets aim with a small Vector class, rotating toward the closest target and firing bullets along that heading</li><li>A generator spawns waves, and a MessageManager draws cash, prices, score and the health bar over the world</li></ol></div><figure style="margin-top:2rem"><img src="portfolio/invasion-classes.webp" alt="The game's class tree in Greenfoot: 14 actor classes and 2 worlds" width="230" height="760" loading="lazy" style="max-height:420px;width:auto;border-radius:6px;border:1px solid var(--border)"><figcaption style="font-size:.82rem;color:var(--muted);margin-top:.6rem">The game's class tree in Greenfoot: 14 actor classes and 2 worlds</figcaption></figure></div>
+  </div>
+  
+  <ul class="gallery"><li><button type="button" data-full="portfolio/invasion-title.webp"><figure><img src="portfolio/invasion-title-t.webp" alt="Title screen" loading="lazy" decoding="async" width="1500" height="1000"><figcaption>Title screen</figcaption></figure></button></li><li><button type="button" data-full="portfolio/invasion-mid.webp"><figure><img src="portfolio/invasion-mid-t.webp" alt="Walls, turrets and land mines bought with cash from kills" loading="lazy" decoding="async" width="1500" height="1000"><figcaption>Walls, turrets and land mines bought with cash from kills</figcaption></figure></button></li><li><button type="button" data-full="portfolio/invasion-late.webp"><figure><img src="portfolio/invasion-late-t.webp" alt="Late game: the slime horde closes in" loading="lazy" decoding="async" width="1500" height="1000"><figcaption>Late game: the slime horde closes in</figcaption></figure></button></li></ul>
+</article>
+
+<article class="scene" id="pytag" data-reel="hand" aria-labelledby="pytag-t">
+  <div class="aperture aperture--contain"><img src="portfolio/pytag-sheet.webp" alt="The PyTag character sprite sheet: idle, run, roll and tag dash animations" width="1600" height="1000" loading="lazy" decoding="async"></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="pytag-t">PyTag Online</h3>
+      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span>Two-player online tag over Python sockets, 2025</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn" href="https://github.com/Yuri1325/Socket-Tag" target="_blank" rel="noopener">View code</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A two-player online game of tag written in Python with pygame for Computer Science 1. Two players connect to a server, one is randomly made the tagger, and the runner has to survive 100 seconds in an arena full of obstacles.</p><p>There is no game engine or networking library underneath it: just raw TCP sockets, threads and the game's own player objects sent back and forth every frame.</p><ul class="stack" aria-label="Tools used"><li>Python</li><li>pygame</li><li>socket</li><li>threading</li><li>pickle</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>How it works</h4><ol class="how"><li>A threaded TCP server accepts two clients and randomly picks which one is the tagger</li><li>Every frame (25 fps) each client pickles its Player object, sends it to the server and gets the opponent's state back</li><li>Pixel-mask collision decides a tag: the tagger has to be mid-dash when the sprites overlap</li><li>The runner wins by surviving 100 seconds. Dash (J/Z) and roll (K/X) run on cooldowns</li></ol></div></div>
+  </div>
+  <div style="margin-top:2.4rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap"><img src="portfolio/pytag-run.webp" alt="The PyTag character run cycle, animated" width="256" height="256" style="image-rendering:pixelated;width:128px;height:auto;background:#0d0d0d;border-radius:6px;padding:.6rem"><p style="max-width:44ch;font-size:.92rem">Controls: WASD or arrow keys to move, J or Z to dash, K or X to roll. Built for Computer Science 1, 2024-2025.</p></div>
+  
+</article>
+
+<article class="scene" id="knn" data-reel="hand" aria-labelledby="knn-t">
+  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/knn-run-poster.webp" aria-label="Screen recording: the model loads MNIST, then shows test digits with their label and its prediction"><source src="portfolio/knn-run.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="knn-t">Handwritten Digit Classifier</h3>
+      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span>k-nearest neighbors on MNIST, January 2026</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn" href="https://github.com/Yuri1325/KNN-Project" target="_blank" rel="noopener">View code</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A k-nearest-neighbors classifier for handwritten digits. It loads the 60,000 training and 10,000 test images of MNIST from JSON, flattens each 28 by 28 image into a 784-number vector and trains OpenCV's KNearest model on them.</p><p>To classify a digit it finds the k training images closest to it and takes a vote. The script then plots test digits with their true label and the model's prediction so you can see exactly where it gets fooled.</p><ul class="stack" aria-label="Tools used"><li>Python</li><li>OpenCV (cv2.ml)</li><li>NumPy</li><li>Matplotlib</li><li>scikit-learn</li><li>tqdm</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>Accuracy on all 10,000 test digits</h4><div class="kbar"><span>k=1</span><i style="transform:scaleX(0.868)"></i><b>96.91%</b></div><div class="kbar"><span>k=2</span><i style="transform:scaleX(0.577)"></i><b>96.27%</b></div><div class="kbar"><span>k=3</span><i style="transform:scaleX(0.932)"></i><b>97.05%</b></div><div class="kbar"><span>k=4</span><i style="transform:scaleX(0.827)"></i><b>96.82%</b></div><div class="kbar"><span>k=5</span><i style="transform:scaleX(0.855)"></i><b>96.88%</b></div><div class="kbar"><span>k=6</span><i style="transform:scaleX(0.805)"></i><b>96.77%</b></div><div class="kbar"><span>k=7</span><i style="transform:scaleX(0.882)"></i><b>96.94%</b></div><div class="kbar"><span>k=8</span><i style="transform:scaleX(0.773)"></i><b>96.70%</b></div><div class="kbar"><span>k=9</span><i style="transform:scaleX(0.723)"></i><b>96.59%</b></div><div class="kbar"><span>k=10</span><i style="transform:scaleX(0.750)"></i><b>96.65%</b></div><p style="font-size:.85rem;margin-top:.9rem;color:var(--muted)">Measured by re-running this project’s code on its own data. Bars start at 95%. Best: k=3 at 97.05%.</p></div></div>
+  </div>
+  
+  <ul class="gallery"><li><button type="button" data-full="portfolio/knn-grid.webp"><figure><img src="portfolio/knn-grid-t.webp" alt="Test digits with label and prediction (k=3). Red ones are real mistakes from the run" loading="lazy" decoding="async" width="1440" height="924"><figcaption>Test digits with label and prediction (k=3). Red ones are real mistakes from the run</figcaption></figure></button></li><li><button type="button" data-full="portfolio/knn-four.webp"><figure><img src="portfolio/knn-four-t.webp" alt="A test digit with its true label and the model&#x27;s prediction" loading="lazy" decoding="async" width="1600" height="900"><figcaption>A test digit with its true label and the model&#x27;s prediction</figcaption></figure></button></li><li><button type="button" data-full="portfolio/knn-load.webp"><figure><img src="portfolio/knn-load-t.webp" alt="Loading 60,000 training and 10,000 test images" loading="lazy" decoding="async" width="1600" height="900"><figcaption>Loading 60,000 training and 10,000 test images</figcaption></figure></button></li></ul>
+</article>
+
+<article class="scene" id="thebox" data-reel="hand" aria-labelledby="thebox-t">
+  <div class="aperture aperture--contain"><video data-auto muted loop playsinline preload="none" poster="portfolio/thebox-gameplay-poster.webp" aria-label="The Box gameplay recording"><source src="portfolio/thebox-gameplay.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="thebox-t">The Box</h3>
+      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span>Game Lab arcade game in JavaScript (Code.org)</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn" href="https://studio.code.org/projects/gamelab/cy9FKuMCYuP6VYuUNUL6vSV6Hi5eUKh52TP9SPuCd0s" target="_blank" rel="noopener">Play it</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A ten-level puzzle platformer written in JavaScript in Code.org Game Lab. Every level traps a stick figure inside a walled box, and the whole game is finding the way out: a gap in a wall, a hidden opening, or a door that needs a key.</p><p>Gravity, jumping, collision and ledge climbing are all written by hand. Drop out of the bottom of the box and the next level loads. Spikes and acid rain send you back, and the credits count your time and deaths.</p><ul class="stack" aria-label="Tools used"><li>JavaScript</li><li>Code.org Game Lab</li><li>p5.play</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>Features</h4><ul class="facts"><li>10 levels built from reusable parts: walls, platforms, ladder, key, door, spikes and acid rain</li><li>Key-and-door puzzles: grab the key, then press E or Down at the door</li><li>Title screen, loading tips, level hints, music and end credits</li><li>A password-protected level skip I added for testing</li></ul></div></div>
+  </div>
+  
+  <ul class="gallery gallery--square"><li><button type="button" data-full="portfolio/thebox-0.webp"><figure><img src="portfolio/thebox-0-t.webp" alt="Title screen" loading="lazy" decoding="async" width="800" height="800"><figcaption>Title screen</figcaption></figure></button></li><li><button type="button" data-full="portfolio/thebox-1.webp"><figure><img src="portfolio/thebox-1-t.webp" alt="Level 1: get out of the box" loading="lazy" decoding="async" width="800" height="800"><figcaption>Level 1: get out of the box</figcaption></figure></button></li><li><button type="button" data-full="portfolio/thebox-2.webp"><figure><img src="portfolio/thebox-2-t.webp" alt="Level 4: ladder, platforms, a key and a locked door" loading="lazy" decoding="async" width="800" height="800"><figcaption>Level 4: ladder, platforms, a key and a locked door</figcaption></figure></button></li><li><button type="button" data-full="portfolio/thebox-3.webp"><figure><img src="portfolio/thebox-3-t.webp" alt="Level 5: acid rain" loading="lazy" decoding="async" width="800" height="800"><figcaption>Level 5: acid rain</figcaption></figure></button></li></ul>
+</article>
+
+<section class="reel reel--ai" id="ai" data-reel="ai" aria-labelledby="reel-ai">
+  <div class="reel-inner">
+    <div class="reel-rule" aria-hidden="true"></div>
+    <h2 class="reel-title" id="reel-ai">Built with AI</h2>
+    <p class="reel-lede">Tools people actually use. I scoped them, designed them and shipped them, with AI coding assistants as part of the build.</p>
+  </div>
+</section>
+
+
+<article class="scene" id="attendance" data-reel="ai" aria-labelledby="attendance-t">
+  <div class="aperture aperture--contain"><video data-auto muted loop playsinline preload="none" poster="portfolio/sobotz-walkthrough-poster.webp" aria-label="SO BOTZ app on a phone: sign-in, then the public team schedule"><source src="portfolio/sobotz-walkthrough.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="attendance-t">Robotics Attendance</h3>
+      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span>Three versions for FRC Team 6911 SO BOTZ, 2025-2026</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn btn--ai" href="https://so-botz.web.app/" target="_blank" rel="noopener">Open SO BOTZ</a><a class="btn" href="https://so-botz.web.app/schedule" target="_blank" rel="noopener">Team schedule</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>My robotics team needed to know who showed up and for how long. I've rebuilt the answer three times, and each version replaced the last as the team grew.</p><p>The current app gives every member an account and a personal QR code. A barcode scanner at the door reads it, writes the scan to the database, and a nightly job at 11 PM turns each visit over 30 minutes into credited hours.</p><ul class="stack" aria-label="Tools used"><li>React 18</li><li>Vite</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>Python</li><li>Firebase Admin SDK</li><li>Google Calendar API</li><li>Claude</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>What the team uses now</h4><ul class="facts"><li>Member, Lead and Parent roles, with admin approval for new sign-ups</li><li>Hours leaderboard and a live “Here right now” list</li><li>Weekly scan log with CSV export, and hour corrections that land in an audit log</li><li>Public calendar that syncs to Google Calendar and iCal</li><li>Announcements, event RSVPs, café staffing sign-ups and email notifications</li></ul></div></div>
+  </div>
+  <div class="timeline">
+     <div class="year"><div class="year-n">Year 1</div><h5>NFC cards and a spreadsheet</h5><p>A Python script read physical cards through an NFC reader over a serial port. Each tap toggled check-in or check-out and was logged to a Google Sheet.</p><span class="chip">No AI</span></div>
+     <div class="year"><div class="year-n">Year 2</div><h5>Base44 web app</h5><p>Moved to a hosted web app. Members typed their names to check in, with no individual accounts.</p><span class="chip chip--ai">Limited AI</span></div>
+     <div class="year"><div class="year-n">Year 3</div><h5>The SO BOTZ app</h5><p>Personal accounts and QR codes, a door scanner station, Firebase, and a whole team hub around it.</p><span class="chip chip--ai">Built with Claude</span></div>
+   </div>
+  <ul class="gallery"><li><button type="button" data-full="portfolio/att-sched.webp"><figure><img src="portfolio/att-sched-t.webp" alt="Year 3: public team calendar with Google Calendar and iCal subscribe" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Year 3: public team calendar with Google Calendar and iCal subscribe</figcaption></figure></button></li><li><button type="button" data-full="portfolio/att-login.webp"><figure><img src="portfolio/att-login-t.webp" alt="Year 3: SO BOTZ app sign-in, with a public schedule link" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Year 3: SO BOTZ app sign-in, with a public schedule link</figcaption></figure></button></li><li><button type="button" data-full="portfolio/att-signup.webp"><figure><img src="portfolio/att-signup-t.webp" alt="Year 3: every member gets an account as a Member, Lead or Parent" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Year 3: every member gets an account as a Member, Lead or Parent</figcaption></figure></button></li><li><button type="button" data-full="portfolio/att-y2.webp"><figure><img src="portfolio/att-y2-t.webp" alt="Year 2: the Base44 SO BOTZ Attendance app" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Year 2: the Base44 SO BOTZ Attendance app</figcaption></figure></button></li></ul>
+</article>
+
+<article class="scene" id="priority" data-reel="ai" aria-labelledby="priority-t">
+  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/priority-tour-poster.webp" aria-label="PRIORITY V building a day schedule, then switching to week and month views (sample data)"><source src="portfolio/priority-tour.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="priority-t">PRIORITY V</h3>
+      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span>Auto-scheduling day planner, 2026 (in progress)</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn btn--ai" href="https://priority-v.web.app/" target="_blank" rel="noopener">Open PRIORITY V</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>A planner that builds the day for you. Enter tasks with a total time, a priority from I to V and a due date, plus fixed blocks like school, practice and dinner. The scheduler places work sessions between them.</p><p>It orders work by priority and deadline, adds breaks after long stretches, protects a daily free-time target and puts deep-focus tasks in your peak hours. It also looks ahead and warns when a deadline is at risk.</p><ul class="stack" aria-label="Tools used"><li>JavaScript (no framework)</li><li>SVG</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>Web Speech API</li><li>Service Worker</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>Features</h4><ul class="facts"><li>Day, week and month views. The day timeline zooms and pans, and goes vertical on phones</li><li>Free-time target with a Spread toggle: scattered through the day or kept as one block</li><li>Hold-to-speak voice commands to add tasks and blockers</li><li>Repeating blockers and .ics calendar import</li><li>Cloud sync with Google or username and PIN sign-in, plus reminder notifications</li></ul></div></div>
+  </div>
+  
+  <ul class="gallery"><li><button type="button" data-full="portfolio/priority-day.webp"><figure><img src="portfolio/priority-day-t.webp" alt="Day view: tasks placed automatically around fixed blocks, with breaks and free time (sample data)" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Day view: tasks placed automatically around fixed blocks, with breaks and free time (sample data)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-week.webp"><figure><img src="portfolio/priority-week-t.webp" alt="Week view with repeating blockers (sample data)" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Week view with repeating blockers (sample data)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-manage.webp"><figure><img src="portfolio/priority-manage-t.webp" alt="Add a task, time blocker or reminder with priority I to V and a due date" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Add a task, time blocker or reminder with priority I to V and a due date</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-settings.webp"><figure><img src="portfolio/priority-settings-t.webp" alt="Settings: sync, PIN sign-in, theme, notifications, speech shortcut" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Settings: sync, PIN sign-in, theme, notifications, speech shortcut</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-signin.webp"><figure><img src="portfolio/priority-signin-t.webp" alt="Sign in with a username and PIN, or Google" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Sign in with a username and PIN, or Google</figcaption></figure></button></li></ul>
+</article>
+
+<article class="scene" id="timecard" data-reel="ai" aria-labelledby="timecard-t">
+  <div class="aperture aperture--tall"><img src="portfolio/tc-grid.webp" alt="Weekly grid with live totals, PDF export, archive and backup (shown empty)" width="1600" height="1000" loading="lazy" decoding="async"></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="timecard-t">LHRIC Intern Time Card</h3>
+      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span>Built for interns at Southern Westchester BOCES, 2026</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn btn--ai" href="https://lhric-timecard.web.app/" target="_blank" rel="noopener">Open Time Card</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>Interns at the Lower Hudson Regional Information Center log hours on an official paper timecard. This app replaces the paperwork: sign in with Google, fill in each day's time in, lunch and time out, and the totals calculate as you type.</p><p>Export stamps every entry, the weekly total and an optional drawn signature onto a copy of the official LHRIC timecard PDF and downloads it, ready to hand in.</p><ul class="stack" aria-label="Tools used"><li>JavaScript</li><li>Firebase Auth</li><li>Cloud Firestore</li><li>pdf-lib</li><li>Canvas</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>How it works</h4><ol class="how"><li>Each intern's week lives in their own Firestore document, cached offline so it syncs across devices</li><li>A stopwatch button stamps the current time. Entering one date fills in the rest of the week</li><li>pdf-lib writes every field onto the real form at calibrated coordinates</li><li>Past weeks are archived and can be re-exported. JSON backup and restore is built in</li></ol></div></div>
+  </div>
+  
+  <ul class="gallery"><li><button type="button" data-full="portfolio/tc-login.webp"><figure><img src="portfolio/tc-login-t.webp" alt="Google sign-in. Each intern&#x27;s timecard is private to their account" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Google sign-in. Each intern&#x27;s timecard is private to their account</figcaption></figure></button></li><li><button type="button" data-full="portfolio/tc-app.webp"><figure><img src="portfolio/tc-app-t.webp" alt="Profile details and the weekly grid (shown empty)" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Profile details and the weekly grid (shown empty)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/tc-mobile.webp"><figure><img src="portfolio/tc-mobile-t.webp" alt="On phones each day becomes its own card" loading="lazy" decoding="async" width="390" height="844"><figcaption>On phones each day becomes its own card</figcaption></figure></button></li></ul>
+</article>
+
+<article class="scene" id="ama" data-reel="ai" aria-labelledby="ama-t">
+  <div class="aperture aperture--flow"><div class="flow" role="img" aria-label="Flow: an email is sent to a dedicated Gmail inbox, a Google Cloud program picks it up, sends the question to the ChatGPT API, and emails the answer back in about 30 seconds">
+  <div class="flow-step"><div class="node"><i class="ph ph-envelope-simple"></i></div><strong>Email</strong><span>Send a question from any computer</span></div>
+  <div class="flow-step"><div class="node"><i class="ph ph-cloud"></i></div><strong>Google Cloud</strong><span>Program watches the inbox for the subject</span></div>
+  <div class="flow-step"><div class="node"><i class="ph ph-sparkle"></i></div><strong>ChatGPT API</strong><span>Question goes to the model</span></div>
+  <div class="flow-step flow-step--end"><div class="node"><i class="ph ph-paper-plane-tilt"></i></div><strong>Reply</strong><span>Answer lands back in your inbox</span></div>
+  <p class="flow-timer">About 30 seconds, round trip</p>
+</div></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="ama-t">Ask Me Anything</h3>
+      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span>Email-to-AI bridge for use during school</span></div>
+    </div>
+    <div class="scene-links rise"></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p>I connected the ChatGPT API to Google Cloud so that from any computer I could email a specific account with a specific subject line. The program picks the message up, runs it through ChatGPT and replies with the answer within about 30 seconds.</p><p>It let me use AI during school hours from any computer with email, for learning only and never for plagiarism.</p><ul class="stack" aria-label="Tools used"><li>Google Cloud</li><li>Gmail</li><li>ChatGPT API</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>How it works</h4><ol class="how"><li>Send an email to the dedicated inbox with the trigger subject</li><li>A program on Google Cloud checks for new messages that match</li><li>The message body is sent to the ChatGPT API</li><li>The answer is emailed back to the sender</li></ol></div></div>
+  </div>
+  
+  
+</article>
+
+<section class="outro" aria-labelledby="outro-title">
+  <h2 id="outro-title">Want the full picture?</h2>
+  <p>My resume covers experience, robotics leadership, certifications and awards.</p>
+  <div class="hero-jump">
+    <a class="btn" href="index.html">View resume</a>
+    <a class="btn email-link" href="#">Copy email</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-name">URI RICHARDSON</div>
+  <div>&copy; 2026 New York</div>
+</footer>
+
+<dialog class="lightbox" aria-label="Enlarged screenshot">
+  <button class="close" type="button" aria-label="Close">&times;</button>
+  <img alt="" />
+  <p></p>
+</dialog>
+<div class="toast" role="status">Email copied to clipboard</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function () {
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* theme */
+  var tbtn = document.querySelector('.theme-toggle');
+  function syncTheme() { tbtn.textContent = root.classList.contains('dark') ? '☀' : '☾'; }
+  tbtn.addEventListener('click', function () {
+    var dark = root.classList.toggle('dark');
+    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+    syncTheme();
+  });
+  syncTheme();
+
+  /* email */
+  document.querySelectorAll('.email-link').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var addr = 'uri.richardson' + '@' + 'gmail.com';
+      var toast = document.querySelector('.toast');
+      (navigator.clipboard ? navigator.clipboard.writeText(addr) : Promise.reject()).then(function () {
+        toast.textContent = 'Email copied to clipboard';
+      }, function () { toast.textContent = addr; }).then(function () {
+        toast.classList.add('show');
+        setTimeout(function () { toast.classList.remove('show'); }, 2400);
+      });
+    });
+  });
+
+  /* lightbox */
+  var dlg = document.querySelector('dialog.lightbox');
+  document.querySelectorAll('[data-full]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      dlg.querySelector('img').src = b.dataset.full;
+      dlg.querySelector('img').alt = b.querySelector('img').alt;
+      dlg.querySelector('p').textContent = b.querySelector('figcaption') ? b.querySelector('figcaption').textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.querySelector('.close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+
+  /* videos: play only while visible, never under reduced motion */
+  var vids = document.querySelectorAll('video[data-auto]');
+  var ICON_PAUSE = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>';
+  var ICON_PLAY = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11a.5.5 0 0 0 .77.42l8.5-5.5a.5.5 0 0 0 0-.84l-8.5-5.5A.5.5 0 0 0 4 2.5z"/></svg>';
+  vids.forEach(function (v) {
+    var btn = v.parentElement.querySelector('.play-toggle');
+    v.userPaused = reduce;
+    function sync() { if (!btn) return; var on = !v.paused; btn.innerHTML = on ? ICON_PAUSE : ICON_PLAY; btn.setAttribute('aria-label', on ? 'Pause video' : 'Play video'); }
+    v.addEventListener('play', sync); v.addEventListener('pause', sync); sync();
+    if (btn) btn.addEventListener('click', function () { if (v.paused) { v.userPaused = false; v.play(); } else { v.userPaused = true; v.pause(); } });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) { if (v.preload === 'none') { v.preload = 'auto'; } if (!v.userPaused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+        else v.pause();
+      });
+    }, { threshold: 0.35 });
+    vids.forEach(function (v) { io.observe(v); });
+  }
+
+  /* nav goes light while it sits over the top letterbox bar */
+  var navEl = document.querySelector('.nav');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { navEl.classList.toggle('nav--dark', en[0].isIntersecting); },
+      { rootMargin: '0px 0px -94% 0px' }).observe(document.querySelector('.bar--top'));
+  }
+
+  /* reel indicator (which section you are in) */
+  var ind = document.querySelector('.reel-indicator');
+  var labels = { hand: 'Built by hand', ai: 'Built with AI' };
+  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  function setReel(r) {
+    ind.textContent = r ? labels[r] : '';
+    if (r) ind.dataset.reel = r; else delete ind.dataset.reel;
+    navLinks.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + r ? 'true' : 'false'); });
+  }
+  if ('IntersectionObserver' in window) {
+    var zones = document.querySelectorAll('[data-reel]');
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) setReel(en.target.dataset.reel); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    zones.forEach(function (z) { ro.observe(z); });
+    var top = new IntersectionObserver(function (e) { if (e[0].isIntersecting) setReel(null); }, { rootMargin: '-45% 0px -50% 0px' });
+    top.observe(document.querySelector('.hero')); top.observe(document.querySelector('.legend'));
+  }
+
+  /* cinematic motion */
+  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  root.classList.add('js-motion');
+
+  gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 } });
+
+  /* hero: load sequence, then letterbox opens on scroll */
+  var tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
+  tl.from('.bar--top', { yPercent: 0, scaleY: 3.2, duration: 1.6 })
+    .from('.bar--bottom', { scaleY: 3.2, duration: 1.6 }, '<')
+    .from('.hero-kicker', { opacity: 0, letterSpacing: '1.2em', duration: 1.6 }, '-=1.1')
+    .from('.hero-title', { opacity: 0, y: 30, duration: 1.4 }, '-=1.3')
+    .from('.hero-sub, .hero-jump', { opacity: 0, y: 16, duration: 1.1, stagger: .12 }, '-=1.0');
+
+  var heroST = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+  gsap.to('.bar--top', { yPercent: -100, ease: 'none', scrollTrigger: heroST });
+  gsap.to('.bar--bottom', { yPercent: 100, ease: 'none', scrollTrigger: heroST });
+  gsap.to('.hero-copy', { y: -80, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: '70% top', scrub: true } });
+  gsap.to('.strip', { scale: 1.18, ease: 'none', scrollTrigger: heroST });
+
+  var mm = gsap.matchMedia();
+
+  /* reel title cards: pin and tighten tracking (desktop) */
+  mm.add('(min-width: 768px)', function () {
+    gsap.utils.toArray('.reel').forEach(function (reel) {
+      var t = gsap.timeline({ scrollTrigger: { trigger: reel, start: 'top top', end: '+=90%', pin: true, scrub: 0.6 } });
+      t.fromTo(reel.querySelector('.reel-title'), { letterSpacing: '0.42em', opacity: 0.15 }, { letterSpacing: '0.1em', opacity: 1, ease: 'power2.out' })
+       .fromTo(reel.querySelector('.reel-lede'), { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, '<0.3')
+       .fromTo(reel.querySelector('.reel-rule'), { scaleY: 0, transformOrigin: 'top' }, { scaleY: 1 }, 0)
+       .to(reel.querySelector('.reel-inner'), { opacity: 0, y: -40, ease: 'power1.in' }, '+=0.35');
+    });
+  });
+  mm.add('(max-width: 767px)', function () {
+    gsap.utils.toArray('.reel-inner').forEach(function (el) {
+      gsap.from(el, { opacity: 0, y: 30, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 80%' } });
+    });
+  });
+
+  /* aperture: frame opens as it enters */
+  gsap.utils.toArray('.aperture').forEach(function (ap) {
+    var media = ap.querySelector(':scope > img, :scope > video, :scope > .flow');
+    gsap.fromTo(ap, { clipPath: 'inset(9% 11% 9% 11% round 6px)' }, { clipPath: 'inset(0% 0% 0% 0% round 6px)', ease: 'none', scrollTrigger: { trigger: ap, start: 'top 92%', end: 'top 28%', scrub: 0.5 } });
+    if (media) gsap.fromTo(media, { scale: 1.14 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top bottom', end: 'bottom 30%', scrub: 0.5 } });
+  });
+
+  /* project copy rises once */
+  gsap.utils.toArray('.scene').forEach(function (sc) {
+    var items = sc.querySelectorAll('.rise');
+    gsap.to(items, { opacity: 1, y: 0, duration: 1, ease: 'expo.out', stagger: 0.08, scrollTrigger: { trigger: sc.querySelector('.scene-head'), start: 'top 85%' } });
+  });
+
+  /* knn bars + flow line draw */
+  gsap.utils.toArray('.kbar i').forEach(function (b) {
+    gsap.from(b, { scaleX: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: b, start: 'top 90%' } });
+  });
+  gsap.utils.toArray('.flow-step').forEach(function (s, i) {
+    gsap.fromTo(s, { '--draw': 0, opacity: 0.25 }, { '--draw': 1, opacity: 1, ease: 'none', scrollTrigger: { trigger: s.closest('.aperture'), start: 'top ' + (80 - i * 10) + '%', end: 'top ' + (60 - i * 10) + '%', scrub: true } });
+  });
+
+  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+});
+</script>
+</body>
+</html>
