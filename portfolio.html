@@ -849,8 +849,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /* aperture: frame opens as it enters */
   gsap.utils.toArray('.aperture').forEach(function (ap) {
     var media = ap.querySelector(':scope > img, :scope > video, :scope > .flow');
-    gsap.fromTo(ap, { '--p': 0 }, { '--p': 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top 92%', end: 'top 28%', scrub: 0.5 } });
-    if (media) gsap.fromTo(media, { scale: 1.14 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top bottom', end: 'bottom 30%', scrub: 0.5 } });
+    gsap.fromTo(ap, { '--p': 0 }, { '--p': 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top 95%', end: 'center 60%', scrub: 0.5 } });
+    if (media) gsap.fromTo(media, { scale: 1.14 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: ap, start: 'top bottom', end: 'center 60%', scrub: 0.5 } });
   });
 
   /* project copy rises once */

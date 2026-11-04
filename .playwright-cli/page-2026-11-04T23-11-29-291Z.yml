@@ -1,0 +1,666 @@
+- generic [active] [ref=e1]:
+  - link "Skip to projects" [ref=e2] [cursor=pointer]:
+    - /url: "#work"
+  - banner [ref=e3]:
+    - link "URI RICHARDSON" [ref=e4] [cursor=pointer]:
+      - /url: index.html
+    - navigation "Portfolio sections" [ref=e5]:
+      - link "Resume" [ref=e6] [cursor=pointer]:
+        - /url: index.html
+      - link "Built by hand" [ref=e7] [cursor=pointer]:
+        - /url: "#hand"
+      - link "Built with AI" [ref=e8] [cursor=pointer]:
+        - /url: "#ai"
+    - button "Switch light or dark theme" [ref=e10] [cursor=pointer]: ☾
+  - main [ref=e11]:
+    - region [ref=e12]:
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: Uri Richardson
+        - heading "Portfolio" [level=1] [ref=e19]
+        - paragraph [ref=e20]: Hardware, games, machine learning and web apps, from a Code.org sketch to apps my robotics team uses every week.
+        - generic [ref=e21]:
+          - link "Built by hand" [ref=e22] [cursor=pointer]:
+            - /url: "#hand"
+          - link "Built with AI" [ref=e23] [cursor=pointer]:
+            - /url: "#ai"
+    - region [ref=e24]:
+      - generic [ref=e25]:
+        - heading "Every project is labeled by how it was made." [level=2] [ref=e26]
+        - paragraph [ref=e27]: Some of this work I wrote line by line. Some I designed and directed with AI coding tools doing part of the typing. Both are real, shipped work, so they are shown separately and marked clearly.
+      - generic [ref=e28]:
+        - link "5 Built by hand Written without AI assistance. Marked with Hand-built" [ref=e29] [cursor=pointer]:
+          - /url: "#hand"
+          - generic [ref=e30]: "5"
+          - generic [ref=e31]:
+            - strong [ref=e32]: Built by hand
+            - text: Written without AI assistance. Marked with
+            - generic [ref=e33]:
+              - generic [aria-hidden] [ref=e34]: 
+              - text: Hand-built
+        - link "5 Built with AI Planned and shipped by me with AI coding assistance. Marked with AI-assisted" [ref=e35] [cursor=pointer]:
+          - /url: "#ai"
+          - generic [ref=e36]: "5"
+          - generic [ref=e37]:
+            - strong [ref=e38]: Built with AI
+            - text: Planned and shipped by me with AI coding assistance. Marked with
+            - generic [ref=e39]:
+              - generic [aria-hidden] [ref=e40]: 
+              - text: AI-assisted
+    - region [ref=e42]:
+      - generic [ref=e43]:
+        - heading "Built by hand" [level=2] [ref=e44]:
+          - generic [aria-hidden] [ref=e45]:
+            - generic [ref=e46]: B
+            - generic [ref=e47]: u
+            - generic [ref=e48]: i
+            - generic [ref=e49]: l
+            - generic [ref=e50]: t
+          - generic [aria-hidden] [ref=e51]:
+            - generic [ref=e52]: b
+            - generic [ref=e53]: "y"
+          - generic [aria-hidden] [ref=e54]:
+            - generic [ref=e55]: h
+            - generic [ref=e56]: a
+            - generic [ref=e57]: "n"
+            - generic [ref=e58]: d
+        - paragraph [ref=e59]: An assistive device, games and a classifier, made without AI assistance.
+    - article [ref=e60]:
+      - generic [ref=e61]:
+        - 'generic "Scrolling the Reach website: the CAD assembly extends, then the prototype demo, build timeline and parts" [ref=e62]'
+        - button "Play video" [ref=e63] [cursor=pointer]
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - heading "Reach" [level=3] [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [aria-hidden] [ref=e71]: 
+              - text: Hand-built
+            - generic [ref=e72]: Motorized telescoping grabber for seniors, Project Invent 2025-2026
+        - generic [ref=e73]:
+          - link "Open the Reach site" [ref=e74] [cursor=pointer]:
+            - /url: https://reach-grabber.web.app/
+          - link "Watch the pitch" [ref=e75] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=QbLDGV5gkpQ
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: A grabber for seniors that extends on its own, so picking something up never means bending, stretching or squeezing. Our four-person team built it for Project Invent with Mozaic Senior Life, after hearing that residents were losing grip strength to arthritis.
+          - paragraph [ref=e79]: "I owned the mechanical design and fabrication: the CAD, the printing and the telescoping mechanism. Six months and three versions later, Reach won the Product Pivot award at Project Invent, and version 0.3 is being refined to go to residents."
+          - list "Tools used" [ref=e80]:
+            - listitem [ref=e81]: Onshape CAD
+            - listitem [ref=e82]: 3D printing (PETG)
+            - listitem [ref=e83]: N20 gear motor
+            - listitem [ref=e84]: Joystick + motor controller
+            - listitem [ref=e85]: Lead-screw mechanism
+        - generic [ref=e87]:
+          - heading "How it works" [level=4] [ref=e88]
+          - list [ref=e89]:
+            - listitem [ref=e90]: An N20 gear motor spins a lead screw. The connector riding on it can't rotate, so the thread drives it upward and the next stage climbs out of the one below
+            - listitem [ref=e91]: Twin lead screws per connector stop it from spinning and leave a channel down the middle for wires
+            - listitem [ref=e92]: 3 mm steel balls in a printed race let lead screw B spin freely without pulling out
+            - listitem [ref=e93]: A four-bar linkage closes Fin Ray fingers in a straight line, run from a joystick through a motor controller on a 6 V LiPo battery
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: Feb 6, 2026
+          - heading "Proof of concept" [level=5] [ref=e97]
+          - paragraph [ref=e98]: A drill stands in for the motor. After tolerance tests set a 1.5 mm thread offset, the printed lead screws extend exactly as planned.
+          - generic [ref=e99]: Worked
+        - generic [ref=e100]:
+          - generic [ref=e101]: Version 0.0
+          - heading "Retired for safety" [level=5] [ref=e102]
+          - paragraph [ref=e103]: The connector's anti-rotation wings poked through the shell and made pinch points for fingers, so I scrapped it.
+          - generic [ref=e104]: Retired
+        - generic [ref=e105]:
+          - generic [ref=e106]: Version 0.2
+          - heading "Two screws, not one" [level=5] [ref=e107]
+          - paragraph [ref=e108]: Twin lead screws removed the wings, steel bearing balls fixed the friction, and the claw joined three stages in one model.
+          - generic [ref=e109]: Product Pivot award
+      - list [ref=e110]:
+        - listitem [ref=e111]:
+          - button [ref=e112]:
+            - 'figure "The Reach website: the CAD assembly telescopes apart as you scroll" [ref=e113]':
+              - 'img "The Reach website: the CAD assembly telescopes apart as you scroll" [ref=e114]'
+        - listitem [ref=e116]:
+          - button [ref=e117]:
+            - 'figure "The full Reach assembly in Onshape: handle, three telescoping stages and the claw" [ref=e118]':
+              - 'img "The full Reach assembly in Onshape: handle, three telescoping stages and the claw" [ref=e119]'
+        - listitem [ref=e121]:
+          - button [ref=e122]:
+            - 'figure "The claw: a four-bar linkage closes Fin Ray fingers in a straight line" [ref=e123]':
+              - 'img "The claw: a four-bar linkage closes Fin Ray fingers in a straight line" [ref=e124]'
+        - listitem [ref=e126]:
+          - button [ref=e127]:
+            - 'figure "Connector V2: slimmer, lighter, riding on twin lead screws" [ref=e128]':
+              - 'img "Connector V2: slimmer, lighter, riding on twin lead screws" [ref=e129]'
+        - listitem [ref=e131]:
+          - button [ref=e132]:
+            - figure "Six months, three versions, every build week on the timeline" [ref=e133]:
+              - img "Six months, three versions, every build week on the timeline" [ref=e134]
+        - listitem [ref=e136]:
+          - button [ref=e137]:
+            - 'figure "What makes it work: the claw, twin lead screws and electronics" [ref=e138]':
+              - 'img "What makes it work: the claw, twin lead screws and electronics" [ref=e139]'
+    - article [ref=e141]:
+      - generic [ref=e142]:
+        - 'generic "Invasion gameplay: the player places walls and turrets while slimes swarm in" [ref=e143]'
+        - button "Play video" [ref=e144] [cursor=pointer]
+      - generic [ref=e148]:
+        - heading "Invasion" [level=3] [ref=e149]
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [aria-hidden] [ref=e152]: 
+            - text: Hand-built
+          - generic [ref=e153]: Turret defense game in Java (Greenfoot), June 2025
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - paragraph [ref=e156]: A top-down survival game written in Java with Greenfoot for my final project. Slimes crawl in from every edge of the map and chase you down. Every slime your defenses destroy earns $1, and you spend it on more defenses before the horde wears through your five hearts.
+          - paragraph [ref=e157]: "Building happens mid-fight on single keys: walls (C) start at $10 and cost $10 more with each one you place, turrets (X) cost $50 and land mines (Z) cost $10. The longer you survive the faster slimes spawn, and your score is how many seconds you lasted."
+          - list "Tools used" [ref=e158]:
+            - listitem [ref=e159]: Java
+            - listitem [ref=e160]: Greenfoot
+            - listitem [ref=e161]: Object-oriented design
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - heading "How it works" [level=4] [ref=e164]
+            - list [ref=e165]:
+              - listitem [ref=e166]: Every frame rolls a random number to decide whether a slime spawns. The roll's range shrinks each second, so spawns go from occasional to constant
+              - listitem [ref=e167]: Up to four turrets fire on their own timers at 1, 2 or 3 shots a second. Two lock onto the oldest slime on the map and two onto the newest, and the fourth fires explosive rounds
+              - listitem [ref=e168]: Turrets turn toward their target with atan2 on a small Vector class I wrote, and bullets fly along that heading
+              - listitem [ref=e169]: Walls soak up five slimes before crumbling, and mines blow up the moment a slime steps on one
+          - 'figure "The game''s class tree in Greenfoot: 14 actor classes and 2 worlds" [ref=e170]':
+            - 'img "The game''s class tree in Greenfoot: 14 actor classes and 2 worlds" [ref=e171]'
+      - region "From the source" [ref=e173]:
+        - heading "From the source" [level=4] [ref=e174]
+        - generic [ref=e175]:
+          - figure [ref=e176]:
+            - generic [ref=e177]:
+              - strong [ref=e178]: Generator.java
+              - text: The difficulty ramp. te counts up once a second to 195, shrinking the roll from 100 to 2.5. Rolls of 0 to 3 spawn a slime off one of the four edges, so spawns go from 4 in 100 frames to every frame.
+            - code [ref=e180]: "if (timeElapsed>1){ int rngNum = ((int)(Math.random()*(100-(te*0.5)))); spawnSlime(rngNum); }"
+          - figure [ref=e181]:
+            - generic [ref=e182]:
+              - strong [ref=e183]: TurretSpawner.java
+              - text: Target selection. The later turrets aim at the newest slime, the first two at the oldest, so the defenses split their fire.
+            - code [ref=e185]: "if((z.id==3)||(z.id==2)){ int max = slimeList.size()-1; z.setTargetLocal(new Vector(slimeList.get(max).getX(),slimeList.get(max).getY())); }else{ z.setTargetLocal(new Vector(slimeList.get(0).getX(),slimeList.get(0).getY())); }"
+          - figure [ref=e186]:
+            - generic [ref=e187]:
+              - strong [ref=e188]: Turret.java + Vector.java
+              - text: Aiming. Subtract the turret's position from the target's, turn the difference into an angle with atan2, and rotate the sprite to face it.
+            - code [ref=e190]: "Vector temp = this.targetLocation; temp.substract(this.position); this.target = temp; double angle = target.toDegrees(); setRotation(180-((int)(angle))); // Vector.java public double toDegrees(){ return ((double)(Math.atan2(this.x,this.y)))*180/Math.PI; }"
+      - list [ref=e191]:
+        - listitem [ref=e192]:
+          - button [ref=e193]:
+            - figure "Title screen" [ref=e194]:
+              - img "Title screen" [ref=e195]
+        - listitem [ref=e197]:
+          - button [ref=e198]:
+            - figure "Walls, turrets and land mines bought with cash from kills" [ref=e199]:
+              - img "Walls, turrets and land mines bought with cash from kills" [ref=e200]
+        - listitem [ref=e202]:
+          - button [ref=e203]:
+            - 'figure "Late game: the slime horde closes in" [ref=e204]':
+              - 'img "Late game: the slime horde closes in" [ref=e205]'
+    - article [ref=e207]:
+      - 'img "The PyTag character sprite sheet: idle, run, roll and tag dash animations" [ref=e209]'
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - heading "PyTag Online" [level=3] [ref=e212]
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - generic [aria-hidden] [ref=e215]: 
+              - text: Hand-built
+            - generic [ref=e216]: Two-player online tag over Python sockets, 2025
+        - link "View code" [ref=e218] [cursor=pointer]:
+          - /url: https://github.com/Yuri1325/Socket-Tag
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - paragraph [ref=e221]: A two-player online game of tag written in Python with pygame for Computer Science 1. Two players connect to a server, one is randomly made the tagger, and the runner has to survive 100 seconds in an arena full of obstacles.
+          - paragraph [ref=e222]: "There is no game engine or networking library underneath it: just raw TCP sockets, threads and the game's own player objects sent back and forth every frame."
+          - list "Tools used" [ref=e223]:
+            - listitem [ref=e224]: Python
+            - listitem [ref=e225]: pygame
+            - listitem [ref=e226]: socket
+            - listitem [ref=e227]: threading
+            - listitem [ref=e228]: pickle
+        - generic [ref=e230]:
+          - heading "How it works" [level=4] [ref=e231]
+          - list [ref=e232]:
+            - listitem [ref=e233]: A threaded TCP server accepts two clients and randomly picks which one is the tagger
+            - listitem [ref=e234]: Every frame (25 fps) each client pickles its Player object, sends it to the server and gets the opponent's state back
+            - listitem [ref=e235]: "Pixel-mask collision decides a tag: the tagger has to be mid-dash when the sprites overlap"
+            - listitem [ref=e236]: The runner wins by surviving 100 seconds. Dash (J/Z) and roll (K/X) run on cooldowns
+      - generic [ref=e237]:
+        - img "The PyTag character run cycle, animated" [ref=e238]
+        - paragraph [ref=e239]: "Controls: WASD or arrow keys to move, J or Z to dash, K or X to roll. Built for Computer Science 1, 2024-2025."
+    - article [ref=e240]:
+      - generic [ref=e241]:
+        - 'generic "Screen recording: the model loads MNIST, then shows test digits with their label and its prediction" [ref=e242]'
+        - button "Play video" [ref=e243] [cursor=pointer]
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - heading "Handwritten Digit Classifier" [level=3] [ref=e248]
+          - generic [ref=e249]:
+            - generic [ref=e250]:
+              - generic [aria-hidden] [ref=e251]: 
+              - text: Hand-built
+            - generic [ref=e252]: k-nearest neighbors on MNIST, January 2026
+        - link "View code" [ref=e254] [cursor=pointer]:
+          - /url: https://github.com/Yuri1325/KNN-Project
+      - generic [ref=e255]:
+        - generic [ref=e256]:
+          - paragraph [ref=e257]: A k-nearest-neighbors classifier for handwritten digits. It loads the 60,000 training and 10,000 test images of MNIST from JSON, flattens each 28 by 28 image into a 784-number vector and trains OpenCV's KNearest model on them.
+          - paragraph [ref=e258]: To classify a digit it finds the k training images closest to it and takes a vote. The script then plots test digits with their true label and the model's prediction so you can see exactly where it gets fooled.
+          - list "Tools used" [ref=e259]:
+            - listitem [ref=e260]: Python
+            - listitem [ref=e261]: OpenCV (cv2.ml)
+            - listitem [ref=e262]: NumPy
+            - listitem [ref=e263]: Matplotlib
+            - listitem [ref=e264]: scikit-learn
+            - listitem [ref=e265]: tqdm
+        - generic [ref=e267]:
+          - heading "Accuracy on all 10,000 test digits" [level=4] [ref=e268]
+          - generic [ref=e269]:
+            - generic [ref=e270]: k=1
+            - generic [ref=e271]: 96.91%
+          - generic [ref=e272]:
+            - generic [ref=e273]: k=2
+            - generic [ref=e274]: 96.27%
+          - generic [ref=e275]:
+            - generic [ref=e276]: k=3
+            - generic [ref=e277]: 97.05%
+          - generic [ref=e278]:
+            - generic [ref=e279]: k=4
+            - generic [ref=e280]: 96.82%
+          - generic [ref=e281]:
+            - generic [ref=e282]: k=5
+            - generic [ref=e283]: 96.88%
+          - generic [ref=e284]:
+            - generic [ref=e285]: k=6
+            - generic [ref=e286]: 96.77%
+          - generic [ref=e287]:
+            - generic [ref=e288]: k=7
+            - generic [ref=e289]: 96.94%
+          - generic [ref=e290]:
+            - generic [ref=e291]: k=8
+            - generic [ref=e292]: 96.70%
+          - generic [ref=e293]:
+            - generic [ref=e294]: k=9
+            - generic [ref=e295]: 96.59%
+          - generic [ref=e296]:
+            - generic [ref=e297]: k=10
+            - generic [ref=e298]: 96.65%
+          - paragraph [ref=e299]: "Measured by re-running this project’s code on its own data. Bars start at 95%. Best: k=3 at 97.05%."
+      - list [ref=e300]:
+        - listitem [ref=e301]:
+          - button [ref=e302]:
+            - figure "Test digits with label and prediction (k=3). Red ones are real mistakes from the run" [ref=e303]:
+              - img "Test digits with label and prediction (k=3). Red ones are real mistakes from the run" [ref=e304]
+        - listitem [ref=e306]:
+          - button [ref=e307]:
+            - figure "A test digit with its true label and the model's prediction" [ref=e308]:
+              - img "A test digit with its true label and the model's prediction" [ref=e309]
+        - listitem [ref=e311]:
+          - button [ref=e312]:
+            - figure "Loading 60,000 training and 10,000 test images" [ref=e313]:
+              - img "Loading 60,000 training and 10,000 test images" [ref=e314]
+    - article [ref=e316]:
+      - generic [ref=e317]:
+        - generic "The Box gameplay recording" [ref=e318]
+        - button "Play video" [ref=e319] [cursor=pointer]
+      - generic [ref=e322]:
+        - generic [ref=e323]:
+          - heading "The Box" [level=3] [ref=e324]
+          - generic [ref=e325]:
+            - generic [ref=e326]:
+              - generic [aria-hidden] [ref=e327]: 
+              - text: Hand-built
+            - generic [ref=e328]: Game Lab arcade game in JavaScript (Code.org)
+        - link "Play it" [ref=e330] [cursor=pointer]:
+          - /url: https://studio.code.org/projects/gamelab/cy9FKuMCYuP6VYuUNUL6vSV6Hi5eUKh52TP9SPuCd0s
+      - generic [ref=e331]:
+        - generic [ref=e332]:
+          - paragraph [ref=e333]: "A ten-level puzzle platformer written in JavaScript in Code.org Game Lab. Every level traps a stick figure inside a walled box, and the whole game is finding the way out: a gap in a wall, a hidden opening, or a door that needs a key."
+          - paragraph [ref=e334]: Gravity, jumping, collision and ledge climbing are all written by hand. Drop out of the bottom of the box and the next level loads. Spikes and acid rain send you back, and the credits count your time and deaths.
+          - list "Tools used" [ref=e335]:
+            - listitem [ref=e336]: JavaScript
+            - listitem [ref=e337]: Code.org Game Lab
+            - listitem [ref=e338]: p5.play
+        - generic [ref=e340]:
+          - heading "Features" [level=4] [ref=e341]
+          - list [ref=e342]:
+            - listitem [ref=e343]: "10 levels built from reusable parts: walls, platforms, ladder, key, door, spikes and acid rain"
+            - listitem [ref=e344]: "Key-and-door puzzles: grab the key, then press E or Down at the door"
+            - listitem [ref=e345]: Title screen, loading tips, level hints, music and end credits
+            - listitem [ref=e346]: A password-protected level skip I added for testing
+      - list [ref=e347]:
+        - listitem [ref=e348]:
+          - button [ref=e349]:
+            - figure "Title screen" [ref=e350]:
+              - img "Title screen" [ref=e351]
+        - listitem [ref=e353]:
+          - button [ref=e354]:
+            - 'figure "Level 1: get out of the box" [ref=e355]':
+              - 'img "Level 1: get out of the box" [ref=e356]'
+        - listitem [ref=e358]:
+          - button [ref=e359]:
+            - 'figure "Level 4: ladder, platforms, a key and a locked door" [ref=e360]':
+              - 'img "Level 4: ladder, platforms, a key and a locked door" [ref=e361]'
+        - listitem [ref=e363]:
+          - button [ref=e364]:
+            - 'figure "Level 5: acid rain" [ref=e365]':
+              - 'img "Level 5: acid rain" [ref=e366]'
+    - region [ref=e369]:
+      - generic [ref=e370]:
+        - heading "Built with AI" [level=2] [ref=e371]:
+          - generic [aria-hidden] [ref=e372]:
+            - generic [ref=e373]: B
+            - generic [ref=e374]: u
+            - generic [ref=e375]: i
+            - generic [ref=e376]: l
+            - generic [ref=e377]: t
+          - generic [aria-hidden] [ref=e378]:
+            - generic [ref=e379]: w
+            - generic [ref=e380]: i
+            - generic [ref=e381]: t
+            - generic [ref=e382]: h
+          - generic [aria-hidden] [ref=e383]:
+            - generic [ref=e384]: A
+            - generic [ref=e385]: I
+        - paragraph [ref=e386]: Tools people actually use. I scoped them, designed them and shipped them, with AI coding assistants as part of the build.
+    - article [ref=e387]:
+      - generic [ref=e388]:
+        - 'generic "Tour of the signed-in SO BOTZ app on a phone: announcements, events, café sign-ups, leaderboard, QR code and admin tools" [ref=e389]'
+        - button "Play video" [ref=e390] [cursor=pointer]
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - heading "Robotics Attendance" [level=3] [ref=e395]
+          - generic [ref=e396]:
+            - generic [ref=e397]:
+              - generic [aria-hidden] [ref=e398]: 
+              - text: AI-assisted
+            - generic [ref=e399]: Three versions for FRC Team 6911 SO BOTZ, 2025-2026. Shown signed in, with teammates’ names blurred
+        - generic [ref=e400]:
+          - link "Open SO BOTZ" [ref=e401] [cursor=pointer]:
+            - /url: https://so-botz.web.app/
+          - link "Team schedule" [ref=e402] [cursor=pointer]:
+            - /url: https://so-botz.web.app/schedule
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - paragraph [ref=e405]: My robotics team needed to know who showed up and for how long. I've rebuilt the answer three times, and each version replaced the last as the team grew.
+          - paragraph [ref=e406]: The current app gives every member an account and a personal QR code. A barcode scanner at the door reads it, writes the scan to the database, and a nightly job at 11 PM turns each visit over 30 minutes into credited hours.
+          - list "Tools used" [ref=e407]:
+            - listitem [ref=e408]: React 18
+            - listitem [ref=e409]: Vite
+            - listitem [ref=e410]: Firebase Auth
+            - listitem [ref=e411]: Cloud Firestore
+            - listitem [ref=e412]: Python
+            - listitem [ref=e413]: Firebase Admin SDK
+            - listitem [ref=e414]: Google Calendar API
+            - listitem [ref=e415]: Claude
+        - generic [ref=e417]:
+          - heading "What the team uses now" [level=4] [ref=e418]
+          - list [ref=e419]:
+            - listitem [ref=e420]: Member, Lead and Parent roles, with admin approval for new sign-ups
+            - listitem [ref=e421]: Hours leaderboard and a live “Here right now” list
+            - listitem [ref=e422]: Weekly scan log with CSV export, and hour corrections that land in an audit log
+            - listitem [ref=e423]: Public calendar that syncs to Google Calendar and iCal
+            - listitem [ref=e424]: Announcements, event RSVPs, café staffing sign-ups and email notifications
+      - generic [ref=e425]:
+        - generic [ref=e426]:
+          - generic [ref=e427]: Year 1
+          - heading "NFC cards and a spreadsheet" [level=5] [ref=e428]
+          - paragraph [ref=e429]: A Python script read physical cards through an NFC reader over a serial port. Each tap toggled check-in or check-out and was logged to a Google Sheet.
+          - generic [ref=e430]: No AI
+        - generic [ref=e431]:
+          - generic [ref=e432]: Year 2
+          - heading "Base44 web app" [level=5] [ref=e433]
+          - paragraph [ref=e434]: Moved to a hosted web app. Members typed their names to check in, with no individual accounts.
+          - generic [ref=e435]: Limited AI
+        - generic [ref=e436]:
+          - generic [ref=e437]: Year 3
+          - heading "The SO BOTZ app" [level=5] [ref=e438]
+          - paragraph [ref=e439]: Personal accounts and QR codes, a door scanner station, Firebase, and a whole team hub around it.
+          - generic [ref=e440]: Built with Claude
+      - list [ref=e441]:
+        - listitem [ref=e442]:
+          - button [ref=e443]:
+            - 'figure "Announcements: post to members, leads or parents, with email notifications" [ref=e444]':
+              - 'img "Announcements: post to members, leads or parents, with email notifications" [ref=e445]'
+        - listitem [ref=e447]:
+          - button [ref=e448]:
+            - figure "Team calendar with meetings, days off and events to RSVP to" [ref=e449]:
+              - img "Team calendar with meetings, days off and events to RSVP to" [ref=e450]
+        - listitem [ref=e452]:
+          - button [ref=e453]:
+            - 'figure "Crescendo: sign up to staff the school café by shift" [ref=e454]':
+              - 'img "Crescendo: sign up to staff the school café by shift" [ref=e455]'
+        - listitem [ref=e457]:
+          - button [ref=e458]:
+            - figure "Hours leaderboard (names blurred here for privacy)" [ref=e459]:
+              - img "Hours leaderboard (names blurred here for privacy)" [ref=e460]
+        - listitem [ref=e462]:
+          - button [ref=e463]:
+            - 'figure "My QR: the personal code the door scanner reads (blurred here)" [ref=e464]':
+              - 'img "My QR: the personal code the door scanner reads (blurred here)" [ref=e465]'
+        - listitem [ref=e467]:
+          - button [ref=e468]:
+            - 'figure "Admin tools: approvals, live attendance, hour edits, notifications" [ref=e469]':
+              - 'img "Admin tools: approvals, live attendance, hour edits, notifications" [ref=e470]'
+    - article [ref=e472]:
+      - generic [ref=e473]:
+        - generic "Scrolling through EPOCh's Period 1 overview, the study modes and AP World History" [ref=e474]
+        - button "Play video" [ref=e475] [cursor=pointer]
+      - generic [ref=e478]:
+        - generic [ref=e479]:
+          - heading "EPOCh" [level=3] [ref=e480]
+          - generic [ref=e481]:
+            - generic [ref=e482]:
+              - generic [aria-hidden] [ref=e483]: 
+              - text: AI-assisted
+            - generic [ref=e484]: AP U.S. and AP World History study site, 2026
+        - link "Open EPOCh" [ref=e486] [cursor=pointer]:
+          - /url: https://epoch-c6bef.web.app/
+      - generic [ref=e487]:
+        - generic [ref=e488]:
+          - paragraph [ref=e489]: A study site for AP U.S. History and AP World History. One toggle switches every page between the two courses, each covering all nine AP periods with a written narrative, key themes, key people and term lists.
+          - paragraph [ref=e490]: Every highlighted term opens a hover card with its definition, date, period and the terms it connects to, so reading the overview doubles as building a concept map.
+          - list "Tools used" [ref=e491]:
+            - listitem [ref=e492]: React 18
+            - listitem [ref=e493]: Vite
+            - listitem [ref=e494]: Tailwind CSS
+            - listitem [ref=e495]: anime.js
+            - listitem [ref=e496]: Firebase Auth
+            - listitem [ref=e497]: Cloud Firestore
+            - listitem [ref=e498]: OpenAI API
+            - listitem [ref=e499]: Web Speech API
+        - generic [ref=e501]:
+          - heading "What's inside" [level=4] [ref=e502]
+          - list [ref=e503]:
+            - listitem [ref=e504]: Ten study modes, including flashcards, Timeline Sort, document sourcing (HAPP), Degrees of Separation and the Feynman technique
+            - listitem [ref=e505]: An “Ask anything” tutor with a course-specific prompt and streamed answers
+            - listitem [ref=e506]: Written answers graded by AI, with keyword grading as a fallback
+            - listitem [ref=e507]: Live multiplayer rooms (MCQ Blitz, Define the Term) with real-time leaderboards
+            - listitem [ref=e508]: A community board where students post and upvote feature ideas
+      - list [ref=e509]:
+        - listitem [ref=e510]:
+          - button [ref=e511]:
+            - figure "Hovering a highlighted term opens its definition, period and connected terms" [ref=e512]:
+              - img "Hovering a highlighted term opens its definition, period and connected terms" [ref=e513]
+        - listitem [ref=e515]:
+          - button [ref=e516]:
+            - figure "The Study tab's game modes" [ref=e517]:
+              - img "The Study tab's game modes" [ref=e518]
+        - listitem [ref=e520]:
+          - button [ref=e521]:
+            - figure "One toggle switches the whole site to AP World History" [ref=e522]:
+              - img "One toggle switches the whole site to AP World History" [ref=e523]
+        - listitem [ref=e525]:
+          - button [ref=e526]:
+            - figure "Key themes, key people and term chips for each period" [ref=e527]:
+              - img "Key themes, key people and term chips for each period" [ref=e528]
+        - listitem [ref=e530]:
+          - button [ref=e531]:
+            - 'figure "Timeline Sort: put AP terms in chronological order" [ref=e532]':
+              - 'img "Timeline Sort: put AP terms in chronological order" [ref=e533]'
+        - listitem [ref=e535]:
+          - button [ref=e536]:
+            - 'figure "U.S. History overview: nine period tabs and the Period 1 narrative" [ref=e537]':
+              - 'img "U.S. History overview: nine period tabs and the Period 1 narrative" [ref=e538]'
+    - article [ref=e540]:
+      - generic [ref=e541]:
+        - generic "PRIORITY V building a day schedule, then switching to week and month views (sample data)" [ref=e542]
+        - button "Play video" [ref=e543] [cursor=pointer]
+      - generic [ref=e546]:
+        - generic [ref=e547]:
+          - heading "PRIORITY V" [level=3] [ref=e548]
+          - generic [ref=e549]:
+            - generic [ref=e550]:
+              - generic [aria-hidden] [ref=e551]: 
+              - text: AI-assisted
+            - generic [ref=e552]:
+              - generic [aria-hidden] [ref=e553]: 
+              - text: Work in progress
+            - generic [ref=e554]: Auto-scheduling day planner, started April 2026
+        - link "Try the work in progress" [ref=e556] [cursor=pointer]:
+          - /url: https://priority-v.web.app/
+      - generic [ref=e557]:
+        - generic [ref=e558]:
+          - paragraph [ref=e559]:
+            - strong [ref=e560]: Still in development.
+            - text: "PRIORITY V works today, but it isn't finished: features are still being built and may change."
+          - paragraph [ref=e561]: A planner that builds the day for you. Enter tasks with a total time, a priority from I to V and a due date, plus fixed blocks like school, practice and dinner. The scheduler places work sessions between them.
+          - paragraph [ref=e562]: It orders work by priority and deadline, adds breaks after long stretches, protects a daily free-time target and puts deep-focus tasks in your peak hours. It also looks ahead and warns when a deadline is at risk.
+          - list "Tools used" [ref=e563]:
+            - listitem [ref=e564]: JavaScript (no framework)
+            - listitem [ref=e565]: SVG
+            - listitem [ref=e566]: Firebase Auth
+            - listitem [ref=e567]: Cloud Firestore
+            - listitem [ref=e568]: Web Speech API
+            - listitem [ref=e569]: Service Worker
+        - generic [ref=e571]:
+          - heading "Features" [level=4] [ref=e572]
+          - list [ref=e573]:
+            - listitem [ref=e574]: Day, week and month views. The day timeline zooms and pans, and goes vertical on phones
+            - listitem [ref=e575]: "Free-time target with a Spread toggle: scattered through the day or kept as one block"
+            - listitem [ref=e576]: Hold-to-speak voice commands to add tasks and blockers
+            - listitem [ref=e577]: Repeating blockers and .ics calendar import
+            - listitem [ref=e578]: Cloud sync with Google or username and PIN sign-in, plus reminder notifications
+      - list [ref=e579]:
+        - listitem [ref=e580]:
+          - button [ref=e581]:
+            - 'figure "Day view: tasks placed automatically around fixed blocks, with breaks and free time (sample data)" [ref=e582]':
+              - 'img "Day view: tasks placed automatically around fixed blocks, with breaks and free time (sample data)" [ref=e583]'
+        - listitem [ref=e585]:
+          - button [ref=e586]:
+            - figure "Week view with repeating blockers (sample data)" [ref=e587]:
+              - img "Week view with repeating blockers (sample data)" [ref=e588]
+        - listitem [ref=e590]:
+          - button [ref=e591]:
+            - figure "Add a task, time blocker or reminder with priority I to V and a due date" [ref=e592]:
+              - img "Add a task, time blocker or reminder with priority I to V and a due date" [ref=e593]
+        - listitem [ref=e595]:
+          - button [ref=e596]:
+            - 'figure "Settings: sync, PIN sign-in, theme, notifications, speech shortcut" [ref=e597]':
+              - 'img "Settings: sync, PIN sign-in, theme, notifications, speech shortcut" [ref=e598]'
+        - listitem [ref=e600]:
+          - button [ref=e601]:
+            - figure "Sign in with a username and PIN, or Google" [ref=e602]:
+              - img "Sign in with a username and PIN, or Google" [ref=e603]
+    - article [ref=e605]:
+      - img "Weekly grid with live totals, PDF export, archive and backup (shown empty)" [ref=e607]
+      - generic [ref=e608]:
+        - generic [ref=e609]:
+          - heading "LHRIC Intern Time Card" [level=3] [ref=e610]
+          - generic [ref=e611]:
+            - generic [ref=e612]:
+              - generic [aria-hidden] [ref=e613]: 
+              - text: AI-assisted
+            - generic [ref=e614]: Built for interns at Southern Westchester BOCES, 2026
+        - link "Open Time Card" [ref=e616] [cursor=pointer]:
+          - /url: https://lhric-timecard.web.app/
+      - generic [ref=e617]:
+        - generic [ref=e618]:
+          - paragraph [ref=e619]: "Interns at the Lower Hudson Regional Information Center log hours on an official paper timecard. This app replaces the paperwork: sign in with Google, fill in each day's time in, lunch and time out, and the totals calculate as you type."
+          - paragraph [ref=e620]: Export stamps every entry, the weekly total and an optional drawn signature onto a copy of the official LHRIC timecard PDF and downloads it, ready to hand in.
+          - list "Tools used" [ref=e621]:
+            - listitem [ref=e622]: JavaScript
+            - listitem [ref=e623]: Firebase Auth
+            - listitem [ref=e624]: Cloud Firestore
+            - listitem [ref=e625]: pdf-lib
+            - listitem [ref=e626]: Canvas
+        - generic [ref=e628]:
+          - heading "How it works" [level=4] [ref=e629]
+          - list [ref=e630]:
+            - listitem [ref=e631]: Each intern's week lives in their own Firestore document, cached offline so it syncs across devices
+            - listitem [ref=e632]: A stopwatch button stamps the current time. Entering one date fills in the rest of the week
+            - listitem [ref=e633]: pdf-lib writes every field onto the real form at calibrated coordinates
+            - listitem [ref=e634]: Past weeks are archived and can be re-exported. JSON backup and restore is built in
+      - list [ref=e635]:
+        - listitem [ref=e636]:
+          - button [ref=e637]:
+            - figure "Google sign-in. Each intern's timecard is private to their account" [ref=e638]:
+              - img "Google sign-in. Each intern's timecard is private to their account" [ref=e639]
+        - listitem [ref=e641]:
+          - button [ref=e642]:
+            - figure "Profile details and the weekly grid (shown empty)" [ref=e643]:
+              - img "Profile details and the weekly grid (shown empty)" [ref=e644]
+        - listitem [ref=e646]:
+          - button [ref=e647]:
+            - figure "On phones each day becomes its own card" [ref=e648]:
+              - img "On phones each day becomes its own card" [ref=e649]
+    - article [ref=e651]:
+      - 'img "Flow: an email is sent to a dedicated Gmail inbox, a Google Cloud program picks it up, sends the question to the ChatGPT API, and emails the answer back in about 30 seconds" [ref=e653]':
+        - generic [ref=e654]:
+          - generic [ref=e655]: 
+          - strong [ref=e657]: Email
+          - text: Send a question from any computer
+        - generic [ref=e658]:
+          - generic [ref=e659]: 
+          - strong [ref=e661]: Google Cloud
+          - text: Program watches the inbox for the subject
+        - generic [ref=e662]:
+          - generic [ref=e663]: 
+          - strong [ref=e665]: ChatGPT API
+          - text: Question goes to the model
+        - generic [ref=e666]:
+          - generic [ref=e667]: 
+          - strong [ref=e669]: Reply
+          - text: Answer lands back in your inbox
+        - paragraph [ref=e670]: About 30 seconds, round trip
+      - generic [ref=e672]:
+        - heading "Ask Me Anything" [level=3] [ref=e673]
+        - generic [ref=e674]:
+          - generic [ref=e675]:
+            - generic [aria-hidden] [ref=e676]: 
+            - text: AI-assisted
+          - generic [ref=e677]: Email-to-AI bridge for use during school
+      - generic [ref=e678]:
+        - generic [ref=e679]:
+          - paragraph [ref=e680]: I connected the ChatGPT API to Google Cloud so that from any computer I could email a specific account with a specific subject line. The program picks the message up, runs it through ChatGPT and replies with the answer within about 30 seconds.
+          - paragraph [ref=e681]: It let me use AI during school hours from any computer with email, for learning only and never for plagiarism.
+          - list "Tools used" [ref=e682]:
+            - listitem [ref=e683]: Google Cloud
+            - listitem [ref=e684]: Gmail
+            - listitem [ref=e685]: ChatGPT API
+        - generic [ref=e687]:
+          - heading "How it works" [level=4] [ref=e688]
+          - list [ref=e689]:
+            - listitem [ref=e690]: Send an email to the dedicated inbox with the trigger subject
+            - listitem [ref=e691]: A program on Google Cloud checks for new messages that match
+            - listitem [ref=e692]: The message body is sent to the ChatGPT API
+            - listitem [ref=e693]: The answer is emailed back to the sender
+    - region [ref=e694]:
+      - heading "Want the full picture?" [level=2] [ref=e695]
+      - paragraph [ref=e696]: My resume covers experience, robotics leadership, certifications and awards.
+      - generic [ref=e697]:
+        - link "View resume" [ref=e698] [cursor=pointer]:
+          - /url: index.html
+        - link "Copy email" [ref=e699] [cursor=pointer]:
+          - /url: "#"
+  - contentinfo [ref=e700]:
+    - generic [ref=e701]: URI RICHARDSON
+    - generic [ref=e702]: © 2026 New York
+    - generic [ref=e703]:
+      - text: Made by
+      - link "Tappan Zee Web" [ref=e704] [cursor=pointer]:
+        - /url: https://tappanzeeweb.com
+  - status: Email copied to clipboard
