@@ -332,6 +332,8 @@
     .flow-step span { font-size: .82rem; color: #a9a9a9; }
     .flow--5 { grid-template-columns: repeat(5, 1fr); padding: 3rem 1.5rem; }
     .flow--5 .flow-step { padding: 0 .4rem; }
+    .flow--5 .flow-step:not(.flow-step--end)::after { background: rgba(255,255,255,.45); }
+    .flow--5 .flow-timer { color: #b8b8b8; }
     .flow-timer { position: absolute; left: 0; right: 0; bottom: 1.4rem; text-align: center; font-size: .82rem; color: #8ea6ff; }
 
     /* stats (knn) */
@@ -438,8 +440,8 @@
     <p>Some of this work I wrote line by line. Some I designed and directed with AI coding tools doing part of the typing. Both are real, shipped work, so they are shown separately and marked clearly.</p>
   </div>
   <div class="legend-keys">
-    <a class="key" href="#hand"><span class="count">5</span><span><strong>Built by hand</strong>Written without AI assistance. Marked with <span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span></span></a>
-    <a class="key key--ai" href="#ai"><span class="count">6</span><span><strong>Built with AI</strong>Planned and shipped by me with AI coding assistance. Marked with <span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span></span></a>
+    <a class="key" href="#hand"><span class="count">6</span><span><strong>Built by hand</strong>Written without AI assistance. Marked with <span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span></span></a>
+    <a class="key key--ai" href="#ai"><span class="count">5</span><span><strong>Built with AI</strong>Planned and shipped by me with AI coding assistance. Marked with <span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span></span></a>
   </div>
 </section>
 
@@ -447,10 +449,38 @@
   <div class="reel-inner">
     <div class="reel-rule" aria-hidden="true"></div>
     <h2 class="reel-title" id="reel-hand">Built by hand</h2>
-    <p class="reel-lede">An assistive device, a classifier and games, made without AI assistance.</p>
+    <p class="reel-lede">Smart glasses in development, an assistive device, a classifier and games, made without AI assistance.</p>
   </div>
 </section>
 
+
+<article class="scene" id="lapis" data-reel="hand" aria-labelledby="lapis-t">
+  <div class="aperture aperture--flow"><div class="flow flow--5" role="img" aria-label="Planned flow, not built yet: the glasses&#x27; microphone and touchpad pick up a question, Bluetooth and Wi-Fi send it to a phone app, an AI model and Obsidian notes find the answer, and it returns to the lens display or speakers">
+  <div class="flow-step"><div class="node"><i class="ph ph-eyeglasses"></i></div><strong>The glasses</strong><span>Microphone and touchpad, no camera</span></div>
+  <div class="flow-step"><div class="node"><i class="ph ph-bluetooth"></i></div><strong>Wireless link</strong><span>Bluetooth and Wi-Fi to your phone</span></div>
+  <div class="flow-step"><div class="node"><i class="ph ph-device-mobile"></i></div><strong>Phone app</strong><span>Decides what to do</span></div>
+  <div class="flow-step"><div class="node"><i class="ph ph-sparkle"></i></div><strong>AI and notes</strong><span>Finds or stores the answer</span></div>
+  <div class="flow-step flow-step--end"><div class="node"><i class="ph ph-speaker-high"></i></div><strong>Back to you</strong><span>On the lens or read aloud</span></div>
+  <p class="flow-timer">The planned path of one question. Not built yet</p>
+</div></div>
+  <div class="scene-head">
+    <div class="rise">
+      <h3 class="scene-title" id="lapis-t">Lapis</h3>
+      <div class="scene-meta"><span class="chip"><i class="ph ph-hand" aria-hidden="true"></i>Hand-built</span><span class="chip chip--wip"><i class="ph ph-hammer" aria-hidden="true"></i>In development, not built yet</span><span>AI smart glasses, my year-long capstone, started September 2026</span></div>
+    </div>
+    <div class="scene-links rise"><a class="btn" href="https://lapis-glasses.web.app/" target="_blank" rel="noopener">See the plan</a></div>
+  </div>
+  <div class="scene-body">
+    <div class="rise"><p><strong>Not built yet.</strong> Lapis is in the design stage. What exists today is the research, the plan and a sponsor website. The glasses themselves are planned for spring 2027.</p><p>Lapis will be a pair of AI smart glasses that answer questions on a small display in the lens. The idea is convenience. A hundred years ago an answer meant the library, and today it means your phone. With Lapis it will be right in front of you.</p><p>It will have no camera, on purpose. Hidden cameras were the top complaint in my research on today&#x27;s smart glasses, so Lapis leaves them out and nobody nearby has to wonder if they are being recorded.</p><ul class="stack" aria-label="Planned tools"><li>Onshape CAD (in progress)</li><li>Custom PCB (planned)</li><li>Bluetooth + Wi-Fi</li><li>Companion phone app (planned)</li><li>Obsidian notes</li><li>Firebase Hosting (sponsor site)</li></ul></div>
+    <div class="rise"><div class="aside-block"><h4>What it will do</h4><ul class="facts"><li>Show short answers, reminders and notes in the lens without blocking your view</li><li>Take voice questions, or taps and swipes on a touchpad on the arm</li><li>Read answers aloud through open-ear speakers</li><li>Save what you say to your Obsidian notes so it can bring it back later</li><li>No camera anywhere on the frame</li></ul></div></div>
+  </div>
+  <div class="timeline">
+    <div class="year"><div class="year-n">Sep to Oct 2026</div><h5>Research and planning</h5><p>Studied existing glasses, the parts inside them, what people like and dislike, and prices from $149 to $849.</p><span class="chip">Done</span></div>
+    <div class="year"><div class="year-n">Oct 2026 to Feb 2027</div><h5>Design and assembly</h5><p>Frame design in Onshape, a custom circuit board, ordering parts, soldering and 3D printing, repeated until it works.</p><span class="chip chip--wip">In progress</span></div>
+    <div class="year"><div class="year-n">Mar to Jun 2027</div><h5>Testing and the fair</h5><p>Test every feature and the fit, let other people try it, redesign what falls short, then present at the Terra STEM Fair.</p><span class="chip chip--wip">Upcoming</span></div>
+  </div>
+  <ul class="gallery"><li><button type="button" data-full="portfolio/lapis-hero.webp"><figure><img src="portfolio/lapis-hero-t.webp" alt="Concept sketch from the sponsor site. The hardware is still being designed" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Concept sketch from the sponsor site. The hardware is still being designed</figcaption></figure></button></li><li><button type="button" data-full="portfolio/lapis-idea.webp"><figure><img src="portfolio/lapis-idea-t.webp" alt="The idea: hours at the library, minutes on a phone, a glance with Lapis" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The idea: hours at the library, minutes on a phone, a glance with Lapis</figcaption></figure></button></li><li><button type="button" data-full="portfolio/lapis-research.webp"><figure><img src="portfolio/lapis-research-t.webp" alt="Research: what people like and dislike about smart glasses today" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Research: what people like and dislike about smart glasses today</figcaption></figure></button></li><li><button type="button" data-full="portfolio/lapis-timeline.webp"><figure><img src="portfolio/lapis-timeline-t.webp" alt="Project timeline. Research is done, design is underway" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Project timeline. Research is done, design is underway</figcaption></figure></button></li></ul>
+</article>
 
 <article class="scene" id="reach" data-reel="hand" aria-labelledby="reach-t">
   <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/reach-site-poster.webp" aria-label="Scrolling the Reach website: the CAD assembly extends, then the prototype demo, build timeline and parts"><source src="portfolio/reach-site.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
@@ -628,34 +658,6 @@ setRotation(<span class="c-num">180</span>-((<span class="c-kw">int</span>)(angl
   
   
   <ul class="gallery"><li><button type="button" data-full="portfolio/priority-day.webp"><figure><img src="portfolio/priority-day-t.webp" alt="Day view: tasks placed automatically around fixed blocks, with breaks and free time (sample data)" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Day view: tasks placed automatically around fixed blocks, with breaks and free time (sample data)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-week.webp"><figure><img src="portfolio/priority-week-t.webp" alt="Week view with repeating blockers (sample data)" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Week view with repeating blockers (sample data)</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-manage.webp"><figure><img src="portfolio/priority-manage-t.webp" alt="Add a task, time blocker or reminder with priority I to V and a due date" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Add a task, time blocker or reminder with priority I to V and a due date</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-settings.webp"><figure><img src="portfolio/priority-settings-t.webp" alt="Settings: sync, PIN sign-in, theme, notifications, speech shortcut" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Settings: sync, PIN sign-in, theme, notifications, speech shortcut</figcaption></figure></button></li><li><button type="button" data-full="portfolio/priority-signin.webp"><figure><img src="portfolio/priority-signin-t.webp" alt="Sign in with a username and PIN, or Google" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Sign in with a username and PIN, or Google</figcaption></figure></button></li></ul>
-</article>
-
-<article class="scene" id="lapis" data-reel="ai" aria-labelledby="lapis-t">
-  <div class="aperture aperture--flow"><div class="flow flow--5" role="img" aria-label="Planned flow, not built yet: the glasses&#x27; microphone and touchpad pick up a question, Bluetooth and Wi-Fi send it to a phone app, an AI model and Obsidian notes find the answer, and it returns to the lens display or speakers">
-  <div class="flow-step"><div class="node"><i class="ph ph-eyeglasses"></i></div><strong>The glasses</strong><span>Microphone and touchpad, no camera</span></div>
-  <div class="flow-step"><div class="node"><i class="ph ph-bluetooth"></i></div><strong>Wireless link</strong><span>Bluetooth and Wi-Fi to your phone</span></div>
-  <div class="flow-step"><div class="node"><i class="ph ph-device-mobile"></i></div><strong>Phone app</strong><span>Decides what to do</span></div>
-  <div class="flow-step"><div class="node"><i class="ph ph-sparkle"></i></div><strong>AI and notes</strong><span>Finds or stores the answer</span></div>
-  <div class="flow-step flow-step--end"><div class="node"><i class="ph ph-speaker-high"></i></div><strong>Back to you</strong><span>On the lens or read aloud</span></div>
-  <p class="flow-timer">The planned path of one question. Not built yet</p>
-</div></div>
-  <div class="scene-head">
-    <div class="rise">
-      <h3 class="scene-title" id="lapis-t">Lapis</h3>
-      <div class="scene-meta"><span class="chip chip--ai"><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted</span><span class="chip chip--wip"><i class="ph ph-hammer" aria-hidden="true"></i>In development, not built yet</span><span>AI smart glasses, my year-long capstone, started September 2026. The hardware design is my own; the sponsor site was made with AI coding help</span></div>
-    </div>
-    <div class="scene-links rise"><a class="btn btn--ai" href="https://lapis-glasses.web.app/" target="_blank" rel="noopener">See the plan</a></div>
-  </div>
-  <div class="scene-body">
-    <div class="rise"><p><strong>Not built yet.</strong> Lapis is in the design stage. What exists today is the research, the plan and a sponsor website. The glasses themselves are planned for spring 2027.</p><p>Lapis will be a pair of AI smart glasses that answer questions on a small display in the lens. The idea is convenience. A hundred years ago an answer meant the library, and today it means your phone. With Lapis it will be right in front of you.</p><p>It will have no camera, on purpose. Hidden cameras were the top complaint in my research on today&#x27;s smart glasses, so Lapis leaves them out and nobody nearby has to wonder if they are being recorded.</p><ul class="stack" aria-label="Planned tools"><li>Onshape CAD (in progress)</li><li>Custom PCB (planned)</li><li>Bluetooth + Wi-Fi</li><li>Companion phone app (planned)</li><li>Obsidian notes</li><li>Firebase Hosting (sponsor site)</li></ul></div>
-    <div class="rise"><div class="aside-block"><h4>What it will do</h4><ul class="facts"><li>Show short answers, reminders and notes in the lens without blocking your view</li><li>Take voice questions, or taps and swipes on a touchpad on the arm</li><li>Read answers aloud through open-ear speakers</li><li>Save what you say to your Obsidian notes so it can bring it back later</li><li>No camera anywhere on the frame</li></ul></div></div>
-  </div>
-  <div class="timeline">
-    <div class="year"><div class="year-n">Sep to Oct 2026</div><h5>Research and planning</h5><p>Studied existing glasses, the parts inside them, what people like and dislike, and prices from $149 to $849.</p><span class="chip">Done</span></div>
-    <div class="year"><div class="year-n">Oct 2026 to Feb 2027</div><h5>Design and assembly</h5><p>Frame design in Onshape, a custom circuit board, ordering parts, soldering and 3D printing, repeated until it works.</p><span class="chip chip--wip">In progress</span></div>
-    <div class="year"><div class="year-n">Mar to Jun 2027</div><h5>Testing and the fair</h5><p>Test every feature and the fit, let other people try it, redesign what falls short, then present at the Terra STEM Fair.</p><span class="chip chip--wip">Upcoming</span></div>
-  </div>
-  <ul class="gallery"><li><button type="button" data-full="portfolio/lapis-hero.webp"><figure><img src="portfolio/lapis-hero-t.webp" alt="Concept sketch from the sponsor site. The hardware is still being designed" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Concept sketch from the sponsor site. The hardware is still being designed</figcaption></figure></button></li><li><button type="button" data-full="portfolio/lapis-idea.webp"><figure><img src="portfolio/lapis-idea-t.webp" alt="The idea: hours at the library, minutes on a phone, a glance with Lapis" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>The idea: hours at the library, minutes on a phone, a glance with Lapis</figcaption></figure></button></li><li><button type="button" data-full="portfolio/lapis-research.webp"><figure><img src="portfolio/lapis-research-t.webp" alt="Research: what people like and dislike about smart glasses today" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Research: what people like and dislike about smart glasses today</figcaption></figure></button></li><li><button type="button" data-full="portfolio/lapis-timeline.webp"><figure><img src="portfolio/lapis-timeline-t.webp" alt="Project timeline. Research is done, design is underway" loading="lazy" decoding="async" width="1600" height="1000"><figcaption>Project timeline. Research is done, design is underway</figcaption></figure></button></li></ul>
 </article>
 
 <article class="scene" id="timecard" data-reel="ai" aria-labelledby="timecard-t">
