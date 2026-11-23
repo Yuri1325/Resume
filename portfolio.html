@@ -330,10 +330,6 @@
     .flow-step:not(.flow-step--end)::after { content: ''; position: absolute; top: 37px; left: calc(50% + 46px); right: calc(-50% + 46px); height: 1px; background: linear-gradient(90deg, rgba(255,255,255,.5), rgba(142,166,255,.9)); transform-origin: left; transform: scaleX(var(--draw, 1)); }
     .flow-step strong { display: block; font-family: 'Cinzel', serif; letter-spacing: .05em; font-size: .95rem; color: #fff; }
     .flow-step span { font-size: .82rem; color: #a9a9a9; }
-    .flow--5 { grid-template-columns: repeat(5, 1fr); padding: 3rem 1.5rem; }
-    .flow--5 .flow-step { padding: 0 .4rem; }
-    .flow--5 .flow-step:not(.flow-step--end)::after { background: rgba(255,255,255,.45); }
-    .flow--5 .flow-timer { color: #b8b8b8; }
     .flow-timer { position: absolute; left: 0; right: 0; bottom: 1.4rem; text-align: center; font-size: .82rem; color: #8ea6ff; }
 
     /* stats (knn) */
@@ -455,14 +451,7 @@
 
 
 <article class="scene" id="lapis" data-reel="hand" aria-labelledby="lapis-t">
-  <div class="aperture aperture--flow"><div class="flow flow--5" role="img" aria-label="Planned flow, not built yet: the glasses&#x27; microphone and touchpad pick up a question, Bluetooth and Wi-Fi send it to a phone app, an AI model and Obsidian notes find the answer, and it returns to the lens display or speakers">
-  <div class="flow-step"><div class="node"><i class="ph ph-eyeglasses"></i></div><strong>The glasses</strong><span>Microphone and touchpad, no camera</span></div>
-  <div class="flow-step"><div class="node"><i class="ph ph-bluetooth"></i></div><strong>Wireless link</strong><span>Bluetooth and Wi-Fi to your phone</span></div>
-  <div class="flow-step"><div class="node"><i class="ph ph-device-mobile"></i></div><strong>Phone app</strong><span>Decides what to do</span></div>
-  <div class="flow-step"><div class="node"><i class="ph ph-sparkle"></i></div><strong>AI and notes</strong><span>Finds or stores the answer</span></div>
-  <div class="flow-step flow-step--end"><div class="node"><i class="ph ph-speaker-high"></i></div><strong>Back to you</strong><span>On the lens or read aloud</span></div>
-  <p class="flow-timer">The planned path of one question. Not built yet</p>
-</div></div>
+  <div class="aperture"><video data-auto muted loop playsinline preload="none" poster="portfolio/lapis-site-poster.webp" aria-label="Scrolling the Lapis sponsor website, a concept for glasses that are not built yet: the concept sketch, the convenience idea, research and the project timeline"><source src="portfolio/lapis-site.mp4" type="video/mp4"></video><button class="play-toggle" type="button" aria-label="Play video"></button></div>
   <div class="scene-head">
     <div class="rise">
       <h3 class="scene-title" id="lapis-t">Lapis</h3>
@@ -472,7 +461,7 @@
   </div>
   <div class="scene-body">
     <div class="rise"><p><strong>Not built yet.</strong> Lapis is in the design stage. What exists today is the research, the plan and a sponsor website. The glasses themselves are planned for spring 2027.</p><p>Lapis will be a pair of AI smart glasses that answer questions on a small display in the lens. The idea is convenience. A hundred years ago an answer meant the library, and today it means your phone. With Lapis it will be right in front of you.</p><p>It will have no camera, on purpose. Hidden cameras were the top complaint in my research on today&#x27;s smart glasses, so Lapis leaves them out and nobody nearby has to wonder if they are being recorded.</p><ul class="stack" aria-label="Planned tools"><li>Onshape CAD (in progress)</li><li>Custom PCB (planned)</li><li>Bluetooth + Wi-Fi</li><li>Companion phone app (planned)</li><li>Obsidian notes</li><li>Firebase Hosting (sponsor site)</li></ul></div>
-    <div class="rise"><div class="aside-block"><h4>What it will do</h4><ul class="facts"><li>Show short answers, reminders and notes in the lens without blocking your view</li><li>Take voice questions, or taps and swipes on a touchpad on the arm</li><li>Read answers aloud through open-ear speakers</li><li>Save what you say to your Obsidian notes so it can bring it back later</li><li>No camera anywhere on the frame</li></ul></div></div>
+    <div class="rise"><div class="aside-block"><h4>What it will do</h4><ul class="facts"><li>Show short answers, reminders and notes in the lens without blocking your view</li><li>Take voice questions, or taps and swipes on a touchpad on the arm</li><li>Read answers aloud through open-ear speakers</li><li>Save what you say to your Obsidian notes so it can bring it back later</li><li>No camera anywhere on the frame</li></ul><h4 style="margin-top:1.8rem">How it will work</h4><ol class="how"><li>The microphone and touchpad on the glasses pick up a question. There is no camera</li><li>Bluetooth and Wi-Fi carry it to your phone</li><li>A companion phone app decides what to do with it</li><li>An AI model and your Obsidian notes find or store the answer</li><li>The answer comes back to the lens display or the speakers</li></ol></div></div>
   </div>
   <div class="timeline">
     <div class="year"><div class="year-n">Sep to Oct 2026</div><h5>Research and planning</h5><p>Studied existing glasses, the parts inside them, what people like and dislike, and prices from $149 to $849.</p><span class="chip">Done</span></div>
